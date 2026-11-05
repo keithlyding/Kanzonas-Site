@@ -13,3 +13,10 @@ cad.kanzonas.com.
 - The download buttons find the newest installer through GitHub's API; don't replace them
   with fixed links (release file names carry the version).
 - American spelling in all visible text.
+
+## Logos: this repo is the single source of truth
+- Every Kanzonas logo (kanzonas.com's, KanzonasPDF's, KanzonasCAD's) is made here, by
+  `brand/make_logos.py` from `brand/artwork/` and `brand/fonts/`. Change a logo only here,
+  never in KanzonasPDF or KanzonasCAD; then copy the files into them as `brand/README.md`
+  says, in each repo's own way (a branch and a pull request, version and release notes).
+- Never edit a logo PNG by hand: change the script or the artwork and run it again.

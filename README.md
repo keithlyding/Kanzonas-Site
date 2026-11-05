@@ -38,11 +38,5 @@ requests an hour per visitor IP).
 
 Each folder is deployed on its own and can't see the others, so `style.css` (in all three)
 and `download.js` (in `pdf/` and `cad/`) are copies. Keep the copies identical. The icons
-are copied from each app's `assets/` folder. The page logos are the website versions that
-KanzonasCAD's `tools/make_logos.py --web` makes in its `assets/web/` folder (both apps' logos:
-twice the size, for sharp high-density screens, with a transparent background):
-`kanzonaspdf-logo-transparent@2x.png` and `kanzonascad-logo-transparent@2x.png`.
-The home page's `kanzonas-logo.png` is cut from `kanzonaspdf-logo-transparent@2x.png`: its
-mark and "Kanzonas" kept as drawn (identical in both apps' logos), "PDF", the rule and the
-tagline left out, and the word centered on the mark. Make it again the same way if the app
-logos change.
+are copied from each app's `assets/` folder. The logos are made in `brand/`, the single source
+of truth for every Kanzonas logo, the apps' too: see [brand/README.md](brand/README.md).
