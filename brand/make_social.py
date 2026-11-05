@@ -19,7 +19,7 @@ BAND = 14                                # the colored band along the bottom, px
 SITES = (
     ("kanzonas-logo-transparent@2x.png", "home", (242, 183, 5), 760),     # sunflower yellow
     ("kanzonaspdf-logo-transparent@2x.png", "pdf", (179, 0, 0), 1000),    # PDF red (#b30000)
-    ("kanzonascad-logo-transparent@2x.png", "cad", (74, 118, 49), 1000),  # CAD green (#4a7631)
+    ("kanzonascad-logo-transparent@2x.png", "cad", (113, 80, 184), 1000),  # CAD violet (#7150b8)
 )
 
 for src, folder, color, logo_w in SITES:

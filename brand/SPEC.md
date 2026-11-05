@@ -31,13 +31,13 @@ All free from Google Fonts, SIL Open Font License 1.1; the files and licenses ar
 | Background (opaque files) | `#F9F9F9` rgb(249, 249, 249) |
 | "Kanzonas" | `#0B0C10` rgb(11, 12, 16), near black, solid |
 | "PDF", vertical gradient over the capital height | top `#B30000` rgb(179, 0, 0), bottom `#800000` rgb(128, 0, 0) |
-| "CAD", vertical gradient over the capital height | top `#4A7631` rgb(74, 118, 49), bottom `#325420` rgb(50, 84, 32) |
+| "CAD", vertical gradient over the capital height | top `#7150B8` rgb(113, 80, 184), bottom `#4B3285` rgb(75, 50, 133) (violet, as the KanzonasCAD icon's tile; green until Nov 2026) |
 | Tagline text | `#646468` rgb(100, 100, 104) |
-| Tagline bullets (•) | the word's top color (`#B30000` for PDF, `#4A7631` for CAD) |
+| Tagline bullets (•) | the word's top color (`#B30000` for PDF, `#7150B8` for CAD) |
 
 Rule under the words:
 - Starts at the midpoint of the word's top and bottom colors: PDF ≈ `#9A0000`,
-  CAD ≈ `#3E6529` (exactly rgb(62, 101, 40.5)).
+  CAD ≈ `#5E419F` (exactly rgb(94, 65, 158.5)).
 - Fades to `#B2B2B2` rgb(178, 178, 178).
 - Fade curve: color = start + (end − start) × t^0.8 (t = 0 at the rule's left end, 1 at its
   right end).
@@ -114,4 +114,6 @@ KanzonasPDF icon (`KanzonasPDF/tools_make_assets.py`):
 - Tag border `#0A100E`, 3.5 units thick, corner radius 11 (tile = 256 units).
 
 KanzonasCAD icon: a ready-made picture (`KanzonasCAD/assets/kanzonascad-icon-source.png`); no
-script draws it, so there are no exact values for it.
+script draws it. Its tile and its tag's "CAD" letters are violet, `#7150B8` → `#4B3285` (top to
+bottom), as "CAD" in the logo; the installer icon keeps a blue tile with the same violet letters.
+KanzonasCAD's `tools/make_icons.py` makes its .png and .ico files from the picture.

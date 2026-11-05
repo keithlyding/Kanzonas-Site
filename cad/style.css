@@ -8,11 +8,19 @@
   --text: #16190f;
   --muted: #555b4e;
   --line: #dde2d6;
-  --green: #3e6b2a;
-  --green-dark: #2f5320;
+  --accent: #3e6b2a;
+  --accent-dark: #2f5320;
   --sun: #f2b705;
   --radius: 12px;
   --max: 1040px;
+}
+
+/* Each app's site in its own color (the color of its icon and of its name in its logo):
+   cad.kanzonas.com (and its card on kanzonas.com) is violet; the rest keeps the green. */
+body[data-site="cad"], .card[data-site="cad"] {
+  --accent: #5e43a3;
+  --accent-dark: #45307d;
+  --bg-soft: #f5f3fa;
 }
 
 * { box-sizing: border-box; }
@@ -26,8 +34,8 @@ body {
   font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
 }
 
-a { color: var(--green); }
-a:hover { color: var(--green-dark); }
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
 
 img { max-width: 100%; height: auto; display: block; }
 
@@ -70,7 +78,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   font-size: 15px;
 }
-.nav a:hover, .nav a[aria-current="page"] { color: var(--green); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
 
 /* Hero */
 .hero {
@@ -109,7 +117,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn {
   display: inline-block;
-  background: var(--green);
+  background: var(--accent);
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -118,7 +126,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 999px;
   transition: background 0.15s;
 }
-.btn:hover { background: var(--green-dark); color: #fff; }
+.btn:hover { background: var(--accent-dark); color: #fff; }
 .btn:focus-visible, .nav a:focus-visible, .card:focus-visible {
   outline: 3px solid var(--sun);
   outline-offset: 3px;
@@ -203,14 +211,14 @@ h2 {
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 .card:hover {
-  border-color: var(--green);
+  border-color: var(--accent);
   box-shadow: 0 6px 20px rgba(30, 50, 20, 0.10);
   color: var(--text);
 }
 .card img { width: 96px; }
 .card h2 { margin: 4px 0 0; font-size: 24px; }
 .card p { margin: 0; color: var(--muted); }
-.card .go { color: var(--green); font-weight: 700; margin-top: auto; }
+.card .go { color: var(--accent); font-weight: 700; margin-top: auto; }
 
 /* Screenshots */
 .shot-section { padding-top: 8px; }
@@ -268,7 +276,7 @@ table.compare {
 }
 .compare thead th:first-child { background: var(--bg-soft); }
 .compare .us { background: #eef4ea; font-weight: 600; }
-.compare thead .us { background: #dfead6; color: var(--green-dark); }
+.compare thead .us { background: #dfead6; color: var(--accent-dark); }
 .table-note { font-size: 13px; color: var(--muted); margin: 10px 0 18px; }
 .sources { font-size: 13px; color: var(--muted); margin: -8px 0 18px; }
 .sources summary { cursor: pointer; font-weight: 600; }

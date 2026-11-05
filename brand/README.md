@@ -43,7 +43,7 @@ The full specification (every size, position and color) is in [SPEC.md](SPEC.md)
 
 - "Kanzonas": Roboto Condensed Medium, a little tighter than normal, near black (#0b0c10).
 - "PDF": Saira Condensed SemiBold, red shading from #b30000 to #800000 (as the app icon's tag).
-- "CAD": the same font, green shading from #4a7631 to #325420.
+- "CAD": the same font, violet shading from #7150b8 to #4b3285 (as the app icon's tile).
 - Under the word: a dot in its color and a line fading to grey, ending with the word.
 - The tagline: Inter, grey (#646468), its bullets in the word's color.
 - kanzonas.com's logo: the mark and "Kanzonas" alone, the word centered on the mark.

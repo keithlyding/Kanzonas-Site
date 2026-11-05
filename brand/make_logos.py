@@ -11,7 +11,8 @@ sunflower and page, is kept as is) and the fonts in brand/fonts/. Writes brand/o
 three pages' logos (home/, pdf/, cad/).
 
 - "Kanzonas": Roboto Condensed Medium, a little tighter than normal, near black.
-- "PDF" (red, as the app icon: #b30000 to #800000) and "CAD" (green): Saira Condensed SemiBold,
+- "PDF" (red, as its app icon: #b30000 to #800000) and "CAD" (violet, as its app icon: #7150b8
+  to #4b3285): Saira Condensed SemiBold,
   the same size; "PDF" a little wider spaced so both words end at the same place, so the two
   logos line up on the left and the right when stacked.
 - A rule under them, from a dot in the word's color fading to grey, ending with the word.
@@ -45,7 +46,7 @@ X0 = 306                                 # left edge of "Kanzonas"
 WORDS = {
     "PDF": dict(top=(179, 0, 0), bottom=(128, 0, 0),
                 tag="VIEW • EDIT • ANNOTATE • REVIEW", out="kanzonas-logo-source.png"),
-    "CAD": dict(top=(74, 118, 49), bottom=(50, 84, 32),
+    "CAD": dict(top=(113, 80, 184), bottom=(75, 50, 133),
                 tag="SCHEMATICS • PANELS • WIRE NUMBERS", out="kanzonascad-logo.png"),
 }
 
