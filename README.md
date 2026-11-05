@@ -37,5 +37,8 @@ requests an hour per visitor IP).
 ## Shared files
 
 Each folder is deployed on its own and can't see the others, so `style.css` (in all three)
-and `download.js` (in `pdf/` and `cad/`) are copies. Keep the copies identical. The logos
-are copied from each app's `assets/` folder.
+and `download.js` (in `pdf/` and `cad/`) are copies. Keep the copies identical. The icons
+are copied from each app's `assets/` folder. The page logos are the website versions that
+KanzonasCAD's `tools/make_logos.py --web` makes in its `assets/web/` folder (both apps' logos:
+twice the size, for sharp high-density screens, with a transparent background):
+`kanzonaspdf-logo-transparent@2x.png` and `kanzonascad-logo-transparent@2x.png`.
