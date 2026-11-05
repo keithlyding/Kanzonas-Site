@@ -301,6 +301,7 @@ footer .wrap {
   gap: 12px;
 }
 footer p { margin: 0; }
+footer .privacy { flex-basis: 100%; font-size: 13px; }
 
 @media (max-width: 520px) {
   .hero { padding: 36px 0 28px; }
