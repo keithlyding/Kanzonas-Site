@@ -79,6 +79,7 @@
             &middot;
             <a data-repo="keithlyding/KanzonasPDF" data-asset="-portable\.zip$" href="https://github.com/keithlyding/KanzonasPDF/releases/latest">Portable for Windows (zip)</a>
             &middot;
+            <span hidden data-reveal="mac"><a data-repo="keithlyding/KanzonasPDF" data-asset="(\.dmg|mac(os)?[^/]*\.zip)$" href="https://github.com/keithlyding/KanzonasPDF/releases/latest">macOS</a> &middot;</span>
             <a href="https://github.com/keithlyding/KanzonasPDF/releases">All releases</a>
             &middot;
             <a href="https://github.com/keithlyding/KanzonasPDF">Source code on GitHub</a>
@@ -155,20 +156,20 @@
                 <th scope="row">Calibrated measuring (length, area, volume, count)</th>
                 <td class="us">Yes</td>
                 <td>Yes</td>
-                <td>Basic</td>
-                <td>Yes</td>
+                <td>Basic (length, perimeter, area)</td>
+                <td>Length, perimeter, area</td>
               </tr>
               <tr>
                 <th scope="row">Compare revisions (clouds the changes)</th>
                 <td class="us">Yes</td>
                 <td>Yes</td>
-                <td>Yes</td>
-                <td>Yes</td>
+                <td>Compares, marks changes with highlights</td>
+                <td>Compares (Editor Plus or PRO license)</td>
               </tr>
               <tr>
                 <th scope="row">Edit page text and objects</th>
                 <td class="us">Yes (paragraphs rewrap)</td>
-                <td>Limited</td>
+                <td>Limited (small changes; text doesn't wrap)</td>
                 <td>Yes</td>
                 <td>Yes</td>
               </tr>
@@ -182,14 +183,22 @@
               <tr>
                 <th scope="row">Runs offline, no account</th>
                 <td class="us">Yes</td>
-                <td>Account</td>
-                <td>Account</td>
+                <td>Bluebeam ID; online every 30 days</td>
+                <td>Adobe account; a subscription goes online every 30 days</td>
                 <td>Yes</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">As compared by the KanzonasPDF project in November 2026. Other products change their prices and features, so check their own sites. Bluebeam Revu, Adobe Acrobat and PDF-XChange Editor are trademarks of their owners.</p>
+        <p class="table-note">Checked against each vendor's own pages in November 2026. Other products change their prices and features, so check their sites before deciding. Bluebeam Revu, Adobe Acrobat and PDF-XChange Editor are trademarks of their owners.</p>
+        <details class="sources">
+          <summary>Sources</summary>
+          <ul>
+            <li>Bluebeam: <a href="https://www.bluebeam.com/pricing/">pricing</a> (annual plans), <a href="https://support.bluebeam.com/revu/subscription/sign-in-bbid.html">sign in with a Bluebeam ID</a>, <a href="https://support.bluebeam.com/revu/subscription/access-subscription-offline.html">working offline</a>, <a href="https://support.bluebeam.com/user-manual/menus/tools/edit-review-text.html">Edit Text</a>, <a href="https://support.bluebeam.com/revu/features/compare-documents-vs-overlay-pages.html">Compare Documents</a></li>
+            <li>Adobe: <a href="https://helpx.adobe.com/acrobat/kb/acrobat-perpetual-eos.html">Acrobat Pro 2024 term license</a>, <a href="https://helpx.adobe.com/acrobat/using/compare-documents.html">Compare Files</a>, <a href="https://helpx.adobe.com/document-cloud/kb/internet-connectivity-and-offline-grace-period---acrobat-dc.html">internet and the 30-day offline period</a></li>
+            <li>PDF-XChange: <a href="https://help.pdf-xchange.com/sysadmin/licensing.html">licensing and watermarks</a>, <a href="https://help.pdf-xchange.com/pdfxe11/compare-documents.html">Compare Documents</a>, <a href="https://help.pdf-xchange.com/pdfxp11/the-measuring-tools.html">measuring tools</a>, <a href="https://www.pdf-xchange.com/knowledgebase/250">portable version</a></li>
+          </ul>
+        </details>
         <p><strong>All of it free, with no watermarks, no account and nothing uploaded.</strong> Missing something you rely on in Bluebeam or Acrobat? <a href="https://github.com/keithlyding/KanzonasPDF/issues">Tell us</a>: that's how most of KanzonasPDF's features got there.</p>
       </div>
     </section>
@@ -213,7 +222,7 @@
           <li>Runs offline; nothing is uploaded</li>
           <li>Portable: runs from a USB stick</li>
           <li>Tells you when an update is out</li>
-          <li>No macOS version</li>
+          <li data-hide-on-reveal="mac">No macOS version yet</li>
         </ul>
       </div>
     </section>

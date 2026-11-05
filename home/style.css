@@ -270,6 +270,10 @@ table.compare {
 .compare .us { background: #eef4ea; font-weight: 600; }
 .compare thead .us { background: #dfead6; color: var(--green-dark); }
 .table-note { font-size: 13px; color: var(--muted); margin: 10px 0 18px; }
+.sources { font-size: 13px; color: var(--muted); margin: -8px 0 18px; }
+.sources summary { cursor: pointer; font-weight: 600; }
+.sources ul { margin: 8px 0 0; padding-left: 20px; }
+.sources li { margin: 4px 0; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;

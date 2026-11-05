@@ -6,7 +6,8 @@
 // (not draft, not pre-release) release that has one. The link's href in the HTML is the
 // GitHub releases page, so the button still works if JavaScript is off or GitHub's API
 // can't be reached (it allows 60 requests an hour per visitor IP without a token).
-// An element with data-version-for="owner/name" shows that release's version.
+// An element with data-version-for="owner/name" shows that release's version. See reveal()
+// for downloads that only some releases have.
 (function () {
   var links = document.querySelectorAll("a[data-repo][data-asset]");
   var byRepo = {};
@@ -35,6 +36,7 @@
               if (pattern.test(assets[j].name)) {
                 a.href = assets[j].browser_download_url;
                 a.setAttribute("data-file", assets[j].name);
+                reveal(a);
                 if (a.hasAttribute("data-primary")) showVersion(repo, published[i]);
                 return;
               }
@@ -46,6 +48,18 @@
         // Leave the links on the releases page.
       });
   });
+
+  // A link inside a hidden <span data-reveal="key"> (a download that not every release has,
+  // like macOS) is shown once its file is found, and anything marked
+  // data-hide-on-reveal="key" (such as "No macOS version yet") is hidden.
+  function reveal(a) {
+    var box = a.closest("[data-reveal]");
+    if (!box) return;
+    box.hidden = false;
+    var key = box.getAttribute("data-reveal");
+    var gone = document.querySelectorAll('[data-hide-on-reveal="' + key + '"]');
+    Array.prototype.forEach.call(gone, function (el) { el.hidden = true; });
+  }
 
   function showVersion(repo, rel) {
     var targets = document.querySelectorAll('[data-version-for="' + repo + '"]');
