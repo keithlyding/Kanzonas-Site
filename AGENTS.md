@@ -17,6 +17,9 @@ cad.kanzonas.com.
 ## Logos: this repo is the single source of truth
 - Every Kanzonas logo (kanzonas.com's, KanzonasPDF's, KanzonasCAD's) is made here, by
   `brand/make_logos.py` from `brand/artwork/` and `brand/fonts/`. Change a logo only here,
-  never in KanzonasPDF or KanzonasCAD; then copy the files into them as `brand/README.md`
-  says, in each repo's own way (a branch and a pull request, version and release notes).
+  never in KanzonasPDF or KanzonasCAD.
+- **Work on this repo stays in this repo** (the owner's decision): a session working on the
+  website and logos does not build, branch or open pull requests in KanzonasPDF or
+  KanzonasCAD; those are handled in their own sessions. When a logo changes, say which files
+  in `brand/out/` go where (`brand/README.md`) so the app's own session copies them in.
 - Never edit a logo PNG by hand: change the script or the artwork and run it again.

@@ -12,8 +12,8 @@ python brand/make_logos.py
 
 It reads the owner's artwork (`artwork/kanzonas-logo-artwork.png`: its left part, the cactus,
 sunflower and page, is kept as drawn) and the fonts in `fonts/`, and writes `out/` plus the
-three website pages' logos (`home/`, `pdf/`, `cad/`). Commit all of it, then copy the app files
-below. Checked on 5 Nov 2026: with these inputs it makes every logo file in KanzonasPDF 1.8.3
+three website pages' logos (`home/`, `pdf/`, `cad/`). Commit all of it. The app files below are copied in by each app's own session
+(this repo's sessions don't change the app repos). Checked on 5 Nov 2026: with these inputs it makes every logo file in KanzonasPDF 1.8.3
 and KanzonasCAD 0.11.5 pixel for pixel (with Pillow 12.3.0 and NumPy 2.5.3; another Pillow version may draw
 the letters' edges very slightly differently).
 
