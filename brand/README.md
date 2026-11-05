@@ -17,6 +17,9 @@ below. Checked on 5 Nov 2026: with these inputs it makes every logo file in Kanz
 and KanzonasCAD 0.11.5 pixel for pixel (with Pillow 12.3.0 and NumPy 2.5.3; another Pillow version may draw
 the letters' edges very slightly differently).
 
+Then `python brand/make_social.py` makes the link-preview pictures (1200 x 630, shown when a
+link to a site is shared) from those logos: `home/`, `pdf/` and `cad/og-image.png`.
+
 ## Where each file goes
 
 | File in `brand/out/` | Copy to |
