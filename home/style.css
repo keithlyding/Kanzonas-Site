@@ -12,6 +12,8 @@
   --accent-dark: #2f5320;
   --sun: #f2b705;
   --radius: 12px;
+  --us-bg: #eef4ea;               /* the comparison table's own column */
+  --us-head: #dfead6;
   --max: 1040px;
 }
 
@@ -21,6 +23,8 @@ body[data-site="cad"], .card[data-site="cad"] {
   --accent: #5e43a3;
   --accent-dark: #45307d;
   --bg-soft: #f5f3fa;
+  --us-bg: #f1edf9;
+  --us-head: #e4dcf3;
 }
 
 * { box-sizing: border-box; }
@@ -275,8 +279,8 @@ table.compare {
   box-shadow: 1px 0 0 var(--line);
 }
 .compare thead th:first-child { background: var(--bg-soft); }
-.compare .us { background: #eef4ea; font-weight: 600; }
-.compare thead .us { background: #dfead6; color: var(--accent-dark); }
+.compare .us { background: var(--us-bg); font-weight: 600; }
+.compare thead .us { background: var(--us-head); color: var(--accent-dark); }
 .table-note { font-size: 13px; color: var(--muted); margin: 10px 0 18px; }
 .sources { font-size: 13px; color: var(--muted); margin: -8px 0 18px; }
 .sources summary { cursor: pointer; font-weight: 600; }
