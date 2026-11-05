@@ -35,6 +35,9 @@ CHANGELOG, release notes).
 
 ## What's in the logos
 
+The full specification (every size, position and color) is in [SPEC.md](SPEC.md). In short:
+
+
 - "Kanzonas": Roboto Condensed Medium, a little tighter than normal, near black (#0b0c10).
 - "PDF": Saira Condensed SemiBold, red shading from #b30000 to #800000 (as the app icon's tag).
 - "CAD": the same font, green shading from #4a7631 to #325420.
