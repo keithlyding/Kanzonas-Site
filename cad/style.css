@@ -91,6 +91,7 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.15;
   margin: 0 0 14px;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 .hero .lead {
   font-size: clamp(18px, 2.4vw, 21px);
