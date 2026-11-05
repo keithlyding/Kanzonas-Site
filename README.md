@@ -42,3 +42,7 @@ are copied from each app's `assets/` folder. The page logos are the website vers
 KanzonasCAD's `tools/make_logos.py --web` makes in its `assets/web/` folder (both apps' logos:
 twice the size, for sharp high-density screens, with a transparent background):
 `kanzonaspdf-logo-transparent@2x.png` and `kanzonascad-logo-transparent@2x.png`.
+The home page's `kanzonas-logo.png` is cut from `kanzonaspdf-logo-transparent@2x.png`: its
+mark and "Kanzonas" kept as drawn (identical in both apps' logos), "PDF", the rule and the
+tagline left out, and the word centered on the mark. Make it again the same way if the app
+logos change.
