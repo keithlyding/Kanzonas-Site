@@ -28,8 +28,8 @@ sessions: see AGENTS.md.)
 - **www.kanzonas.com -> kanzonas.com** permanent redirect (the owner, in the dashboard):
   Rules > Redirect Rules, template "Redirect from WWW to root". Today www serves a copy of the
   home page (its canonical tag points at kanzonas.com).
-- **Not-found pages** (proposed): a 404.html in each site, so unknown addresses (scanners'
-  `/.env`, `/.git/config`...) get a real 404 instead of the home page with 200.
+- Done: not-found pages (404.html in each site): unknown addresses (scanners' `/.env`,
+  `/.git/config`...) get a real 404 instead of the home page with 200.
 
 ## Website
 - **macOS for KanzonasPDF** (planned for its 1.9): the PDF page's macOS link and "No macOS

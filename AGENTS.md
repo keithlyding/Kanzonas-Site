@@ -15,6 +15,9 @@ cad.kanzonas.com.
   api.github.com, and the AlternativeTo badge (pdf/, cad/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the
   browser blocks it. Keep pages free of inline scripts, inline styles and `on...=` handlers.
 - `download.js` links only to files in the app's own GitHub releases (`isOwnRelease`).
+- Each site has a `404.html` (Cloudflare Pages serves it, with status 404, for any unknown
+  address, at any depth): its stylesheet, icon and pictures use root paths (`/style.css`),
+  never relative ones. Change its header and footer along with the site's `index.html`.
 - The download buttons find the newest installer through GitHub's API; don't replace them
   with fixed links (release file names carry the version).
 - American spelling in all visible text.
