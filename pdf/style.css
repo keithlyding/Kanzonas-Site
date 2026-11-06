@@ -145,6 +145,8 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0;
 }
 .alt-links a { font-weight: 600; }
+.listed { margin: 6px 0 0; }
+.listed img { margin: 0 auto; }
 
 /* Sections */
 section { padding: 40px 0; }
