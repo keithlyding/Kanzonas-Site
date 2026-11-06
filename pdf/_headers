@@ -14,3 +14,12 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
+
+# The pages themselves: Cloudflare's usual caching (always check for a newer copy), plus
+# no-transform, so Cloudflare doesn't insert scripts into them. On the free plan it would add
+# an inline bot-detection script ("JavaScript Detections", which can't be switched off there)
+# that the policy above blocks. The analytics script is in the pages instead.
+/
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
