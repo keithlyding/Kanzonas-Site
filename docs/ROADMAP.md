@@ -30,6 +30,13 @@ sessions: see AGENTS.md.)
   home page (its canonical tag points at kanzonas.com).
 - Done: not-found pages (404.html in each site): unknown addresses (scanners' `/.env`,
   `/.git/config`...) get a real 404 instead of the home page with 200.
+- Done: Browser Cache TTL "Respect existing headers" (was 4 hours, which overrode the site's
+  own max-age=0 on CSS, JS and pictures: a returning visitor could get a new page with the old
+  stylesheet).
+- Known, accepted: on 404 responses Cloudflare Pages sets its own `Cache-Control: no-store`
+  (overriding `_headers`), so Cloudflare still inserts its bot-detection script there and the
+  policy blocks it (a console error on not-found pages only). A fix would be a Cloudflare
+  Transform Rule adding no-transform to 404 responses, if ever wanted.
 
 ## Website
 - **macOS for KanzonasPDF** (planned for its 1.9): the PDF page's macOS link and "No macOS
