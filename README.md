@@ -19,8 +19,9 @@ Create three Pages projects, each connected to this repository (branch `main`):
 - **Custom domain:** `kanzonas.com` (and `www.kanzonas.com` if wanted), `pdf.kanzonas.com`,
   `cad.kanzonas.com`
 
-Optionally, under each project's *Settings > Builds > Build watch paths*, include only that
-project's folder (for example `pdf/*`) so a change to one site doesn't redeploy the other two.
+Each project's *Settings > Builds* has its folder as the build watch path (`home/*`,
+`pdf/*`, `cad/*`), so a push redeploys only the site whose folder changed, and preview
+deployments are off (changes go straight to `main`).
 
 ## How the download buttons work
 

@@ -11,12 +11,25 @@ sessions: see AGENTS.md.)
   smtp.gmail.com. When that starts:
   1. Read the domain's TXT records first (Cloudflare > DNS). Cloudflare's email setup may have
      added an SPF record already: edit it, never add a second one (two break both).
-  2. SPF: `v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all` (Cloudflare's
-     part for forwarding, Google's for sending; check against what is there).
+  2. SPF: the domain already has `v=spf1 include:_spf.mx.cloudflare.net ~all` (added by
+     Email Routing; checked Nov 2026). Edit that record to
+     `v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all`; don't add a second.
   3. DMARC, starting report-only: TXT `_dmarc` = `v=DMARC1; p=none; rua=mailto:<address>`;
      after a week or two of passing reports, `p=quarantine`, then `p=reject`.
 - **support@kanzonas.com** in Cloudflare Email Routing (the owner): the site's footer shows it
   since Nov 2026.
+
+## Cloudflare settings (reviewed Nov 2026, with a scoped API token)
+- Done: Always Use HTTPS on; minimum TLS 1.2 (was 1.0); Pages projects: preview deployments
+  off and build watch paths `home/*`, `pdf/*`, `cad/*` (a push rebuilds only the site whose
+  folder changed; a change outside them, like docs/ or brand/ alone, rebuilds none).
+- **DNSSEC** (the owner, in the dashboard): DNS > Settings > Enable DNSSEC, then add the DS
+  record it shows at the domain's registrar (automatic if the registrar is Cloudflare).
+- **www.kanzonas.com -> kanzonas.com** permanent redirect (the owner, in the dashboard):
+  Rules > Redirect Rules, template "Redirect from WWW to root". Today www serves a copy of the
+  home page (its canonical tag points at kanzonas.com).
+- **Not-found pages** (proposed): a 404.html in each site, so unknown addresses (scanners'
+  `/.env`, `/.git/config`...) get a real 404 instead of the home page with 200.
 
 ## Website
 - **macOS for KanzonasPDF** (planned for its 1.9): the PDF page's macOS link and "No macOS
