@@ -37,6 +37,7 @@ requests an hour per visitor IP).
 ## Shared files
 
 Each folder is deployed on its own and can't see the others, so `style.css` (in all three)
-and `download.js` (in `pdf/` and `cad/`) are copies. Keep the copies identical. The icons
+and `download.js` (in `pdf/` and `cad/`) are copies, as is `_headers` (the security headers,
+in all three). Keep the copies identical. The icons
 are copied from each app's `assets/` folder. The logos are made in `brand/`, the single source
 of truth for every Kanzonas logo, the apps' too: see [brand/README.md](brand/README.md).

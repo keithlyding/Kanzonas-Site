@@ -1,0 +1,15 @@
+# Security headers for every page and file of this site (Cloudflare Pages reads this file).
+# The same file is in home/, pdf/ and cad/: keep the three copies identical.
+#
+# Content-Security-Policy: only this site's own files run, plus Cloudflare Web Analytics
+# (static.cloudflareinsights.com loads its script, cloudflareinsights.com receives the counts);
+# the download buttons may ask api.github.com for the newest release. Nothing may embed these
+# pages in a frame, and there are no forms or plugins.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://api.github.com https://cloudflareinsights.com; img-src 'self'; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin

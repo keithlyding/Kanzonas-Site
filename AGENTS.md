@@ -8,8 +8,13 @@ cad.kanzonas.com.
   working branches: Cloudflare builds a preview of all three sites for every branch push.
 - Before pushing, open the changed pages in a browser at desktop and phone width (about
   390 px): no sideways scrolling, no console errors.
-- `style.css` (in all three folders) and `download.js` (in `pdf/` and `cad/`) are copies:
-  change every copy the same way.
+- `style.css` and `_headers` (in all three folders) and `download.js` (in `pdf/` and `cad/`)
+  are copies: change every copy the same way.
+- `_headers` sets the security headers, including a Content-Security-Policy: only the site's
+  own files run, plus Cloudflare Web Analytics, and the download buttons may call
+  api.github.com. A new outside script, font, picture or API needs adding there, or the
+  browser blocks it. Keep pages free of inline scripts, inline styles and `on...=` handlers.
+- `download.js` links only to files in the app's own GitHub releases (`isOwnRelease`).
 - The download buttons find the newest installer through GitHub's API; don't replace them
   with fixed links (release file names carry the version).
 - American spelling in all visible text.

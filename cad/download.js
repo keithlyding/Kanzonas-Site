@@ -33,7 +33,7 @@
           for (var i = 0; i < published.length; i++) {
             var assets = published[i].assets || [];
             for (var j = 0; j < assets.length; j++) {
-              if (pattern.test(assets[j].name)) {
+              if (pattern.test(assets[j].name) && isOwnRelease(assets[j].browser_download_url, repo)) {
                 a.href = assets[j].browser_download_url;
                 a.setAttribute("data-file", assets[j].name);
                 reveal(a);
@@ -48,6 +48,19 @@
         // Leave the links on the releases page.
       });
   });
+
+  // Only a file in this repository's own GitHub releases is linked:
+  // https://github.com/<owner>/<name>/releases/download/... Anything else the API might
+  // return is ignored and the link stays on the releases page. (What people download matters
+  // most on this site; this keeps a bad API answer from pointing them anywhere else.)
+  function isOwnRelease(url, repo) {
+    var u;
+    try { u = new URL(url); } catch (e) { return false; }
+    var prefix = ("/" + repo + "/releases/download/").toLowerCase();
+    return u.protocol === "https:" && u.hostname === "github.com" && !u.port &&
+      !u.username && !u.password && u.pathname.toLowerCase().indexOf(prefix) === 0 &&
+      u.pathname.indexOf("..") === -1;
+  }
 
   // A link inside a hidden <span data-reveal="key"> (a download that not every release has,
   // like macOS) is shown once its file is found, and anything marked
