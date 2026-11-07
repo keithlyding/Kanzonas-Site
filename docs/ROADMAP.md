@@ -45,7 +45,8 @@ sessions: see AGENTS.md.)
   installing (zip)" and keep "Portable for Windows (zip)", as the PDF page does.
 
 ## Done (Nov 2026)
-Three sites on Cloudflare Pages; download buttons that find the newest release (checked to be
+AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
+top left on every page, linking to kanzonas.com. Three sites on Cloudflare Pages; download buttons that find the newest release (checked to be
 the app's own GitHub releases); logos made in brand/ (the single source of truth); SEO
 (titles, canonical links, link previews, structured data, sitemaps; Search Console verified);
 comparison tables (PDF, CAD) with sources; KanzonasCAD in violet; Cloudflare Web Analytics with
