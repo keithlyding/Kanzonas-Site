@@ -39,8 +39,8 @@ sessions: see AGENTS.md.)
   comparison's Reports row). Screenshots as a gallery of thumbnails with a viewer.
 - **KanzonasCAD wire lists** (its README: coming next, with assigning parts to devices and
   shared libraries): update the CAD page's comparison and "Good to know" when they ship.
-- **CAD page, two Windows zips** (suggested, waiting for the owner): drop "Windows without
-  installing (zip)" and keep "Portable for Windows (zip)", as the PDF page does.
+- Done: the CAD page shows the portable zip only (the owner, Nov 2026), as the PDF page does;
+  the plain Windows zip stays on the GitHub releases page.
 
 - **Code signing** (the owner to decide): unsigned downloads get Windows SmartScreen's warning,
   and its reputation is per file, so every new version starts over: with frequent releases the
