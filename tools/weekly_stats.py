@@ -62,7 +62,10 @@ def read_app(repo):
             break
         page += 1
     info = get("https://api.github.com/repos/" + repo)
-    out = {"stars": info.get("stargazers_count", 0), "open_issues": info.get("open_issues_count", 0),
+    # GitHub's open_issues_count includes open pull requests: count only issues people opened
+    prs = get("https://api.github.com/repos/%s/pulls?state=open&per_page=100" % repo)
+    issues = max(info.get("open_issues_count", 0) - len(prs), 0)
+    out = {"stars": info.get("stargazers_count", 0), "open_issues": issues,
            "releases": {}}
     for r in releases:
         if r.get("draft"):
