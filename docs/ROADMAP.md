@@ -32,9 +32,6 @@ sessions: see AGENTS.md.)
   Transform Rule adding no-transform to 404 responses, if ever wanted.
 
 ## Website
-- **About page** (kanzonas.com/about): a draft in docs/about-draft.md for the owner to edit;
-  not published. When it's final: home/about.html with the site's header and footer, "About"
-  in the menu and footer of every page, and in home/sitemap.xml.
 - Done (7 Nov 2026): content brought up to KanzonasPDF 1.9 (macOS for Apple silicon: the
   download link, "Good to know", structured data; Scan, styled text editing, Dimension and
   Legend markups, Replace pages, PDF/A) and KanzonasCAD 0.14.1 (panel layouts, bill of
@@ -54,7 +51,7 @@ sessions: see AGENTS.md.)
   says this plainly; update it if signing arrives.
 
 ## Done (Nov 2026)
-Help page (/help) and privacy page (/privacy) on kanzonas.com, linked from every page; "What's new" from the newest release on the PDF and CAD pages. AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
+About page (/about, the owner's own words, 7 Nov 2026). Help page (/help) and privacy page (/privacy) on kanzonas.com, linked from every page; "What's new" from the newest release on the PDF and CAD pages. AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
 top left on every page, linking to kanzonas.com. Three sites on Cloudflare Pages; download buttons that find the newest release (checked to be
 the app's own GitHub releases); logos made in brand/ (the single source of truth); SEO
 (titles, canonical links, link previews, structured data, sitemaps; Search Console verified);
