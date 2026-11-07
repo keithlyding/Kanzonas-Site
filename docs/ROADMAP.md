@@ -5,19 +5,13 @@ lands or a decision changes. (The apps' own work is in their repos, handled in t
 sessions: see AGENTS.md.)
 
 ## Email and domain
-- **SPF and DMARC records for kanzonas.com** (the owner: later). Email today: Cloudflare Email
-  Routing receives (keithlyding@kanzonas.com; support@kanzonas.com to be added) and forwards to
-  Gmail; nothing sends as @kanzonas.com yet. Sending will be Gmail "Send mail as" through
-  smtp.gmail.com. When that starts:
-  1. Read the domain's TXT records first (Cloudflare > DNS). Cloudflare's email setup may have
-     added an SPF record already: edit it, never add a second one (two break both).
-  2. SPF: the domain already has `v=spf1 include:_spf.mx.cloudflare.net ~all` (added by
-     Email Routing; checked Nov 2026). Edit that record to
-     `v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all`; don't add a second.
-  3. DMARC, starting report-only: TXT `_dmarc` = `v=DMARC1; p=none; rua=mailto:<address>`;
-     after a week or two of passing reports, `p=quarantine`, then `p=reject`.
-- **support@kanzonas.com** in Cloudflare Email Routing (the owner): the site's footer shows it
-  since Nov 2026.
+- Done (7 Nov 2026): email. Cloudflare Email Routing receives keithlyding@ and support@kanzonas.com
+  into Gmail; Gmail sends as both ("Send mail as" through smtp.gmail.com, an App Password each).
+  SPF: `v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all` (one record).
+  DMARC: `_dmarc` = `v=DMARC1; p=none; rua=mailto:keithlyding@kanzonas.com` (report-only).
+- Keep DMARC at `p=none` while mail is sent through Gmail: Gmail signs it as gmail.com, not
+  kanzonas.com, so quarantine/reject would catch the owner's own mail. Tighten only after moving
+  to a sender that signs as kanzonas.com (Google Workspace, Zoho, a sending service).
 
 ## Cloudflare settings (reviewed Nov 2026, with a scoped API token)
 - Done: Always Use HTTPS on; minimum TLS 1.2 (was 1.0); Pages projects: preview deployments
