@@ -17,6 +17,12 @@ cad.kanzonas.com.
   `gallery:end` markers in `index.html`, and pushes only when something changed. Don't edit
   those files or that part of the page by hand; to change a screenshot or its description,
   change the app's README. The short label under each thumbnail is in `screenshots.json`.
+- **Weekly summary:** `.github/workflows/weekly-stats.yml` runs `tools/weekly_stats.py` every
+  Monday: the apps' download counts (with the "probably automated" rounds left out), stars and
+  issues, compared with last week's snapshot in `docs/stats/` (not published), posted as an
+  issue labeled "weekly summary" (GitHub emails it; last week's is closed). It only reads
+  GitHub's public numbers: nothing is collected inside the apps (the owner's promise: no
+  telemetry, ever).
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
   api.github.com, and the AlternativeTo badge (pdf/, cad/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the

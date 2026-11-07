@@ -1,0 +1,54 @@
+# The weekly summary: every Monday (and by hand: Actions > Weekly summary > Run workflow) it runs
+# tools/weekly_stats.py (downloads, stars and issues of KanzonasPDF and KanzonasCAD, from GitHub's
+# public API, compared with last week), saves it in docs/stats/ (not published on the website),
+# and posts it as an issue labeled "weekly summary", which GitHub emails to the owner; last
+# week's issue is closed. Nothing is collected inside the apps.
+name: Weekly summary
+
+on:
+  schedule:
+    - cron: "43 14 * * 1"      # Mondays 14:43 UTC (7:43 in Arizona)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: weekly-stats
+  cancel-in-progress: false
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Make the summary
+        run: python tools/weekly_stats.py > summary.md
+
+      - name: Save it in docs/stats
+        run: |
+          git add docs/stats
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Weekly summary $(date -u +%F)"
+            git push origin HEAD:main
+          fi
+
+      - name: Post it as an issue (GitHub emails it), close last week's
+        run: |
+          gh label create "weekly summary" --color "f2b705" --description "The weekly downloads summary" --force
+          for n in $(gh issue list --label "weekly summary" --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Replaced by this week's summary."
+          done
+          gh issue create --title "Weekly summary, $(date -u +%F)" --label "weekly summary" --body-file summary.md
