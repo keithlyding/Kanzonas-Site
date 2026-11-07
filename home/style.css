@@ -311,6 +311,10 @@ table.compare {
 }
 .gallery img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;      /* every thumbnail the same shape; the viewer shows the whole picture */
+  object-fit: cover;
+  object-position: top left;
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(30, 50, 20, 0.10);
