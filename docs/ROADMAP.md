@@ -32,15 +32,13 @@ sessions: see AGENTS.md.)
   Transform Rule adding no-transform to 404 responses, if ever wanted.
 
 ## Website
-- **macOS for KanzonasPDF** (planned for its 1.9): the PDF page's macOS link and "No macOS
-  version yet" switch over by themselves when a release has a .dmg or a mac .zip
-  (download.js, `data-reveal`). Then also: macOS in the page's structured data
-  (`operatingSystem`), in the titles and descriptions that say "Windows and Linux", and on the
-  home page.
-- **KanzonasCAD reports**: the CAD page's comparison says "Coming next"; update it (and
-  "Good to know") when they ship.
-- **KanzonasCAD drag-and-drop of DXF/DWG** (requested from its own session): mention it on the
-  CAD page when it ships.
+- Done (7 Nov 2026): content brought up to KanzonasPDF 1.9 (macOS for Apple silicon: the
+  download link, "Good to know", structured data; Scan, styled text editing, Dimension and
+  Legend markups, Replace pages, PDF/A) and KanzonasCAD 0.14.1 (panel layouts, bill of
+  materials, revisions, blocks and AutoCAD Electrical data from DXF/DWG, drag and drop; the
+  comparison's Reports row). Screenshots as a gallery of thumbnails with a viewer.
+- **KanzonasCAD wire lists** (its README: coming next, with assigning parts to devices and
+  shared libraries): update the CAD page's comparison and "Good to know" when they ship.
 - **CAD page, two Windows zips** (suggested, waiting for the owner): drop "Windows without
   installing (zip)" and keep "Portable for Windows (zip)", as the PDF page does.
 

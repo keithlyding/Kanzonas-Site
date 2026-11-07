@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KanzonasPDF: free PDF markup, measuring and editing</title>
-  <meta name="description" content="Free, open-source PDF editor for Windows and Linux: calibrated measuring, revision clouds, compare, forms, signatures, redaction and OCR. No watermarks.">
+  <meta name="description" content="Free, open-source PDF editor for Windows, Linux and Mac: measuring, revision clouds, compare, scanning, forms, signatures, redaction and OCR. No watermarks.">
   <link rel="canonical" href="https://pdf.kanzonas.com/">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KanzonasPDF">
   <meta property="og:title" content="KanzonasPDF: free PDF markup, measuring and editing">
-  <meta property="og:description" content="Free, open-source PDF editor for Windows and Linux: calibrated measuring, revision clouds, compare, forms, signatures, redaction and OCR. No watermarks.">
+  <meta property="og:description" content="Free, open-source PDF editor for Windows, Linux and Mac: measuring, revision clouds, compare, scanning, forms, signatures, redaction and OCR. No watermarks.">
   <meta property="og:url" content="https://pdf.kanzonas.com/">
   <meta property="og:image" content="https://pdf.kanzonas.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -30,13 +30,13 @@
     "name": "KanzonasPDF",
     "url": "https://pdf.kanzonas.com/",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Windows, Linux",
+    "operatingSystem": "Windows, Linux, macOS",
     "description": "PDF markup, measuring and editing for construction and engineering.",
     "downloadUrl": "https://github.com/keithlyding/KanzonasPDF/releases/latest",
     "license": "https://www.gnu.org/licenses/agpl-3.0.html",
     "isAccessibleForFree": true,
     "image": "https://pdf.kanzonas.com/og-image.png",
-    "screenshot": "https://pdf.kanzonas.com/screenshot-markup.png",
+    "screenshot": "https://pdf.kanzonas.com/shots/markup.png",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -79,7 +79,8 @@
             &middot;
             <a data-repo="keithlyding/KanzonasPDF" data-asset="-portable\.zip$" href="https://github.com/keithlyding/KanzonasPDF/releases/latest">Portable for Windows (zip)</a>
             &middot;
-            <span hidden data-reveal="mac"><a data-repo="keithlyding/KanzonasPDF" data-asset="(\.dmg|mac(os)?[^/]*\.zip)$" href="https://github.com/keithlyding/KanzonasPDF/releases/latest">macOS</a> &middot;</span>
+            <a data-repo="keithlyding/KanzonasPDF" data-asset="(\.dmg|mac(os)?[^/]*\.zip)$" href="https://github.com/keithlyding/KanzonasPDF/releases/latest">macOS (Apple silicon)</a>
+            &middot;
             <a href="https://github.com/keithlyding/KanzonasPDF/releases">All releases</a>
             &middot;
             <a href="https://github.com/keithlyding/KanzonasPDF">Source code on GitHub</a>
@@ -89,48 +90,54 @@
       </div>
     </div>
 
-    <section class="shot-section">
+    <section class="soft">
       <div class="wrap">
-        <figure class="shot">
-          <img src="screenshot-markup.png" alt="KanzonasPDF with a marked-up warehouse floor plan: an area measurement of 814.95 square feet, a length, a revision cloud, a callout and an APPROVED stamp" width="1440" height="900">
-          <figcaption>A floor plan marked up in KanzonasPDF: an area and a length measured to scale, a revision cloud with a callout, and a stamp.</figcaption>
-        </figure>
+        <h2>Screenshots</h2>
+        <ul class="gallery">
+          <li><a href="shots/markup.png" data-caption="KanzonasPDF reviewing a catalog page: highlighted text, a revision cloud with a callout, a sticky note and an APPROVED stamp, with the Markups list below"><img src="shots/markup-thumb.jpg" alt="KanzonasPDF reviewing a catalog page: highlighted text, a revision cloud with a callout, a sticky note and an APPROVED stamp, with the Markups list below" width="600" height="375" loading="lazy"><span>Mark up and review</span></a></li>
+          <li><a href="shots/measure.png" data-caption="A floor plan measured to scale: an area with its perimeter and a length, a revision cloud with a callout and an APPROVED stamp, with the measurements in the Markups list"><img src="shots/measure-thumb.jpg" alt="A floor plan measured to scale: an area with its perimeter and a length, a revision cloud with a callout and an APPROVED stamp, with the measurements in the Markups list" width="600" height="375" loading="lazy"><span>Measure to scale</span></a></li>
+          <li><a href="shots/edit-text.png" data-caption="Editing a page’s own text: a paragraph being retyped in place, rewrapping as it changes, in the line’s own font"><img src="shots/edit-text-thumb.jpg" alt="Editing a page’s own text: a paragraph being retyped in place, rewrapping as it changes, in the line’s own font" width="600" height="375" loading="lazy"><span>Edit the PDF’s text</span></a></li>
+          <li><a href="shots/forms.png" data-caption="Filling in an order form: text fields, checkboxes, a drawn signature and the date"><img src="shots/forms-thumb.jpg" alt="Filling in an order form: text fields, checkboxes, a drawn signature and the date" width="600" height="375" loading="lazy"><span>Fill in and sign</span></a></li>
+          <li><a href="shots/dark.png" data-caption="The same catalog review in the dark theme"><img src="shots/dark-thumb.jpg" alt="The same catalog review in the dark theme" width="600" height="375" loading="lazy"><span>Dark theme</span></a></li>
+        </ul>
+        <p class="gallery-note">Click a picture to see it full size, then use the arrows to go through them all.</p>
       </div>
     </section>
 
-    <section class="soft">
+
+    <section>
       <div class="wrap">
         <h2>What it does</h2>
         <div class="grid">
           <div class="feature">
             <h3>Measure</h3>
-            <p>Calibrated length, area, perimeter, volume, count, angle and radius. Scales read from title blocks.</p>
+            <p>Calibrated length, area, perimeter, volume, count, angle and radius, with scales read from title blocks. Dimension markups and an on-screen scale bar.</p>
           </div>
           <div class="feature">
             <h3>Mark up and review</h3>
-            <p>Highlights, comments, callouts, shapes, revision clouds, stamps with your name and the date, and a tool chest.</p>
-          </div>
-          <div class="feature">
-            <h3>Compare revisions</h3>
-            <p>Word by word, or laid over each other, with the changes clouded for you.</p>
+            <p>Highlights, comments, callouts, shapes, revision clouds and stamps with your name and the date. Legends that list and total the markups, and compare revisions with the changes clouded for you.</p>
           </div>
           <div class="feature">
             <h3>Edit the PDF itself</h3>
-            <p>Change the page's own text (paragraphs rewrap), pictures and shapes. Add links to anything.</p>
+            <p>Retype the page’s own text: paragraphs rewrap, and words keep their style or turn bold, italic, another color or size. Move and resize pictures and shapes; add links to anything.</p>
           </div>
           <div class="feature">
             <h3>Forms, signatures, redaction</h3>
-            <p>Fillable forms, digital signatures, true redaction and OCR for scanned pages.</p>
+            <p>Fill in and create forms, sign by hand or with a certificate, redact for real (hidden text and leftovers too), and recognize text in scanned pages.</p>
           </div>
           <div class="feature">
-            <h3>Export</h3>
-            <p>To Word, Excel, PowerPoint and AutoCAD DXF.</p>
+            <h3>Scan</h3>
+            <p>Scan straight into a PDF from a scanner or a network printer that scans, without installing its driver.</p>
+          </div>
+          <div class="feature">
+            <h3>Pages, archive and export</h3>
+            <p>Replace a page with its new revision and keep its markups. Combine files, save as PDF/A for archiving, and export to Word, Excel, PowerPoint and AutoCAD DXF.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="soft">
       <div class="wrap">
         <h2>A free alternative to Bluebeam Revu and Adobe Acrobat</h2>
         <p class="section-lead">If you need Bluebeam-style calibration, lengths, areas, volumes and revision clouds, or Acrobat-style forms, signatures, redaction and text editing, but not the price, try KanzonasPDF.</p>
@@ -204,26 +211,17 @@
       </div>
     </section>
 
-    <section class="soft">
-      <div class="wrap">
-        <h2>Light or dark</h2>
-        <p class="section-lead">A light, dark or match-Windows theme, with ribbon or classic toolbars.</p>
-        <figure class="shot">
-          <img src="screenshot-dark.png" alt="KanzonasPDF in its dark theme, showing the same marked-up floor plan" width="1440" height="900" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
     <section>
       <div class="wrap">
         <h2>Good to know</h2>
         <ul class="facts">
           <li>Free and open source (AGPL-3.0)</li>
-          <li>Windows, and Linux on 64-bit x86 PCs</li>
+          <li>Windows, Linux (64-bit PCs) and Mac (Apple silicon, macOS 14.4 or newer)</li>
           <li>Runs offline; nothing is uploaded</li>
           <li>Portable: runs from a USB stick</li>
           <li>Tells you when an update is out</li>
-          <li data-hide-on-reveal="mac">No macOS version yet</li>
+          <li>On a Mac, the first time: System Settings &gt; Privacy &amp; Security &gt; Open Anyway (not signed by Apple yet)</li>
+          <li>Light, dark or match-system theme</li>
         </ul>
       </div>
     </section>
@@ -237,6 +235,18 @@
     </div>
   </footer>
 
+  <dialog class="viewer" aria-label="Screenshot viewer">
+    <div class="viewer-stage">
+      <img class="viewer-img" alt="">
+      <p class="viewer-caption"></p>
+      <p class="viewer-count"></p>
+    </div>
+    <button type="button" class="viewer-prev" aria-label="Previous screenshot">&#8249;</button>
+    <button type="button" class="viewer-next" aria-label="Next screenshot">&#8250;</button>
+    <button type="button" class="viewer-close" aria-label="Close">&#215;</button>
+  </dialog>
+
   <script src="download.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>

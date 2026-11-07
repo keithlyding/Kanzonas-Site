@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KanzonasCAD: free electrical CAD for Windows and Linux</title>
-  <meta name="description" content="Free, open-source electrical CAD for Windows and Linux: schematics, JIC/NFPA symbols, wire numbers and cross-references that update themselves.">
+  <meta name="description" content="Free, open-source electrical CAD for Windows and Linux: schematics, panel layouts, JIC/NFPA symbols, wire numbers, cross-references and a bill of materials.">
   <link rel="canonical" href="https://cad.kanzonas.com/">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KanzonasCAD">
   <meta property="og:title" content="KanzonasCAD: free electrical CAD for Windows and Linux">
-  <meta property="og:description" content="Free, open-source electrical CAD for Windows and Linux: schematics, JIC/NFPA symbols, wire numbers and cross-references that update themselves.">
+  <meta property="og:description" content="Free, open-source electrical CAD for Windows and Linux: schematics, panel layouts, JIC/NFPA symbols, wire numbers, cross-references and a bill of materials.">
   <meta property="og:url" content="https://cad.kanzonas.com/">
   <meta property="og:image" content="https://cad.kanzonas.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -36,6 +36,7 @@
     "license": "https://opensource.org/license/mit",
     "isAccessibleForFree": true,
     "image": "https://cad.kanzonas.com/og-image.png",
+    "screenshot": "https://cad.kanzonas.com/shots/schematic.png",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -93,37 +94,60 @@
 
     <section class="soft">
       <div class="wrap">
+        <h2>Screenshots</h2>
+        <ul class="gallery">
+          <li><a href="shots/schematic.png" data-caption="A schematic sheet: a motor control circuit with pushbuttons, a motor starter, control relays and pilot lights on numbered rungs, in a zoned ANSI sheet with a title block"><img src="shots/schematic-thumb.jpg" alt="A schematic sheet: a motor control circuit with pushbuttons, a motor starter, control relays and pilot lights on numbered rungs, in a zoned ANSI sheet with a title block" width="600" height="356" loading="lazy"><span>Schematics</span></a></li>
+          <li><a href="shots/panel.png" data-caption="A panel sheet at 1:4: DIN rail and wire duct at real size inside the enclosure outline, with dimensions"><img src="shots/panel-thumb.jpg" alt="A panel sheet at 1:4: DIN rail and wire duct at real size inside the enclosure outline, with dimensions" width="600" height="356" loading="lazy"><span>Panel layouts</span></a></li>
+        </ul>
+        <p class="gallery-note">Click a picture to see it full size, then use the arrows to go through them.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
         <h2>What it does</h2>
         <div class="grid">
           <div class="feature">
             <h3>AutoCAD-style drawing</h3>
-            <p>Command line, object snaps, ortho, polar tracking, grips, and window, crossing and lasso selection.</p>
+            <p>Command line, object snaps, ortho, polar tracking, grips, and window, crossing and lasso selection. Leaders, multiline text, hatches and dimensions.</p>
           </div>
           <div class="feature">
             <h3>Projects of sheets</h3>
-            <p>ANSI sheets with a grid of zones (6-D1 references) and an editable title block.</p>
+            <p>ANSI sheets with a grid of zones (6-D1 references) and a title block that fills itself in: drawn date, print stamp and a revision history.</p>
           </div>
           <div class="feature">
             <h3>Your own library</h3>
-            <p>JIC/NFPA schematic symbols, panel footprints and parts. Three-phase power symbols, terminal strips and PLC I/O points.</p>
+            <p>JIC/NFPA schematic symbols, panel footprints and parts, with manufacturer, family, series and catalog number. Three-phase power, terminal strips and PLC I/O points.</p>
           </div>
           <div class="feature">
             <h3>Wires and wire numbers</h3>
-            <p>Wires stay attached to symbols. Wire numbers (6001) number themselves, with distribution blocks (6001A) and off-sheet connectors.</p>
+            <p>Wires stay attached to symbols. Wire numbers (6001) number themselves, with distribution blocks (6001A) and off-sheet connectors. Trim, clean up and align wires.</p>
           </div>
           <div class="feature">
             <h3>Tags and cross-references</h3>
             <p>Device tags by page number (CR601), contacts linked to their coil, and cross-references that update themselves.</p>
           </div>
           <div class="feature">
-            <h3>Files</h3>
-            <p>DXF in and out, DWG in (AutoCAD R13 to 2018), PDF out.</p>
+            <h3>Panel layouts</h3>
+            <p>Panel sheets at a scale (1:4, 3" = 1'-0"...), with DIN rail and wire duct at real size. Footprints snap onto the rail, and Sheet scale picks a scale that fits.</p>
+          </div>
+          <div class="feature">
+            <h3>Bill of materials</h3>
+            <p>Every part the project uses, once, with how many, manufacturer, catalog number, tags and sheets, and DIN rail and duct as stock lengths. Save it as CSV.</p>
+          </div>
+          <div class="feature">
+            <h3>AutoCAD files</h3>
+            <p>DXF in and out, DWG in (AutoCAD R13 to 2018), PDF out. Blocks stay blocks, and AutoCAD Electrical's tags and part data come with them.</p>
+          </div>
+          <div class="feature">
+            <h3>Drag and drop</h3>
+            <p>Drag a DXF or DWG from Explorer onto a sheet to bring it in right there, or onto the window to open it as its own project.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="soft">
       <div class="wrap">
         <h2>A free alternative to AutoCAD Electrical</h2>
         <p class="section-lead">For people who know AutoCAD Electrical but not its price, or who want an electrical CAD program that also runs on Linux.</p>
@@ -182,7 +206,7 @@
               </tr>
               <tr>
                 <th scope="row">Reports (bill of materials, wire lists)</th>
-                <td class="us">Coming next</td>
+                <td class="us">Bill of materials (wire lists coming next)</td>
                 <td>Yes</td>
                 <td>Bill of materials</td>
               </tr>
@@ -215,7 +239,7 @@
           <li>Installs without administrator rights</li>
           <li>Portable: runs from a USB stick</li>
           <li>Tells you when an update is out</li>
-          <li>Coming next: panel layouts with DIN rail and wire duct, and reports</li>
+          <li>Coming next: assigning parts to devices, shared libraries, and wire lists</li>
         </ul>
       </div>
     </section>
@@ -229,6 +253,18 @@
     </div>
   </footer>
 
+  <dialog class="viewer" aria-label="Screenshot viewer">
+    <div class="viewer-stage">
+      <img class="viewer-img" alt="">
+      <p class="viewer-caption"></p>
+      <p class="viewer-count"></p>
+    </div>
+    <button type="button" class="viewer-prev" aria-label="Previous screenshot">&#8249;</button>
+    <button type="button" class="viewer-next" aria-label="Next screenshot">&#8250;</button>
+    <button type="button" class="viewer-close" aria-label="Close">&#215;</button>
+  </dialog>
+
   <script src="download.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>

@@ -8,8 +8,12 @@ cad.kanzonas.com.
   working branches: Cloudflare builds a preview of all three sites for every branch push.
 - Before pushing, open the changed pages in a browser at desktop and phone width (about
   390 px): no sideways scrolling, no console errors.
-- `style.css` and `_headers` (in all three folders) and `download.js` (in `pdf/` and `cad/`)
-  are copies: change every copy the same way.
+- `style.css` and `_headers` (in all three folders), and `download.js` and `gallery.js` (in
+  `pdf/` and `cad/`) are copies: change every copy the same way.
+- Screenshots (`pdf/shots/`, `cad/shots/`) are copies of the apps' own `docs/screenshot-*.png`,
+  each with a 600 px wide `-thumb.jpg` beside it; the page lists them in `<ul class="gallery">`
+  and `gallery.js` opens the viewer. When an app gets new screenshots, copy them in, make the
+  thumbnails, and add or update their `<li>` (with its alt text and caption).
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
   api.github.com, and the AlternativeTo badge (pdf/, cad/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the
