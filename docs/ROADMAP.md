@@ -17,8 +17,8 @@ sessions: see AGENTS.md.)
 - Done: Always Use HTTPS on; minimum TLS 1.2 (was 1.0); Pages projects: preview deployments
   off and build watch paths `home/*`, `pdf/*`, `cad/*` (a push rebuilds only the site whose
   folder changed; a change outside them, like docs/ or brand/ alone, rebuilds none).
-- Done: DNSSEC enabled (7 Nov 2026; the registrar is Cloudflare, which adds the DS record
-  itself). Status "pending" until the registry has it; then "active".
+- Done: DNSSEC active (enabled 7 Nov 2026 02:11 UTC, active by 04:17 UTC; the registrar is
+  Cloudflare, which added the DS record itself).
 - Done: www.kanzonas.com -> kanzonas.com, a Single Redirect rule (301, path and query string
   kept), checked live.
 - Done: not-found pages (404.html in each site): unknown addresses (scanners' `/.env`,
