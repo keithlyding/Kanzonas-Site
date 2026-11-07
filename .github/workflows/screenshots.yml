@@ -1,0 +1,46 @@
+# Keeps the PDF and CAD pages' screenshot galleries the same as the apps' READMEs.
+# Every hour (and by hand: Actions > Screenshots from the apps > Run workflow) it runs
+# tools/update_screenshots.py, which reads each app's README on GitHub, and pushes to main only
+# when a screenshot, its order or its description changed. Cloudflare Pages then publishes it.
+name: Screenshots from the apps
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pillow (for the thumbnails)
+        run: python -m pip install --quiet "pillow==12.3.0"
+
+      - name: Bring the galleries up to date
+        run: python tools/update_screenshots.py
+
+      - name: Push if anything changed
+        run: |
+          git add -A pdf cad
+          if git diff --cached --quiet; then
+            echo "The galleries already match the apps' READMEs."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Screenshots from the apps' READMEs" -m "$(git diff --cached --name-status | sed 's/^/    /')"
+          git push origin HEAD:main

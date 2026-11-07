@@ -10,10 +10,13 @@ cad.kanzonas.com.
   390 px): no sideways scrolling, no console errors.
 - `style.css` and `_headers` (in all three folders), and `download.js` and `gallery.js` (in
   `pdf/` and `cad/`) are copies: change every copy the same way.
-- Screenshots (`pdf/shots/`, `cad/shots/`) are copies of the apps' own `docs/screenshot-*.png`,
-  each with a 600 px wide `-thumb.jpg` beside it; the page lists them in `<ul class="gallery">`
-  and `gallery.js` opens the viewer. When an app gets new screenshots, copy them in, make the
-  thumbnails, and add or update their `<li>` (with its alt text and caption).
+- Screenshots (`pdf/shots/`, `cad/shots/`) follow the apps' READMEs by themselves: every hour
+  `.github/workflows/screenshots.yml` runs `tools/update_screenshots.py`, which takes the
+  screenshots each README shows (`docs/screenshot-NAME.png`), in its order and with its
+  descriptions, makes the 600 px thumbnails, writes the gallery between the `gallery:start` and
+  `gallery:end` markers in `index.html`, and pushes only when something changed. Don't edit
+  those files or that part of the page by hand; to change a screenshot or its description,
+  change the app's README. The short label under each thumbnail is in `screenshots.json`.
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
   api.github.com, and the AlternativeTo badge (pdf/, cad/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the

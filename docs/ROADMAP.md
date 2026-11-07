@@ -51,7 +51,7 @@ sessions: see AGENTS.md.)
   says this plainly; update it if signing arrives.
 
 ## Done (Nov 2026)
-About page (/about, the owner's own words, 7 Nov 2026). Help page (/help) and privacy page (/privacy) on kanzonas.com, linked from every page; "What's new" from the newest release on the PDF and CAD pages. AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
+Screenshots follow the apps' READMEs automatically (an hourly GitHub Action). About page (/about, the owner's own words, 7 Nov 2026). Help page (/help) and privacy page (/privacy) on kanzonas.com, linked from every page; "What's new" from the newest release on the PDF and CAD pages. AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
 top left on every page, linking to kanzonas.com. Three sites on Cloudflare Pages; download buttons that find the newest release (checked to be
 the app's own GitHub releases); logos made in brand/ (the single source of truth); SEO
 (titles, canonical links, link previews, structured data, sitemaps; Search Console verified);
