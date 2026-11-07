@@ -42,6 +42,14 @@ sessions: see AGENTS.md.)
 - **CAD page, two Windows zips** (suggested, waiting for the owner): drop "Windows without
   installing (zip)" and keep "Portable for Windows (zip)", as the PDF page does.
 
+- **Code signing** (the owner to decide): unsigned downloads get Windows SmartScreen's warning,
+  and its reputation is per file, so every new version starts over: with frequent releases the
+  warning effectively never goes away. Signing builds reputation on the publisher, carried to
+  new versions (even EV certificates no longer skip the warning). Options: SignPath again (free
+  for open source; declined once as too new), Microsoft Artifact Signing (~$10/month;
+  eligibility to check), or fewer, bigger releases. The download note on the PDF and CAD pages
+  says this plainly; update it if signing arrives.
+
 ## Done (Nov 2026)
 AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
 top left on every page, linking to kanzonas.com. Three sites on Cloudflare Pages; download buttons that find the newest release (checked to be
