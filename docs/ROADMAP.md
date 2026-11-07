@@ -23,11 +23,10 @@ sessions: see AGENTS.md.)
 - Done: Always Use HTTPS on; minimum TLS 1.2 (was 1.0); Pages projects: preview deployments
   off and build watch paths `home/*`, `pdf/*`, `cad/*` (a push rebuilds only the site whose
   folder changed; a change outside them, like docs/ or brand/ alone, rebuilds none).
-- **DNSSEC** (the owner, in the dashboard): DNS > Settings > Enable DNSSEC, then add the DS
-  record it shows at the domain's registrar (automatic if the registrar is Cloudflare).
-- **www.kanzonas.com -> kanzonas.com** permanent redirect (the owner, in the dashboard):
-  Rules > Redirect Rules, template "Redirect from WWW to root". Today www serves a copy of the
-  home page (its canonical tag points at kanzonas.com).
+- Done: DNSSEC enabled (7 Nov 2026; the registrar is Cloudflare, which adds the DS record
+  itself). Status "pending" until the registry has it; then "active".
+- Done: www.kanzonas.com -> kanzonas.com, a Single Redirect rule (301, path and query string
+  kept), checked live.
 - Done: not-found pages (404.html in each site): unknown addresses (scanners' `/.env`,
   `/.git/config`...) get a real 404 instead of the home page with 200.
 - Done: Browser Cache TTL "Respect existing headers" (was 4 hours, which overrode the site's
