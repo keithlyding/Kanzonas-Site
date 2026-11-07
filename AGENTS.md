@@ -19,6 +19,14 @@ cad.kanzonas.com.
   api.github.com, and the AlternativeTo badge (pdf/, cad/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the
   browser blocks it. Keep pages free of inline scripts, inline styles and `on...=` handlers.
 - `download.js` links only to files in the app's own GitHub releases (`isOwnRelease`).
+- "What's new" on the PDF and CAD pages is the newest release's own notes (the part between
+  `<!-- ...-notes -->` and `<!-- /...-notes -->` in its GitHub release text), filled in by
+  `download.js` from the same request as the download buttons, as text only. Hidden until it
+  loads. If an app changes how it marks its notes, update `showNotes`.
+- kanzonas.com also has `help.html` (/help) and `privacy.html` (/privacy), and the menu and
+  footer of every page link them. Their statements come from the apps' READMEs: when an app
+  changes how it installs, updates, keeps settings or goes online, update them (and the date
+  on the privacy page).
 - Each site has a `404.html` (Cloudflare Pages serves it, with status 404, for any unknown
   address, at any depth): its stylesheet, icon and pictures use root paths (`/style.css`),
   never relative ones. Change its header and footer along with the site's `index.html`.

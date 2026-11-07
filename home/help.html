@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help: installing and updating the Kanzonas apps</title>
+  <meta name="description" content="How to choose a download, get past the Windows or Mac warning, run the Linux AppImage, update, uninstall, and check a download, for KanzonasPDF and KanzonasCAD.">
+  <link rel="canonical" href="https://kanzonas.com/help">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kanzonas">
+  <meta property="og:title" content="Help: installing and updating the Kanzonas apps">
+  <meta property="og:description" content="How to choose a download, get past the Windows or Mac warning, run the Linux AppImage, update, uninstall, and check a download, for KanzonasPDF and KanzonasCAD.">
+  <meta property="og:url" content="https://kanzonas.com/help">
+  <meta property="og:image" content="https://kanzonas.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="https://kanzonas.com/"><img src="/kanzonas-mark.png" alt="" width="30" height="37">Kanzonas</a>
+      <nav class="nav" aria-label="Apps">
+        <a href="https://pdf.kanzonas.com/">KanzonasPDF</a>
+        <a href="https://cad.kanzonas.com/">KanzonasCAD</a>
+        <a href="https://kanzonas.com/help" aria-current="page">Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <div class="wrap">
+      <h1>Help</h1>
+      <p class="lead">Installing, updating and checking KanzonasPDF and KanzonasCAD.</p>
+      <nav class="toc" aria-label="On this page">
+        <a href="#which">Which download?</a>
+        <a href="#windows">The Windows warning</a>
+        <a href="#mac">Mac</a>
+        <a href="#linux">Linux</a>
+        <a href="#updates">Updates</a>
+        <a href="#uninstall">Uninstalling</a>
+        <a href="#settings">Where your settings are</a>
+        <a href="#check">Checking a download</a>
+        <a href="#contact">Still stuck?</a>
+      </nav>
+
+      <h2 id="which">Which download?</h2>
+      <p>Each app's page has the newest version. Pick one:</p>
+      <div class="table-wrap" role="region" aria-label="Which download to choose" tabindex="0">
+        <table class="compare plain">
+          <thead><tr><th scope="col">Download</th><th scope="col">For</th><th scope="col">What it is</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Download for Windows (setup)</th><td>Most people on Windows</td><td>The installer. No administrator rights needed. Adds the app to the Start menu.</td></tr>
+            <tr><th scope="row">Portable for Windows (zip)</th><td>A USB stick, or a PC where you can't install</td><td>Unzip anywhere and run it. Your settings stay in a <code>data</code> folder next to it, and nothing is left on the PC.</td></tr>
+            <tr><th scope="row">macOS (Apple silicon)</th><td>KanzonasPDF on a Mac with an M1 or newer chip, macOS 14.4 or newer</td><td>A disk image: open it and drag the app to Applications. No version for Intel Macs yet.</td></tr>
+            <tr><th scope="row">Linux (AppImage)</th><td>Linux on a 64-bit PC (Ubuntu 22.04, Debian 12, Fedora 36 or newer)</td><td>A single file: make it executable and run it. No installation needed.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="windows">The Windows warning</h2>
+      <p>The apps aren't code-signed yet, so Windows doesn't recognize them, and every new version counts as new to it. That's why you may see a warning. It doesn't mean anything is wrong:</p>
+      <ol>
+        <li>If your browser asks whether to keep the file, choose <strong>Keep</strong>.</li>
+        <li>If Windows says <strong>"Windows protected your PC"</strong>, click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+      </ol>
+      <p>Only do this with files from these pages or the apps' GitHub releases pages. Every download is built by GitHub's own servers from the public source code, after the automated tests pass. See <a href="#check">Checking a download</a> to confirm yours is the real one.</p>
+
+      <h2 id="mac">Mac: "Open Anyway" the first time</h2>
+      <p>KanzonasPDF isn't signed by Apple yet, so the first time you open a new version macOS stops it with a message that Apple could not verify it. Click <strong>Done</strong> (not Move to Trash), then open <strong>System Settings</strong> &gt; <strong>Privacy &amp; Security</strong>, scroll down to <strong>Security</strong>, click <strong>Open Anyway</strong> next to "KanzonasPDF was blocked", and confirm with your password or Touch ID. After that it opens like any other app. macOS asks again for each new version.</p>
+
+      <h2 id="linux">Linux: running the AppImage</h2>
+      <ol>
+        <li>Put the AppImage where you keep programs, for example a folder <code>~/Applications</code>.</li>
+        <li>Make it executable: right-click it &gt; Properties &gt; Permissions &gt; <strong>Allow executing file as program</strong>, or run <code>chmod +x</code> on it in a terminal.</li>
+        <li>Double-click it.</li>
+      </ol>
+      <p><strong>If it doesn't start</strong> with an error about FUSE or <code>libfuse.so.2</code>: install FUSE 2 (<code>sudo apt install libfuse2</code> on Ubuntu 22.04 and Debian 12, <code>sudo apt install libfuse2t64</code> on Ubuntu 24.04 and later, <code>sudo dnf install fuse-libs</code> on Fedora), or start it with <code>--appimage-extract-and-run</code> after its name.</p>
+
+      <h2 id="updates">Updates</h2>
+      <p>Both apps tell you when a new version is out, and you can check any time with <strong>Help &gt; Check for updates...</strong>. Your settings and work are kept when you update.</p>
+      <ul>
+        <li><strong>KanzonasPDF on Windows:</strong> download and run the new installer; it replaces the old version. With the portable zip, unzip the new one over the same folder.</li>
+        <li><strong>KanzonasPDF on Linux:</strong> <strong>Update now</strong> downloads the new AppImage, checks it, and puts it in place of the old one.</li>
+        <li><strong>KanzonasPDF on a Mac:</strong> download the new disk image, drag KanzonasPDF to Applications and choose <strong>Replace</strong>.</li>
+        <li><strong>KanzonasCAD:</strong> <strong>Update now</strong> downloads the new version, checks it and installs it over your copy (installer, portable zip and AppImage alike).</li>
+      </ul>
+
+      <h2 id="uninstall">Uninstalling</h2>
+      <ul>
+        <li><strong>Windows (installed):</strong> Settings &gt; Apps &gt; Installed apps, find the app, then <strong>Uninstall</strong>. KanzonasCAD keeps your projects and library in Documents.</li>
+        <li><strong>Portable zip:</strong> delete its folder. Nothing else was put on the PC.</li>
+        <li><strong>Mac:</strong> drag KanzonasPDF from Applications to the Trash.</li>
+        <li><strong>Linux:</strong> delete the AppImage. (KanzonasPDF: if you added it to the applications menu, untick that in File &gt; Preferences &gt; General first.)</li>
+      </ul>
+
+      <h2 id="settings">Where your settings are</h2>
+      <ul>
+        <li><strong>Portable zip:</strong> in the <code>data</code> folder next to the program.</li>
+        <li><strong>KanzonasPDF on Linux:</strong> <code>~/.config/KanzonasPDF</code>, and signatures, stamps and backups in <code>~/.local/share/KanzonasPDF</code>.</li>
+        <li><strong>KanzonasPDF on a Mac:</strong> <code>~/Library/Preferences/com.kanzonaspdf.KanzonasPDF.plist</code>, and signatures, stamps and backups in <code>~/Library/Application Support/KanzonasPDF</code>.</li>
+        <li><strong>KanzonasCAD:</strong> your projects are where you save them, and your library is in Documents (KanzonasCAD Library).</li>
+      </ul>
+
+      <h2 id="check">Checking a download</h2>
+      <p>Every release lists a SHA-256 checksum for each file, in its notes and in <code>SHA256SUMS.txt</code>. To check yours, compare it with:</p>
+      <ul>
+        <li><strong>Windows</strong> (PowerShell): <code>Get-FileHash</code> followed by the file name</li>
+        <li><strong>Mac</strong> (Terminal): <code>shasum -a 256</code> followed by the file name</li>
+        <li><strong>Linux</strong> (terminal): <code>sha256sum</code> followed by the file name</li>
+      </ul>
+      <p>If the numbers match, you have exactly the file GitHub's servers built.</p>
+
+      <h2 id="contact">Still stuck?</h2>
+      <p>Write to <a href="mailto:support@kanzonas.com">support@kanzonas.com</a>, or report a problem on GitHub: <a href="https://github.com/keithlyding/KanzonasPDF/issues">KanzonasPDF</a> &middot; <a href="https://github.com/keithlyding/KanzonasCAD/issues">KanzonasCAD</a>. Reports on GitHub are public, so please don't attach confidential files. Each app also has a full user manual: press <strong>F1</strong>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Keith Lyding &middot; <a href="mailto:support@kanzonas.com">support@kanzonas.com</a></p>
+      <p><a href="https://github.com/keithlyding/KanzonasPDF">KanzonasPDF on GitHub</a> &middot; <a href="https://github.com/keithlyding/KanzonasCAD">KanzonasCAD on GitHub</a></p>
+      <p class="footer-links"><a href="https://kanzonas.com/help">Help</a> &middot; <a href="https://kanzonas.com/privacy">Privacy</a></p>
+      <p class="privacy">Privacy: this site counts visits anonymously with <a href="https://developers.cloudflare.com/web-analytics/about/">Cloudflare Web Analytics</a>. It uses no cookies and nothing that identifies you.</p>
+    </div>
+  </footer>
+</body>
+</html>
