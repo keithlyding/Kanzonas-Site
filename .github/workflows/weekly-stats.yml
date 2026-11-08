@@ -25,6 +25,9 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Cloudflare API token with Account Analytics: Read, for the website visitors (optional;
+      # see docs/stats/README.md)
+      CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 

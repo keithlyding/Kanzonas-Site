@@ -12,8 +12,9 @@ Downloads are read carefully (they over-count real people):
   times, those N rounds are counted as a bot or mirror fetching everything (that pattern is
   rarely people: a person downloads one file, not all of them).
 - Updates count as downloads: someone updating is a returning user, not a new one.
-- Nothing is collected from inside the apps (no telemetry: the owner's promise). Website visits
-  are in Cloudflare Web Analytics (each Pages project's Metrics), not here.
+- Nothing is collected from inside the apps (no telemetry: the owner's promise).
+- Website visitors come from Cloudflare Web Analytics, when the Action has the CF_ANALYTICS_TOKEN
+  secret (a Cloudflare API token with Account Analytics: Read); without it the summary says so.
 """
 import datetime
 import json
@@ -74,6 +75,71 @@ def read_app(repo):
                  if not a["name"].endswith(SKIP)}
         out["releases"][r["tag_name"]] = {"published": r.get("published_at", ""), "files": files}
     return out
+
+
+CF_ACCOUNT = "3148e7ce611b08b82ffba66d703d90a8"      # the Cloudflare account (not secret)
+CF_QUERY = """query($acct: String!, $start: Time!, $end: Time!) {
+  viewer { accounts(filter: {accountTag: $acct}) {
+    hosts: rumPageloadEventsAdaptiveGroups(limit: 20, orderBy: [count_DESC],
+      filter: {AND: [{datetime_geq: $start}, {datetime_lt: $end}]}) {
+      count sum { visits } dimensions { requestHost } }
+    pages: rumPageloadEventsAdaptiveGroups(limit: 12, orderBy: [count_DESC],
+      filter: {AND: [{datetime_geq: $start}, {datetime_lt: $end}]}) {
+      count dimensions { requestHost requestPath } }
+    referrers: rumPageloadEventsAdaptiveGroups(limit: 10, orderBy: [count_DESC],
+      filter: {AND: [{datetime_geq: $start}, {datetime_lt: $end}]}) {
+      count sum { visits } dimensions { refererHost } }
+    countries: rumPageloadEventsAdaptiveGroups(limit: 8, orderBy: [count_DESC],
+      filter: {AND: [{datetime_geq: $start}, {datetime_lt: $end}]}) {
+      sum { visits } dimensions { countryName } }
+  } }
+}"""
+
+
+def cloudflare_section(start, end):
+    """Lines about the websites' visitors, from Cloudflare Web Analytics (real browsers that ran
+    the page, so scanners and most bots aren't in it). Needs CF_ANALYTICS_TOKEN: a Cloudflare
+    API token with Account > Account Analytics > Read."""
+    lines = ["## Website visitors (Cloudflare Web Analytics)"]
+    token = os.environ.get("CF_ANALYTICS_TOKEN")
+    if not token:
+        return lines + ["- Not connected yet: add a Cloudflare API token with Account Analytics: "
+                        "Read as the GitHub secret CF_ANALYTICS_TOKEN (see docs/stats/README.md).", ""]
+    body = json.dumps({"query": CF_QUERY, "variables": {
+        "acct": CF_ACCOUNT, "start": start, "end": end}}).encode()
+    req = urllib.request.Request("https://api.cloudflare.com/client/v4/graphql", data=body, headers={
+        "Authorization": "Bearer " + token, "Content-Type": "application/json",
+        "User-Agent": "kanzonas-weekly-stats"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            d = json.load(r)
+    except Exception as e:                          # reported in the summary, not hidden
+        return lines + ["- Couldn't read Cloudflare: %s" % e, ""]
+    if d.get("errors"):
+        return lines + ["- Cloudflare refused: %s" % "; ".join(x.get("message", "?") for x in d["errors"]), ""]
+    acc = (d.get("data", {}).get("viewer", {}).get("accounts") or [{}])[0]
+    hosts = acc.get("hosts") or []
+    if not hosts:
+        return lines + ["- No visits recorded this week.", ""]
+    tv = sum(h["sum"]["visits"] for h in hosts)
+    tp = sum(h["count"] for h in hosts)
+    lines.append("- **Visits: %d**, page views: %d (all three sites)" % (tv, tp))
+    for h in sorted(hosts, key=lambda h: -h["sum"]["visits"]):
+        lines.append("  - %s: %d visits, %d page views"
+                     % (h["dimensions"]["requestHost"] or "(unknown)", h["sum"]["visits"], h["count"]))
+    pages = acc.get("pages") or []
+    if pages:
+        lines.append("- Top pages: " + ", ".join("%s%s %d" % (p["dimensions"]["requestHost"],
+                     p["dimensions"]["requestPath"], p["count"]) for p in pages[:8]))
+    refs = [r for r in (acc.get("referrers") or []) if r["dimensions"]["refererHost"]]
+    if refs:
+        lines.append("- Came from: " + ", ".join("%s %d" % (r["dimensions"]["refererHost"],
+                     r["sum"]["visits"]) for r in refs[:8]))
+    cs = [c for c in (acc.get("countries") or []) if c["dimensions"]["countryName"]]
+    if cs:
+        lines.append("- Countries: " + ", ".join("%s %d" % (c["dimensions"]["countryName"],
+                     c["sum"]["visits"]) for c in cs))
+    return lines + [""]
 
 
 def week_numbers(now, before):
@@ -142,9 +208,13 @@ def main():
                          % (newest[0], newest[1]["published"][:10], sum(newest[1]["files"].values())))
         lines.append("- All-time downloads: %d over %d releases" % (all_time, len(data["releases"])))
         lines.append("")
+    end = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0)
+    start = (datetime.datetime.fromisoformat(before["taken"]) if before and before.get("taken")
+             else end - datetime.timedelta(days=7))
+    lines += cloudflare_section(start.isoformat().replace("+00:00", "Z"),
+                                end.isoformat().replace("+00:00", "Z"))
+    now["taken"] = end.isoformat()
     lines += ["## Also look at",
-              "- Website visitors (real browsers, not bots): Cloudflare > Workers & Pages > each "
-              "project > Metrics (Web Analytics).",
               "- Google searches: Search Console > Performance (clicks and impressions).",
               "- Messages to support@kanzonas.com, and new GitHub issues from people you don't know.",
               "",

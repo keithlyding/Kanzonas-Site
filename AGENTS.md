@@ -20,8 +20,9 @@ cad.kanzonas.com.
 - **Weekly summary:** `.github/workflows/weekly-stats.yml` runs `tools/weekly_stats.py` every
   Monday: the apps' download counts (with the "probably automated" rounds left out), stars and
   issues, compared with last week's snapshot in `docs/stats/` (not published), posted as an
-  issue labeled "weekly summary" (GitHub emails it; last week's is closed). It only reads
-  GitHub's public numbers: nothing is collected inside the apps (the owner's promise: no
+  issue labeled "weekly summary" (GitHub emails it; last week's is closed), plus the websites'
+  visitors from Cloudflare Web Analytics (with the secret CF_ANALYTICS_TOKEN, docs/stats/README.md).
+  It only reads public numbers and the site's own analytics: nothing is collected inside the apps (the owner's promise: no
   telemetry, ever).
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
