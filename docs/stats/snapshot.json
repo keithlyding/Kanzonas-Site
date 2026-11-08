@@ -940,10 +940,10 @@
     "v1.9": {
      "files": {
       "KanzonasPDF-macos-arm64.dmg": 0,
-      "KanzonasPDF-portable.zip": 5,
-      "KanzonasPDF-v1.9-setup.exe": 7,
-      "KanzonasPDF-windows.zip": 2,
-      "KanzonasPDF-x86_64.AppImage": 2
+      "KanzonasPDF-portable.zip": 6,
+      "KanzonasPDF-v1.9-setup.exe": 14,
+      "KanzonasPDF-windows.zip": 3,
+      "KanzonasPDF-x86_64.AppImage": 5
      },
      "published": "2026-11-06T15:03:21Z"
     }
@@ -951,5 +951,6 @@
    "stars": 6
   }
  },
- "date": "2026-11-07"
+ "date": "2026-11-08",
+ "taken": "2026-11-08T04:09:56+00:00"
 }
