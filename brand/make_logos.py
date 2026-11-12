@@ -49,7 +49,7 @@ WORDS = {
     "CAD": dict(top=(113, 80, 184), bottom=(75, 50, 133),
                 tag="SCHEMATICS • PANELS • WIRE NUMBERS", out="kanzonascad-logo.png"),
     "SVG": dict(top=(239, 125, 0), bottom=(179, 79, 0),
-                tag="LOGOS • DRAWINGS • SCANS", out="kanzonassvg-logo.png"),
+                tag="CONVERT IMAGES TO SVG", out="kanzonassvg-logo.png"),
 }
 
 

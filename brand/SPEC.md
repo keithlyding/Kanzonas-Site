@@ -34,7 +34,7 @@ All free from Google Fonts, SIL Open Font License 1.1; the files and licenses ar
 | "CAD", vertical gradient over the capital height | top `#7150B8` rgb(113, 80, 184), bottom `#4B3285` rgb(75, 50, 133) (violet, as the KanzonasCAD icon's tile; green until Nov 2026) |
 | "SVG", vertical gradient over the capital height | top `#EF7D00` rgb(239, 125, 0), bottom `#B34F00` rgb(179, 79, 0) (orange, as the KanzonasSVG icon's tile) |
 | Tagline text | `#646468` rgb(100, 100, 104) |
-| Tagline bullets (•) | the word's top color (`#B30000` for PDF, `#7150B8` for CAD, `#EF7D00` for SVG) |
+| Tagline bullets (•) | the word's top color (`#B30000` for PDF, `#7150B8` for CAD; the SVG tagline has none) |
 
 Rule under the words:
 - Starts at the midpoint of the word's top and bottom colors: PDF ≈ `#9A0000`,
@@ -75,7 +75,7 @@ Tagline:
   399 px wide; the CAD tagline uses the same spacing.
 - PDF: `VIEW • EDIT • ANNOTATE • REVIEW`
 - CAD: `SCHEMATICS • PANELS • WIRE NUMBERS`
-- SVG: `LOGOS • DRAWINGS • SCANS`
+- SVG: `CONVERT IMAGES TO SVG` (no bullets)
 - All caps; the bullets are U+2022 with a space on each side.
 
 Mark (cactus, sunflower, page) at the left, x = 0 to 296: **not a font**. It's the owner's
