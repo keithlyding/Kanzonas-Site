@@ -46,7 +46,7 @@ cad.kanzonas.com.
 - American spelling in all visible text.
 
 ## Logos: this repo is the single source of truth
-- Every Kanzonas logo (kanzonas.com's, KanzonasPDF's, KanzonasCAD's) is made here, by
+- Every Kanzonas logo (kanzonas.com's, KanzonasPDF's, KanzonasCAD's, KanzonasSVG's) is made here, by
   `brand/make_logos.py` from `brand/artwork/` and `brand/fonts/`. Change a logo only here,
   never in KanzonasPDF or KanzonasCAD.
 - **Work on this repo stays in this repo** (the owner's decision): a session working on the

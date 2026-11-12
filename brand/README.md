@@ -1,6 +1,6 @@
 # Kanzonas logos: the single source of truth
 
-Every Kanzonas logo comes from this folder: kanzonas.com's, KanzonasPDF's and KanzonasCAD's.
+Every Kanzonas logo comes from this folder: kanzonas.com's, KanzonasPDF's, KanzonasCAD's and KanzonasSVG's.
 Change a logo **here**, never in the app repos, then copy the results into them.
 
 ## Make them
@@ -28,6 +28,8 @@ link to a site is shared) from those logos: `home/`, `pdf/` and `cad/og-image.pn
 | `kanzonascad-logo.png` | KanzonasCAD `assets/kanzonascad-logo.png` (its README) |
 | `web/kanzonascad-logo@2x.png` | KanzonasCAD `kanzonascad/resources/logo.png` (Help > About) |
 | `web/kanzonaspdf-logo*.png`, `web/kanzonascad-logo*.png` | KanzonasCAD `assets/web/` (until it's removed there; this folder replaces it) |
+| `kanzonassvg-logo.png` | KanzonasSVG `assets/kanzonassvg-logo.png` (its README) |
+| `web/kanzonassvg-logo@2x.png` | KanzonasSVG `kanzonassvg/logo.png` (Help > About) |
 | `web/kanzonas-logo*.png` | kanzonas.com's logo; the script copies the transparent 2x one to `home/` |
 
 The script copies `web/kanzonaspdf-logo-transparent@2x.png` to `pdf/` and
@@ -44,6 +46,8 @@ The full specification (every size, position and color) is in [SPEC.md](SPEC.md)
 - "Kanzonas": Roboto Condensed Medium, a little tighter than normal, near black (#0b0c10).
 - "PDF": Saira Condensed SemiBold, red shading from #b30000 to #800000 (as the app icon's tag).
 - "CAD": the same font, violet shading from #7150b8 to #4b3285 (as the app icon's tile).
+- "SVG": the same font, orange shading from #ef7d00 to #b34f00 (as the app icon's tile), fitted
+  to end where "PDF" and "CAD" end (it never moves them).
 - Under the word: a dot in its color and a line fading to grey, ending with the word.
 - The tagline: Inter, grey (#646468), its bullets in the word's color.
 - kanzonas.com's logo: the mark and "Kanzonas" alone, the word centered on the mark.

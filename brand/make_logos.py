@@ -1,4 +1,4 @@
-"""The Kanzonas logos: kanzonas.com's, KanzonasPDF's and KanzonasCAD's, all from here.
+"""The Kanzonas logos: kanzonas.com's, KanzonasPDF's, KanzonasCAD's and KanzonasSVG's, all from here.
 
     python brand/make_logos.py
 
@@ -11,10 +11,10 @@ sunflower and page, is kept as is) and the fonts in brand/fonts/. Writes brand/o
 three pages' logos (home/, pdf/, cad/).
 
 - "Kanzonas": Roboto Condensed Medium, a little tighter than normal, near black.
-- "PDF" (red, as its app icon: #b30000 to #800000) and "CAD" (violet, as its app icon: #7150b8
-  to #4b3285): Saira Condensed SemiBold,
-  the same size; "PDF" a little wider spaced so both words end at the same place, so the two
-  logos line up on the left and the right when stacked.
+- "PDF" (red, as its app icon: #b30000 to #800000), "CAD" (violet, as its app icon: #7150b8
+  to #4b3285) and "SVG" (orange, as its app icon: #ef7d00 to #b34f00): Saira Condensed SemiBold,
+  the same size; each spaced so that all the words end at the same place (where "PDF" and
+  "CAD" end), so the logos line up on the left and the right when stacked.
 - A rule under them, from a dot in the word's color fading to grey, ending with the word.
 - The tagline: Inter, grey, its bullets in the word's color.
 - kanzonas.com's logo: the mark and "Kanzonas" alone, the word centered on the mark.
@@ -48,6 +48,8 @@ WORDS = {
                 tag="VIEW • EDIT • ANNOTATE • REVIEW", out="kanzonas-logo-source.png"),
     "CAD": dict(top=(113, 80, 184), bottom=(75, 50, 133),
                 tag="SCHEMATICS • PANELS • WIRE NUMBERS", out="kanzonascad-logo.png"),
+    "SVG": dict(top=(239, 125, 0), bottom=(179, 79, 0),
+                tag="LOGOS • DRAWINGS • SCANS", out="kanzonassvg-logo.png"),
 }
 
 
@@ -114,9 +116,11 @@ def render(scale, transparent):
     k_placed, k_right = layout(kan, "Kanzonas", X0 * K, -0.02)
     GAP = 16 * K                            # from "Kanzonas" to the colored word, as before
     # a round first letter (C) sits optically further away than a straight one (P): 3 px in
-    starts = {"PDF": k_right + GAP, "CAD": k_right + GAP - 3 * K}
-    ends = {w: layout(word, w, starts[w], -0.02)[1] for w in WORDS}
-    R = max(ends.values())                   # both words end here
+    starts = {"PDF": k_right + GAP, "CAD": k_right + GAP - 3 * K, "SVG": k_right + GAP - 3 * K}
+    # Every word ends where the farther of "PDF" and "CAD" ends (as it always has: a word
+    # added later is fitted to it and never moves the others).
+    ends = {w: layout(word, w, starts[w], -0.02)[1] for w in ("PDF", "CAD")}
+    R = max(ends.values())
     ref = "VIEW • EDIT • ANNOTATE • REVIEW"
     tag_track = (399 * K - tagf.getlength(ref)) / (len(ref) - 1) / tagf.size
 
@@ -216,7 +220,7 @@ for w, (img, placed, right, track) in render(1, False).items():
     print(w, "letters from", round(placed[0][1] / SS), "to", round(right / SS), "spacing %.3f" % track)
 web = os.path.join(OUT, "web")
 os.makedirs(web, exist_ok=True)
-names = {"PDF": "kanzonaspdf-logo", "CAD": "kanzonascad-logo"}
+names = {"PDF": "kanzonaspdf-logo", "CAD": "kanzonascad-logo", "SVG": "kanzonassvg-logo"}
 for scale, transparent, suffix in ((1, False, ""), (2, False, "@2x"), (1, True, "-transparent"),
                                    (2, True, "-transparent@2x")):
     for w, (img, *_rest) in render(scale, transparent).items():

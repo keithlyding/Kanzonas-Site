@@ -32,8 +32,9 @@ All free from Google Fonts, SIL Open Font License 1.1; the files and licenses ar
 | "Kanzonas" | `#0B0C10` rgb(11, 12, 16), near black, solid |
 | "PDF", vertical gradient over the capital height | top `#B30000` rgb(179, 0, 0), bottom `#800000` rgb(128, 0, 0) |
 | "CAD", vertical gradient over the capital height | top `#7150B8` rgb(113, 80, 184), bottom `#4B3285` rgb(75, 50, 133) (violet, as the KanzonasCAD icon's tile; green until Nov 2026) |
+| "SVG", vertical gradient over the capital height | top `#EF7D00` rgb(239, 125, 0), bottom `#B34F00` rgb(179, 79, 0) (orange, as the KanzonasSVG icon's tile) |
 | Tagline text | `#646468` rgb(100, 100, 104) |
-| Tagline bullets (•) | the word's top color (`#B30000` for PDF, `#7150B8` for CAD) |
+| Tagline bullets (•) | the word's top color (`#B30000` for PDF, `#7150B8` for CAD, `#EF7D00` for SVG) |
 
 Rule under the words:
 - Starts at the midpoint of the word's top and bottom colors: PDF ≈ `#9A0000`,
@@ -58,9 +59,11 @@ Gap to the colored word:
 - PDF: 16 px (starts x ≈ 756.9).
 - CAD: 13 px (starts x ≈ 753.9). A round C looks further away than a straight P, so it's
   moved 3 px closer.
+- SVG: 13 px, as CAD (a round S).
 
-Colored word letter-spacing: PDF −0.02 em, CAD −0.0175 em. Both words end at the same
-x ≈ 909.4, so the two logos line up on the left and the right when stacked.
+Colored word letter-spacing: PDF −0.02 em, CAD −0.0175 em, SVG −0.029 em. All end at the same
+x ≈ 909.4 (where the farther of "PDF" and "CAD" ends; "SVG" is fitted to it and doesn't move
+it), so the logos line up on the left and the right when stacked.
 
 Rule (the line under the words), centered at y = 261:
 - Dot: an 8 px circle at the left, center x = 309.
@@ -72,6 +75,7 @@ Tagline:
   399 px wide; the CAD tagline uses the same spacing.
 - PDF: `VIEW • EDIT • ANNOTATE • REVIEW`
 - CAD: `SCHEMATICS • PANELS • WIRE NUMBERS`
+- SVG: `LOGOS • DRAWINGS • SCANS`
 - All caps; the bullets are U+2022 with a space on each side.
 
 Mark (cactus, sunflower, page) at the left, x = 0 to 296: **not a font**. It's the owner's
@@ -96,6 +100,7 @@ the capitals are centered on the 325 px height. The canvas ends 8 px after the w
 | `kanzonaspdf-logo-transparent.png` | 936 x 325 | transparent |
 | `kanzonaspdf-logo-transparent@2x.png` | 1872 x 650 | transparent |
 | `kanzonascad-logo*.png` | the same four for CAD | |
+| `kanzonassvg-logo*.png` | the same four for SVG | |
 | `kanzonas-logo*.png` | the same four for kanzonas.com (749 x 325 / 1496 x 650) | |
 
 The transparent files are for light backgrounds only: "Kanzonas" is near black and would
@@ -112,6 +117,11 @@ KanzonasPDF icon (`KanzonasPDF/tools_make_assets.py`):
 - "PDF" tag letters: Inter, weight Black (900), squeezed to 78.3% width, gradient
   `#B30000` → `#800000`.
 - Tag border `#0A100E`, 3.5 units thick, corner radius 11 (tile = 256 units).
+
+KanzonasSVG icon (`KanzonasSVG/tools/make_icon.py`, the same design as KanzonasPDF's):
+- Orange tile gradient `#EF7D00` → `#B34F00`; "SVG" tag letters in the same orange (Inter Black,
+  78.3% width); on the page, a curve with its nodes instead of lines of writing.
+- Installer icon: blue tile `#2B88E8` → `#0A4EA8`, the "SVG" letters still orange.
 
 KanzonasCAD icon: a ready-made picture (`KanzonasCAD/assets/kanzonascad-icon-source.png`); no
 script draws it. Its tile and its tag's "CAD" letters are violet, `#7150B8` → `#4B3285` (top to
