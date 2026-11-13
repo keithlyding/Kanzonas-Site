@@ -42,9 +42,13 @@ sessions: see AGENTS.md.)
 - Done (13 Nov 2026): **KanzonasSVG** on the website (the owner tested it): svg.kanzonas.com
   (`svg/`, its own Cloudflare Pages project, orange accent), a card on kanzonas.com, KanzonasSVG
   in every menu and footer, Help and Privacy, the screenshot updates and the weekly summary.
-  Still to do: its "What's new" stays hidden until its GitHub releases mark their notes with
-  `<!-- svg-notes -->` ... `<!-- /svg-notes -->` (KanzonasSVG's own session); an AlternativeTo
-  listing for it, if the owner wants one.
+  Its releases mark their notes (`<!-- kanzonas-notes -->`, from 1.1.1), so "What's new" shows.
+  Still to do: an AlternativeTo listing for it, if the owner wants one.
+- Done (13 Nov 2026): content brought up to KanzonasPDF 1.14 (comments review, smart forms,
+  accessibility, batch processing, split view, rulers, groups, layers, spaces, sets, numbered
+  dots, Italian), KanzonasCAD 0.15.12 (wire tools, duct sizes) and KanzonasSVG 1.1.1 (it now
+  checks for updates and updates itself: the SVG page, Help and Privacy say so; crop; line art;
+  the comparison with Inkscape 1.4.4 from its README).
 - Done: the CAD page shows the portable zip only (the owner, Nov 2026), as the PDF page does;
   the plain Windows zip stays on the GitHub releases page.
 

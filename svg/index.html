@@ -88,7 +88,7 @@
           </p>
           <div class="trust-note">
             <p><strong>About the Windows warning.</strong> Windows warns about programs that aren't code-signed and that it hasn't seen much yet, and every new version counts as new. The code-signing certificate that stops this costs money this free project doesn't spend yet. The warning doesn't mean anything is wrong. If your browser asks, choose <strong>Keep</strong>; if Windows says "Windows protected your PC", click <strong>More info</strong> &gt; <strong>Run anyway</strong>.</p>
-            <p><strong>Why you can trust it:</strong> the source code is public on GitHub, and every download is built by GitHub's own servers straight from that code, only after its automated tests, a battery of tests that tries to break it, and a self-test of the finished program pass. Each release lists SHA-256 checksums so you can check your copy. No ads, no account, and it never goes online: your pictures stay on your computer.</p>
+            <p><strong>Why you can trust it:</strong> the source code is public on GitHub, and every download is built by GitHub's own servers straight from that code, only after its automated tests, a battery of tests that tries to break it, and a self-test of the finished program pass. Each release lists SHA-256 checksums so you can check your copy. No ads, no account, and your pictures stay on your computer.</p>
             <p>Questions? Write to <a href="mailto:support@kanzonas.com">support@kanzonas.com</a>.</p>
           </div>
         </div>
@@ -100,10 +100,11 @@
         <h2>Screenshots</h2>
         <ul class="gallery">
           <!-- gallery:start: written by tools/update_screenshots.py from the app's README; don't edit by hand -->
-          <li><a href="shots/screenshot.png" data-caption="A picture and its SVG side by side"><img src="shots/screenshot-thumb.jpg" alt="A picture and its SVG side by side" width="600" height="351" loading="lazy"><span>A picture and its SVG</span></a></li>
+          <li><a href="shots/screenshot.png" data-caption="The KanzonasSVG window: on the left, a picture of a yellow sunflower with a brown center on a dark green cactus; on the right, its SVG traced in 6 flat colors with Auto settings, petals, center and cactus matching the picture; the settings panel on the right shows Colors mode, 6 colors and Background: Remove"><img src="shots/screenshot-thumb.jpg" alt="The KanzonasSVG window: on the left, a picture of a yellow sunflower with a brown center on a dark green cactus; on the right, its SVG traced in 6 flat colors with Auto settings, petals, center and cactus matching the picture; the settings panel on the right shows Colors mode, 6 colors and Background: Remove" width="600" height="351" loading="lazy"><span>A logo traced</span></a></li>
+          <li><a href="shots/landscape.png" data-caption="A flat illustration traced with Auto settings: an orange sky with a pale yellow sun, purple mountains, a green hill, a blue lake, dark green pines, a cream house with a red roof and blue door, and pink, orange, yellow and lilac flowers in the grass; the SVG on the right matches it in 14 flat colors"><img src="shots/landscape-thumb.jpg" alt="A flat illustration traced with Auto settings: an orange sky with a pale yellow sun, purple mountains, a green hill, a blue lake, dark green pines, a cream house with a red roof and blue door, and pink, orange, yellow and lilac flowers in the grass; the SVG on the right matches it in 14 flat colors" width="600" height="351" loading="lazy"><span>An illustration in 14 colors</span></a></li>
           <!-- gallery:end -->
         </ul>
-        <p class="gallery-note">Click a picture to see it full size.</p>
+        <p class="gallery-note">Click a picture to see it full size, then use the arrows to go through them.</p>
       </div>
     </section>
 
@@ -113,15 +114,15 @@
         <div class="grid">
           <div class="feature">
             <h3>Picks the settings for you</h3>
-            <p>Open a picture, drag it in or paste it, and Auto settings chooses the number of colors, smoothing for photos and scans, and the background. The SVG appears beside the picture; change any setting and it updates.</p>
+            <p>Open a picture, drag it in or paste it, and Auto settings sets everything for it: a logo's or illustration's exact colors (up to 64), smoothing for photos and scans, the background, and thin lines for drawings and plans. The SVG appears beside the picture; change any setting and it updates.</p>
           </div>
           <div class="feature">
             <h3>Exact colors, sharp edges</h3>
-            <p>A logo's colors come out exactly as in the picture, with no rings of in-between shades around letters and shapes, and the holes in letters like O stay holes.</p>
+            <p>Flat colors come out exactly as in the picture, with no rings of in-between shades around letters and shapes. Thin lines stay thin and keep their colors, and the holes in letters like O stay holes.</p>
           </div>
           <div class="feature">
-            <h3>Remove the background</h3>
-            <p>Make the color around the picture see-through, keeping it inside shapes, or remove it everywhere. A transparent background stays transparent.</p>
+            <h3>Only what you want</h3>
+            <p>Crop to trace just part of a picture, such as the drawing in a screenshot without the toolbars. Make the background see-through, keeping its color inside shapes, or remove it everywhere.</p>
           </div>
           <div class="feature">
             <h3>Modes for every kind of picture</h3>
@@ -149,53 +150,54 @@
 
     <section>
       <div class="wrap">
-        <h2>Inkscape's tracing, fixed</h2>
-        <p class="section-lead">KanzonasSVG's tracing is Inkscape's Trace Bitmap (Potrace and Autotrace), taken out of Inkscape and fixed. Here's how many pixels come out badly wrong (off by more than 25% when the SVG is drawn and compared with the picture). Lower is better.</p>
-        <div class="table-wrap" role="region" aria-label="Badly wrong pixels: Inkscape's tracing code before the fixes against KanzonasSVG" tabindex="0">
+        <h2>A free alternative to Inkscape's Trace Bitmap</h2>
+        <p class="section-lead">KanzonasSVG's tracing is Inkscape's Trace Bitmap (Potrace and Autotrace) with fixes, in a program that does only this. If you trace pictures in Inkscape and fix the result by hand, try KanzonasSVG first.</p>
+        <div class="table-wrap" role="region" aria-label="KanzonasSVG compared with Inkscape's Trace Bitmap" tabindex="0">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Feature</span></th>
+                <th scope="col" class="us">KanzonasSVG</th>
+                <th scope="col">Inkscape's Trace Bitmap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Picks the settings for each picture</th><td class="us">Yes: colors, smoothing, background, line art</td><td>No</td></tr>
+              <tr><th scope="row">Colors</th><td class="us">Exactly the picture's, for flat colors</td><td>Close to the picture's</td></tr>
+              <tr><th scope="row">Edges between colors</th><td class="us">Sharp</td><td>In-between shades as extra outlines</td></tr>
+              <tr><th scope="row">Thin lines (plans, drawings, screenshots)</th><td class="us">Kept, in their colors</td><td>Thickened and faded by smoothing</td></tr>
+              <tr><th scope="row">Trace part of a picture</th><td class="us">Crop</td><td>No</td></tr>
+              <tr><th scope="row">Many files at once</th><td class="us">Command line</td><td>No</td></tr>
+              <tr><th scope="row">Edit the SVG afterwards</th><td class="us">No: open it in Inkscape or another editor</td><td>Yes: it's a vector editor</td></tr>
+              <tr><th scope="row">Pixel art (Depixelize), selecting the foreground (SIOX)</th><td class="us">No</td><td>Yes</td></tr>
+              <tr><th scope="row">Systems</th><td class="us">Windows, Linux</td><td>Windows, macOS, Linux</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>How close the SVG comes to the picture</h3>
+        <p>Pixels clearly the wrong color (off by more than 25% when the SVG is drawn and compared with the picture). Lower is better.</p>
+        <div class="table-wrap" role="region" aria-label="Pixels clearly the wrong color: Inkscape against KanzonasSVG" tabindex="0">
           <table class="compare">
             <thead>
               <tr>
                 <th scope="col">Picture</th>
-                <th scope="col">Mode</th>
-                <th scope="col">Inkscape's code, before the fixes</th>
-                <th scope="col" class="us">KanzonasSVG</th>
+                <th scope="col">Inkscape, 8 colors</th>
+                <th scope="col" class="us">KanzonasSVG, Auto settings</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row"><a href="https://commons.wikimedia.org/wiki/File:Smiley.svg">Smiley</a></th>
-                <td>Colors, 8</td>
-                <td>0.47%</td>
-                <td class="us">0.27%</td>
-              </tr>
-              <tr>
-                <th scope="row">Smiley</th>
-                <td>Autotrace colors, 8</td>
-                <td>65%</td>
-                <td class="us">0.61%</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg">The Starry Night</a></th>
-                <td>Colors, 16</td>
-                <td>3.0%</td>
-                <td class="us">2.3%</td>
-              </tr>
-              <tr>
-                <th scope="row">The Starry Night</th>
-                <td>Autotrace colors, 16</td>
-                <td>30%</td>
-                <td class="us">12.7%</td>
-              </tr>
-              <tr>
-                <th scope="row">A two-color logo</th>
-                <td>Colors, 8</td>
-                <td>0.89%</td>
-                <td class="us">0.17%</td>
-              </tr>
+              <tr><th scope="row">A two-color logo</th><td>1.6%</td><td class="us">0.26%</td></tr>
+              <tr><th scope="row">The same logo as a JPEG</th><td>1.5%</td><td class="us">0.34%</td></tr>
+              <tr><th scope="row">Sunflower and cactus</th><td>6.5%</td><td class="us">2.5%</td></tr>
+              <tr><th scope="row"><a href="https://commons.wikimedia.org/wiki/File:Smiley.svg">Smiley</a></th><td>0.46%</td><td class="us">0.23%</td></tr>
+              <tr><th scope="row">A flat illustration, 15 colors</th><td>1.7%</td><td class="us">0.29%</td></tr>
+              <tr><th scope="row">A floor plan (thin gray lines, blue labels)</th><td>0.87%</td><td class="us">0.002%</td></tr>
+              <tr><th scope="row"><a href="https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg">The Starry Night</a></th><td>3.7%</td><td class="us">2.9%</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">Measured by KanzonasSVG's own tests (both named pictures are public domain). It's faster too: a 12-megapixel picture with 8 colors took 6.4 s with Inkscape's code before the fixes and 1.8 s with these fixes alone. The cost: keeping strong edges sharp adds about 15% more nodes on detailed pictures. The same fixes were offered to Inkscape: <a href="https://gitlab.com/inkscape/inkscape/-/merge_requests/8302">inkscape!8302</a>. Inkscape is a trademark of its owners.</p>
+        <p class="table-note">Measured by KanzonasSVG's developers in November 2026 against Inkscape's own code (its development version of 10 November 2026, whose tracing is the same as Inkscape 1.4.4's), on the same pictures, with Inkscape's default settings; every SVG drawn by the same renderer. With Autotrace the gap is wider (the smiley: 65% in Inkscape, a black disc, against 0.60%). On a big painting KanzonasSVG is faster (The Starry Night: 0.24 s, Inkscape 1.1 s) and its file smaller; on line art, which it traces at four times the size, it's slower. Full results: <a href="https://github.com/keithlyding/KanzonasSVG#compared-with-inkscape">KanzonasSVG's README</a>. The same fixes were offered to Inkscape: <a href="https://gitlab.com/inkscape/inkscape/-/merge_requests/8302">inkscape!8302</a>. Inkscape is a trademark of its owners.</p>
         <p><strong>Free, with no account, no watermark and no upload:</strong> unlike many online converters, your picture never leaves your computer. Missing something? <a href="https://github.com/keithlyding/KanzonasSVG/issues">Tell us</a>.</p>
       </div>
     </section>
@@ -206,10 +208,10 @@
         <ul class="facts">
           <li>Free and open source (GPL-2.0 or later)</li>
           <li>Windows, and Linux (64-bit PCs; Ubuntu 22.04, Debian 12, Fedora 36 or newer)</li>
-          <li>Never goes online; nothing is uploaded</li>
+          <li>Nothing is uploaded: it only goes online to check for a newer version (you can turn that off)</li>
           <li>Opens PNG, JPEG, BMP, GIF, WebP and TIFF pictures, or a picture you copied</li>
           <li>Installs without administrator rights, and adds itself to "Open with" for pictures</li>
-          <li>Updating: install the newer version over it</li>
+          <li>Updates itself: Update now downloads the new version, checks it and installs it, settings kept</li>
         </ul>
       </div>
     </section>
