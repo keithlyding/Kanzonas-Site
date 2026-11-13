@@ -1,4 +1,4 @@
-// Screenshot viewer. Copied identically into pdf/ and cad/; keep the two copies the same.
+// Screenshot viewer. Copied identically into pdf/, cad/ and svg/; keep the three copies the same.
 //
 // The page has <ul class="gallery"> with one <li> per screenshot:
 //   <a href="shots/NAME.png" data-caption="..."><img src="shots/NAME-thumb.jpg" alt="..."></a>

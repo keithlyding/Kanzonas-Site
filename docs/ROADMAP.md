@@ -39,12 +39,12 @@ sessions: see AGENTS.md.)
   comparison's Reports row). Screenshots as a gallery of thumbnails with a viewer.
 - **KanzonasCAD wire lists** (its README: coming next, with assigning parts to devices and
   shared libraries): update the CAD page's comparison and "Good to know" when they ship.
-- **KanzonasSVG** (pictures to SVG, https://github.com/keithlyding/KanzonasSVG): its logo is
-  made here (orange "SVG", tagline CONVERT IMAGES TO SVG) and copied in, but it is **not on the
-  website** until the owner has tested it (the owner, 12 Nov 2026). When he says go: an
-  svg.kanzonas.com folder like `pdf/` (its own Cloudflare Pages project, download.js and
-  gallery.js copies, screenshots.json entry), a card on kanzonas.com, the menus and footers,
-  help/privacy statements from its README, and KanzonasSVG in tools/weekly_stats.py.
+- Done (13 Nov 2026): **KanzonasSVG** on the website (the owner tested it): svg.kanzonas.com
+  (`svg/`, its own Cloudflare Pages project, orange accent), a card on kanzonas.com, KanzonasSVG
+  in every menu and footer, Help and Privacy, the screenshot updates and the weekly summary.
+  Still to do: its "What's new" stays hidden until its GitHub releases mark their notes with
+  `<!-- svg-notes -->` ... `<!-- /svg-notes -->` (KanzonasSVG's own session); an AlternativeTo
+  listing for it, if the owner wants one.
 - Done: the CAD page shows the portable zip only (the owner, Nov 2026), as the PDF page does;
   the plain Windows zip stays on the GitHub releases page.
 

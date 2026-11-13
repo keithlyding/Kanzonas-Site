@@ -1,5 +1,5 @@
 // Points the download links at the newest release's files on GitHub.
-// Copied identically into pdf/ and cad/; keep the two copies the same.
+// Copied identically into pdf/, cad/ and svg/; keep the three copies the same.
 //
 // Each link with data-repo="owner/name" and data-asset="<regular expression>" gets the
 // browser_download_url of the first file matching that expression in the newest published
@@ -78,7 +78,7 @@
   // "What's new": an element with data-notes-for="owner/name" gets the newest release's own
   // notes, the part of its GitHub release text between <!-- ...-notes --> and
   // <!-- /...-notes --> (the English part; KanzonasPDF adds a Spanish one after it). Only a
-  // little Markdown is understood (**Heading** lines, "- " items, **bold**, *italic*, `code`),
+  // little Markdown is understood (**Heading** lines or plain "Heading:" lines, "- " items, **bold**, *italic*, `code`),
   // and everything is put in as text, never as HTML. Each heading shows at most
   // data-notes-max items (default 6), then a link to the rest.
   function showNotes(repo, rel) {
@@ -89,7 +89,7 @@
     var max = parseInt(box.getAttribute("data-notes-max") || "6", 10);
     var sections = [], cur = null, item = null;
     m[2].split(/\r?\n/).forEach(function (line) {
-      var h = /^\s*\*\*([^*]+)\*\*\s*$/.exec(line);
+      var h = /^\s*\*\*([^*]+)\*\*\s*$/.exec(line) || /^\s*([A-Z][^:*`]{0,80}):\s*$/.exec(line);
       if (h) { cur = { title: h[1], items: [] }; sections.push(cur); item = null; return; }
       var li = /^\s*[-*]\s+(.*)$/.exec(line);
       if (li) {

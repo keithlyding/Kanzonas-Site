@@ -1,5 +1,5 @@
 # Security headers for every page and file of this site (Cloudflare Pages reads this file).
-# The same file is in home/, pdf/ and cad/: keep the three copies identical.
+# The same file is in home/, pdf/, cad/ and svg/: keep the four copies identical.
 #
 # Content-Security-Policy: only this site's own files run, plus Cloudflare Web Analytics
 # (static.cloudflareinsights.com loads its script, cloudflareinsights.com receives the counts);

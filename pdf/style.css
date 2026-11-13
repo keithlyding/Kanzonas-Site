@@ -1,6 +1,6 @@
-/* Kanzonas sites: one stylesheet, copied into home/, pdf/ and cad/
+/* Kanzonas sites: one stylesheet, copied into home/, pdf/, cad/ and svg/
    (each folder is its own Cloudflare Pages project and only sees its own files).
-   Keep the three copies identical. */
+   Keep the four copies identical. */
 
 :root {
   --bg: #ffffff;
@@ -18,13 +18,21 @@
 }
 
 /* Each app's site in its own color (the color of its icon and of its name in its logo):
-   cad.kanzonas.com (and its card on kanzonas.com) is violet; the rest keeps the green. */
+   cad.kanzonas.com (and its card on kanzonas.com) is violet, svg.kanzonas.com orange (darkened
+   from the icon's #ef7d00 so text and buttons keep 5:1 contrast on white); the rest keeps the green. */
 body[data-site="cad"], .card[data-site="cad"] {
   --accent: #5e43a3;
   --accent-dark: #45307d;
   --bg-soft: #f5f3fa;
   --us-bg: #f1edf9;
   --us-head: #e4dcf3;
+}
+body[data-site="svg"], .card[data-site="svg"] {
+  --accent: #a84a00;
+  --accent-dark: #853a00;
+  --bg-soft: #fbf6f1;
+  --us-bg: #fcf1e7;
+  --us-head: #f8e2cf;
 }
 
 * { box-sizing: border-box; }

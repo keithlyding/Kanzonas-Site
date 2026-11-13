@@ -1,4 +1,4 @@
-"""The weekly summary of KanzonasPDF and KanzonasCAD downloads and interest.
+"""The weekly summary of KanzonasPDF, KanzonasCAD and KanzonasSVG downloads and interest.
 
     python tools/weekly_stats.py     (the GitHub Action .github/workflows/weekly-stats.yml runs it)
 
@@ -23,7 +23,8 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "docs", "stats")
-APPS = {"KanzonasPDF": "keithlyding/KanzonasPDF", "KanzonasCAD": "keithlyding/KanzonasCAD"}
+APPS = {"KanzonasPDF": "keithlyding/KanzonasPDF", "KanzonasCAD": "keithlyding/KanzonasCAD",
+        "KanzonasSVG": "keithlyding/KanzonasSVG"}
 SKIP = (".txt", "winget-manifests.zip")      # not the app itself
 
 
@@ -123,7 +124,7 @@ def cloudflare_section(start, end):
         return lines + ["- No visits recorded this week.", ""]
     tv = sum(h["sum"]["visits"] for h in hosts)
     tp = sum(h["count"] for h in hosts)
-    lines.append("- **Visits: %d**, page views: %d (all three sites)" % (tv, tp))
+    lines.append("- **Visits: %d**, page views: %d (all the sites)" % (tv, tp))
     for h in sorted(hosts, key=lambda h: -h["sum"]["visits"]):
         lines.append("  - %s: %d visits, %d page views"
                      % (h["dimensions"]["requestHost"] or "(unknown)", h["sum"]["visits"], h["count"]))

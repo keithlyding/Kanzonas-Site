@@ -1,8 +1,9 @@
 {
-  "_about": "Read by tools/update_screenshots.py (run every hour by .github/workflows/screenshots.yml). The screenshots, their order and their descriptions come from each app's README; 'labels' are the short words under each thumbnail, by screenshot name (docs/screenshot-NAME.png). A screenshot not listed gets a label made from its name: add it here to choose a better one.",
+  "_about": "Read by tools/update_screenshots.py (run every hour by .github/workflows/screenshots.yml). The screenshots, their order and their descriptions come from each app's README; 'labels' are the short words under each thumbnail, by screenshot name (docs/screenshot-NAME.png, or docs/screenshot.png: 'screenshot'). A screenshot not listed gets a label made from its name: add it here to choose a better one.",
   "apps": {
     "pdf": {"repo": "keithlyding/KanzonasPDF", "branch": "main", "host": "pdf.kanzonas.com"},
-    "cad": {"repo": "keithlyding/KanzonasCAD", "branch": "main", "host": "cad.kanzonas.com"}
+    "cad": {"repo": "keithlyding/KanzonasCAD", "branch": "main", "host": "cad.kanzonas.com"},
+    "svg": {"repo": "keithlyding/KanzonasSVG", "branch": "main", "host": "svg.kanzonas.com"}
   },
   "labels": {
     "pdf": {
@@ -17,6 +18,9 @@
       "panel": "Panel layouts",
       "imported-dwg": "AutoCAD Electrical drawings",
       "cables": "Cables and pull lists"
+    },
+    "svg": {
+      "screenshot": "A picture and its SVG"
     }
   }
 }

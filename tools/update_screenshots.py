@@ -1,9 +1,10 @@
-"""Bring the PDF and CAD pages' screenshot galleries up to date with the apps' READMEs.
+"""Bring the PDF, CAD and SVG pages' screenshot galleries up to date with the apps' READMEs.
 
     python tools/update_screenshots.py            (the GitHub Action runs it every hour)
 
 For each app it reads the README on the app's `main` branch on GitHub and takes the
-screenshots it shows (`docs/screenshot-NAME.png`, as a Markdown image or an <img> tag), in the
+screenshots it shows (`docs/screenshot-NAME.png`, or a plain `docs/screenshot.png`, which is named
+"screenshot"; as a Markdown image or an <img> tag), in the
 README's order and with the README's description (its alt text). For each one:
 
 - the full picture goes to SITE/shots/NAME.png, and a 600 px wide SITE/shots/NAME-thumb.jpg is
@@ -43,18 +44,18 @@ def fetch(url):
 def readme_screenshots(text):
     """[(name, alt)] in the README's order, each screenshot once."""
     found = []
-    md = r"!\[([^\]]*)\]\((?:\./)?docs/screenshot-([a-z0-9-]+)\.png\)"
+    md = r"!\[([^\]]*)\]\((?:\./)?docs/screenshot(?:-([a-z0-9-]+))?\.png\)"
     tag = r"<img\b[^>]*>"
     for m in re.finditer(md + "|" + tag, text, re.I):
-        if m.group(2):
-            name, alt = m.group(2), m.group(1)
+        if m.group(0).startswith("!"):
+            name, alt = m.group(2) or "screenshot", m.group(1)
         else:
             t = m.group(0)
-            s = re.search(r'src="(?:\./)?docs/screenshot-([a-z0-9-]+)\.png"', t, re.I)
+            s = re.search(r'src="(?:\./)?docs/screenshot(?:-([a-z0-9-]+))?\.png"', t, re.I)
             if not s:
                 continue
             a = re.search(r'alt="([^"]*)"', t, re.I)
-            name, alt = s.group(1), (a.group(1) if a else "")
+            name, alt = s.group(1) or "screenshot", (a.group(1) if a else "")
         if name not in [n for n, _a in found]:
             found.append((name, html.unescape(alt).strip()))
     return found
@@ -85,7 +86,8 @@ def update(site, app):
     changed = False
     sizes = {}
     for name, _alt in shots:
-        png = fetch(RAW.format(repo=repo, branch=branch, path="docs/screenshot-%s.png" % name))
+        path = "docs/screenshot.png" if name == "screenshot" else "docs/screenshot-%s.png" % name
+        png = fetch(RAW.format(repo=repo, branch=branch, path=path))
         full = os.path.join(folder, name + ".png")
         thumb = os.path.join(folder, name + "-thumb.jpg")
         new_png = write_if_changed(full, png)
