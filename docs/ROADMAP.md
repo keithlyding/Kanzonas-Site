@@ -26,6 +26,14 @@ sessions: see AGENTS.md.)
 - Done: Browser Cache TTL "Respect existing headers" (was 4 hours, which overrode the site's
   own max-age=0 on CSS, JS and pictures: a returning visitor could get a new page with the old
   stylesheet).
+- Done (15 Nov 2026): the `.pages.dev` addresses redirect to the sites' own domains
+  (kanzonas-home -> kanzonas.com, kanzonas-pdf -> pdf., kanzonas-cad -> cad., kanzonas-svg ->
+  svg.; 301, path and query string kept): an account-level Bulk Redirect list
+  `pages_dev_redirects` and its rule in the account's http_request_redirect phase. Deployment
+  addresses (`<id>.kanzonas-svg.pages.dev`) aren't redirected, so a deployment can still be
+  checked. A new site's project needs its line added to that list. Also: svg/ in the build
+  watch paths; Web Analytics on for all four projects (svg since 15 Nov); Crawler Hints
+  (IndexNow) on since 14 Nov.
 - Known, accepted: on 404 responses Cloudflare Pages sets its own `Cache-Control: no-store`
   (overriding `_headers`), so Cloudflare still inserts its bot-detection script there and the
   policy blocks it (a console error on not-found pages only). A fix would be a Cloudflare
