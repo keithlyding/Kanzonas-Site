@@ -36,13 +36,13 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
 - kanzonas.com also has `about.html` (/about: the owner's own words; change it only as he
   asks), `help.html` (/help), `privacy.html` (/privacy) and `press.html` (/press: the press kit,
   its logos copied into `home/press/` by `brand/make_logos.py`), and the menu and footer of every
-  page link them (Press in the footer).
+  page link them (Press in the footer). Their statements come from the apps' READMEs: when an
+  app changes how it installs, updates, keeps settings or goes online, update them (and the
+  date on the privacy page).
 - Each app site has a "free alternative to..." page (`pdf/bluebeam-alternative.html`,
   `cad/autocad-electrical-alternative.html`, `svg/vectorizer-alternative.html`), linked from its
   main page: keep their features, comparisons and sources as true as the main page's, and
-  update them with it. Drafts of posts for sharing the apps are in `docs/outreach/`. Their statements come from the apps' READMEs: when an app
-  changes how it installs, updates, keeps settings or goes online, update them (and the date
-  on the privacy page).
+  update them with it. Drafts of posts for sharing the apps are in `docs/outreach/`.
 - Each site has a `404.html` (Cloudflare Pages serves it, with status 404, for any unknown
   address, at any depth): its stylesheet, icon and pictures use root paths (`/style.css`),
   never relative ones. Change its header and footer along with the site's `index.html`.
