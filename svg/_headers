@@ -4,7 +4,7 @@
 # Content-Security-Policy: only this site's own files run, plus Cloudflare Web Analytics
 # (static.cloudflareinsights.com loads its script, cloudflareinsights.com receives the counts);
 # the download buttons may ask api.github.com for the newest release; the AlternativeTo
-# badge (pdf/, cad/) is a picture from alternativeto.net. Nothing may embed these
+# badge (pdf/, cad/, svg/) is a picture from alternativeto.net. Nothing may embed these
 # pages in a frame, and there are no forms or plugins.
 #
 # Cache-Control is Cloudflare Pages' own default (always check for a newer copy) plus

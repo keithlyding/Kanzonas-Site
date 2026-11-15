@@ -26,7 +26,7 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
   telemetry, ever).
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
-  api.github.com, and the AlternativeTo badge (pdf/, cad/; KanzonasSVG isn't listed there yet) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the
+  api.github.com, and the AlternativeTo badge (pdf/, cad/, svg/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the
   browser blocks it. Keep pages free of inline scripts, inline styles and `on...=` handlers.
 - `download.js` links only to files in the app's own GitHub releases (`isOwnRelease`).
 - "What's new" on the PDF, CAD and SVG pages is the newest release's own notes (the part between
