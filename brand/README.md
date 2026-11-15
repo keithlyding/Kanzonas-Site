@@ -32,8 +32,10 @@ link to a site is shared) from those logos: `home/`, `pdf/` and `cad/og-image.pn
 | `web/kanzonassvg-logo@2x.png` | KanzonasSVG `kanzonassvg/logo.png` (Help > About) |
 | `web/kanzonas-logo*.png` | kanzonas.com's logo; the script copies the transparent 2x one to `home/` |
 
-The script copies `web/kanzonaspdf-logo-transparent@2x.png` to `pdf/` and
-`web/kanzonascad-logo-transparent@2x.png` to `cad/` itself.
+The script copies `web/kanzonaspdf-logo-transparent@2x.png` to `pdf/`,
+`web/kanzonascad-logo-transparent@2x.png` to `cad/` and `web/kanzonassvg-logo-transparent@2x.png`
+to `svg/` itself, and every logo (light background and transparent, 2x) to `home/press/` for the
+press kit (kanzonas.com/press).
 
 In the apps, a logo change is a user-facing change: follow that repo's AGENTS.md (version,
 CHANGELOG, release notes).

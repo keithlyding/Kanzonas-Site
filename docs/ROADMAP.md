@@ -45,6 +45,16 @@ sessions: see AGENTS.md.)
   Legend markups, Replace pages, PDF/A) and KanzonasCAD 0.14.1 (panel layouts, bill of
   materials, revisions, blocks and AutoCAD Electrical data from DXF/DWG, drag and drop; the
   comparison's Reports row). Screenshots as a gallery of thumbnails with a viewer.
+- Done (15 Nov 2026), to bring more people to the apps (the owner's go-ahead): "free alternative
+  to..." pages for the searches people make (pdf.kanzonas.com/bluebeam-alternative,
+  cad.kanzonas.com/autocad-electrical-alternative, svg.kanzonas.com/vectorizer-alternative, each
+  with an honest comparison, its sources and what the app doesn't do), a press kit
+  (kanzonas.com/press, Press in every footer), and drafts of posts for Hacker News and Reddit in
+  docs/outreach/posts.md for the owner to edit and post himself. Also: the SVG page's logo is now
+  the transparent one, as on the other pages (it had the light-background one).
+- Ideas for the apps' own sessions (not this repo): Flathub, winget/Scoop/Chocolatey, the
+  PortableApps.com listing, download directories, a "star us on GitHub" line in the About box,
+  short demo videos.
 - **KanzonasCAD wire lists** (its README: coming next, with assigning parts to devices and
   shared libraries): update the CAD page's comparison and "Good to know" when they ship.
 - Done (13 Nov 2026): **KanzonasSVG** on the website (the owner tested it): svg.kanzonas.com

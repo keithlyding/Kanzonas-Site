@@ -7,8 +7,8 @@ logos here, run this, commit, then copy the files in brand/out/ into the apps (b
 says which file goes where). Don't edit a logo in KanzonasPDF or KanzonasCAD.
 
 Reads brand/artwork/kanzonas-logo-artwork.png (the owner's logo, whose left part, the cactus,
-sunflower and page, is kept as is) and the fonts in brand/fonts/. Writes brand/out/ and the
-three pages' logos (home/, pdf/, cad/).
+sunflower and page, is kept as is) and the fonts in brand/fonts/. Writes brand/out/, the
+sites' logos (home/, pdf/, cad/, svg/) and the press kit's (home/press/).
 
 - "Kanzonas": Roboto Condensed Medium, a little tighter than normal, near black.
 - "PDF" (red, as its app icon: #b30000 to #800000), "CAD" (violet, as its app icon: #7150b8
@@ -231,6 +231,13 @@ print("files in", OUT)
 # the website's own copies (each Cloudflare Pages project sees only its folder)
 for src, dst in (("kanzonas-logo-transparent@2x.png", "home/kanzonas-logo.png"),
                  ("kanzonaspdf-logo-transparent@2x.png", "pdf/kanzonaspdf-logo.png"),
-                 ("kanzonascad-logo-transparent@2x.png", "cad/kanzonascad-logo.png")):
+                 ("kanzonascad-logo-transparent@2x.png", "cad/kanzonascad-logo.png"),
+                 ("kanzonassvg-logo-transparent@2x.png", "svg/kanzonassvg-logo.png")):
     shutil.copyfile(os.path.join(web, src), os.path.join(SITE, dst))
     print("copied to", dst)
+# the press kit (kanzonas.com/press): each logo on a light background and transparent, at 2x
+for name in ("kanzonas", "kanzonaspdf", "kanzonascad", "kanzonassvg"):
+    for src, dst in ((name + "-logo@2x.png", name + "-logo.png"),
+                     (name + "-logo-transparent@2x.png", name + "-logo-transparent.png")):
+        shutil.copyfile(os.path.join(web, src), os.path.join(SITE, "home", "press", dst))
+print("copied the press kit's logos to home/press/")
