@@ -2,7 +2,10 @@
 
 Drafts, written Nov 2026, in Keith's voice. **Edit them into your own words before posting**:
 communities can tell a pasted ad from a person, and your own story (20 years in controls, the
-frustration with AutoCAD Electrical) is what makes people listen.
+frustration with AutoCAD Electrical, having AI write the apps you needed) is what makes people
+listen. Say up front that the apps are made with AI: people respect it when you say so and
+turn on you if they find out later. Check each community's rules on AI-made projects too;
+some restrict them.
 
 How to post (from the Nov 2026 plan in docs/ROADMAP.md):
 - One community at a time, a few days apart, so you can answer every comment and see in the
@@ -31,8 +34,9 @@ GitHub repo or the site; be there to answer questions).
 
 > I needed to turn logos and scanned drawings into SVGs and kept fixing Inkscape's Trace Bitmap
 > output by hand: colors a step off, rings of in-between shades around letters, Autotrace filling
-> in the holes of an O (or turning a smiley into a black disc). So I took the tracing code
-> (Potrace and Autotrace, as Inkscape uses them) out of Inkscape and fixed those.
+> in the holes of an O (or turning a smiley into a black disc). So I had AI coding assistants
+> take the tracing code (Potrace and Autotrace, as Inkscape uses them) out of Inkscape and fix
+> those, with me testing every change on real pictures.
 >
 > Measured against Inkscape's own code (its development version, whose tracing is the same as
 > 1.4.4's), same pictures, every SVG rendered by rsvg-convert and compared with the picture,
@@ -57,12 +61,13 @@ thread.
 
 **Title:**
 
-    I made a free image-to-SVG converter that runs on your computer (no upload, no watermark)
+    I had AI write me a free image-to-SVG converter that runs on your computer (no upload, no watermark)
 
 **Text:**
 
 > Every free PNG-to-SVG converter I tried either wanted a subscription to download, added a
-> watermark, or uploaded my picture to who-knows-where. So I made KanzonasSVG: open a picture,
+> watermark, or uploaded my picture to who-knows-where. So I had AI write one for me, KanzonasSVG,
+> and it turned out good enough to share. Open a picture,
 > it picks the settings, and the SVG appears next to it. Logos and flat designs come out with
 > their exact colors and clean edges, and it can remove the background. Then save the SVG and
 > open it in Design Space.
@@ -84,15 +89,16 @@ r/PLC is controls engineers and techs: talk to them as one of them.
 
 **Title:**
 
-    After 20 years in controls I got fed up with AutoCAD Electrical and wrote my own (free, open source)
+    After 20 years in controls and plenty of AutoCAD Electrical frustration, I had AI write me an alternative. It's good enough to share (free, open source)
 
 **Text:**
 
 > I've spent 20 years in industrial electrical and controls, a lot of it drawing schematics
 > and panel layouts in AutoCAD Electrical. It does the job, but the subscription, the 30-day
-> sign-in and the number of ways it can surprise you finally got to me, so I've been building
-> KanzonasCAD: an electrical CAD program that works the AutoCAD way (command line, snaps,
-> grips) with a much shorter list of commands.
+> sign-in and the number of ways it can surprise you finally got to me. With how advanced AI
+> has gotten, I decided to see if it could write one for me: KanzonasCAD, an electrical CAD
+> program that works the AutoCAD way (command line, snaps, grips) with a much shorter list of
+> commands. It ended up doing everything I needed and more, so I'm sharing it.
 >
 > What it does today: JIC/NFPA symbols, device tags by page (CR601), contacts linked to their
 > coil with cross-references that update themselves, wire numbers by page (6001) with
@@ -123,7 +129,7 @@ to a relevant question, not a post).
 **Text:**
 
 > I use PDFs of drawings every day and wanted Bluebeam-style tools without the subscription, so I
-> built KanzonasPDF. Calibrate from the title block or a known dimension, then length, area,
+> had AI write them for me: KanzonasPDF. It does everything I needed, so I'm sharing it. Calibrate from the title block or a known dimension, then length, area,
 > perimeter, volume and counts with snapping, exported to CSV. Named spaces (Room 101) so the
 > markups list filters room by room, revision clouds, stamps with your name and date, a tool
 > chest, legends, and compare two revisions with the changes clouded.
@@ -147,8 +153,8 @@ Reply only where someone is actually asking; say it's your app.
 
 - PDF: "I make a free, open-source one, KanzonasPDF (Windows, Mac, Linux): calibrated
   measuring, revision clouds, compare, no subscription. https://pdf.kanzonas.com/bluebeam-alternative
-  (disclosure: I built it)"
-- CAD: "I've been building a free AutoCAD Electrical alternative, KanzonasCAD: wire numbers,
-  cross-references, JIC symbols, opens DWG. https://cad.kanzonas.com (disclosure: I'm the developer)"
+  (disclosure: it's mine, made with AI)"
+- CAD: "I had AI write me a free AutoCAD Electrical alternative, KanzonasCAD: wire numbers,
+  cross-references, JIC symbols, opens DWG. https://cad.kanzonas.com (disclosure: it's mine, made with AI)"
 - SVG: "KanzonasSVG is free and runs offline, so nothing gets uploaded: it keeps a logo's exact
-  colors. https://svg.kanzonas.com (disclosure: I made it)"
+  colors. https://svg.kanzonas.com (disclosure: it's mine, made with AI)"
