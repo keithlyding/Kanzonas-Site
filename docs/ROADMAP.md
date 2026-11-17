@@ -55,6 +55,9 @@ sessions: see AGENTS.md.)
 - Ideas for the apps' own sessions (not this repo): Flathub, winget/Scoop/Chocolatey, the
   PortableApps.com listing, download directories, a "star us on GitHub" line in the About box,
   short demo videos.
+- Done (17 Nov 2026): the PDF page brought up to KanzonasPDF 1.15.7 (colors of the page's own
+  drawing and text, rotating pictures and shapes, SVG drawings placed as real lines, File
+  Explorer thumbnails); the SVG page mentions placing an SVG in KanzonasPDF.
 - Done (17 Nov 2026): the CAD pages brought up to KanzonasCAD 0.16.7 (printing, wires that
   route around symbols and land on pins, buses by poles, wire gauge and color, ratings, fused
   disconnects, starters, drive terminals, Array and Offset, a second screen); also the
