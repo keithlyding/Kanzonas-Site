@@ -55,6 +55,10 @@ sessions: see AGENTS.md.)
 - Ideas for the apps' own sessions (not this repo): Flathub, winget/Scoop/Chocolatey, the
   PortableApps.com listing, download directories, a "star us on GitHub" line in the About box,
   short demo videos.
+- Done (17 Nov 2026): the CAD pages brought up to KanzonasCAD 0.16.7 (printing, wires that
+  route around symbols and land on pins, buses by poles, wire gauge and color, ratings, fused
+  disconnects, starters, drive terminals, Array and Offset, a second screen); also the
+  AutoCAD Electrical page, the kanzonas.com card, the press kit and the r/PLC draft.
 - **KanzonasCAD wire lists** (its README: coming next, with assigning parts to devices and
   shared libraries): update the CAD page's comparison and "Good to know" when they ship.
 - Done (13 Nov 2026): **KanzonasSVG** on the website (the owner tested it): svg.kanzonas.com

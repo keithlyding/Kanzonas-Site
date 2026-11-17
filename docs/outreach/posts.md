@@ -102,8 +102,10 @@ r/PLC is controls engineers and techs: talk to them as one of them.
 >
 > What it does today: JIC/NFPA symbols, device tags by page (CR601), contacts linked to their
 > coil with cross-references that update themselves, wire numbers by page (6001) with
-> distribution blocks, terminal strips, PLC I/O points, panel layouts at scale with DIN rail and
-> duct, a bill of materials and cable pull lists. It opens DWG and DXF, and AutoCAD Electrical's
+> distribution blocks, wires that land exactly on pins and route around symbols, buses that
+> land wire for wire on three-pole devices, wire gauge and color, terminal strips, PLC I/O points,
+> panel layouts at scale with DIN rail and duct, a bill of materials with ratings, cable pull
+> lists, and printing to paper or PDF. It opens DWG and DXF, and AutoCAD Electrical's
 > attributes come in as tags and parts.
 >
 > What it doesn't do yet: wire lists, terminal strip reports, multi-user check-out. It's
