@@ -84,6 +84,9 @@ sessions: see AGENTS.md.)
   for open source; declined once as too new), Microsoft Artifact Signing (~$10/month;
   eligibility to check), or fewer, bigger releases. The download note on the PDF and CAD pages
   says this plainly; update it if signing arrives.
+  Update 19 Nov 2026: the owner applied to SignPath Foundation again for KanzonasPDF; if it's
+  declined, Microsoft Artifact Signing next (individuals in the US qualify), Certum's open-source
+  certificate as the fallback. When signing arrives, update the download notes and Help.
 
 ## Done (Nov 2026)
 Weekly summary of downloads, stars and issues (Mondays, as a GitHub issue; never anything from inside the apps). Screenshots follow the apps' READMEs automatically (an hourly GitHub Action). About page (/about, the owner's own words, 7 Nov 2026). Help page (/help) and privacy page (/privacy) on kanzonas.com, linked from every page; "What's new" from the newest release on the PDF and CAD pages. AlternativeTo badges on the PDF and CAD pages (the owner confirmed they show); the Kanzonas mark
