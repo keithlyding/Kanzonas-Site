@@ -42,7 +42,7 @@ sessions: see AGENTS.md.)
 ## Open items (handed over 20 Nov 2026, from the session that built the sites)
 - Done (20 Nov 2026): the morning report couldn't read downloads (its scheduled sessions have no
   repositories attached, so GitHub's API answered 403). Now a nightly GitHub Action
-  (`download-snapshot.yml`, 05:07 UTC) saves every app's download totals in `docs/stats/`, and
+  (`download-snapshot.yml`, 22:37 UTC; moved from 05:07 after GitHub started the first run 9 hours late) saves every app's download totals in `docs/stats/`, and
   `tools/daily_traffic.py` reads them: downloads per day for all three apps. First snapshot the
   night of 19/20 Nov, so the first full day counted is Friday 20 Nov (in Saturday's report).
 - **KanzonasSVG** was added to the Kanzonas environment's repositories on 20 Nov 2026 (and attached

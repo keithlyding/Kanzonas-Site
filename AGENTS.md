@@ -27,8 +27,8 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
 - **Daily traffic report:** `tools/daily_traffic.py` (read only) prints yesterday's visitors (US
   Eastern day) and the downloads from the nightly snapshots; a scheduled task runs it every
   morning and sends the owner a short summary. **Nightly download snapshot:**
-  `.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` on GitHub every night
-  (05:07 UTC) and saves each app's download totals in `docs/stats/downloads-latest.json` and a line
+  `.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` on GitHub every evening
+  (22:37 UTC; GitHub often starts it hours late) and saves each app's download totals in `docs/stats/downloads-latest.json` and a line
   per night in `downloads-daily.json` (not published), because a scheduled Claude session can't read
   GitHub's release counts itself.
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's

@@ -24,7 +24,8 @@ permission, it says what Cloudflare answered. The rest of the summary works eith
 
 ## Nightly download snapshot
 
-`.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` every night at 05:07 UTC
+`.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` every evening at 22:37 UTC (5:37 p.m. US Eastern; GitHub often starts
+scheduled runs hours late, so it's early enough to land before the 6:33 a.m. morning report)
 (and by hand: Actions > Download snapshot > Run workflow). It saves:
 
 - `downloads-latest.json`: every release file's download count at that moment;
