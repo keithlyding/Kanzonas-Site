@@ -31,6 +31,8 @@ scheduled runs hours late, so it's early enough to land before the 6:33 a.m. mor
 - `downloads-latest.json`: every release file's download count at that moment;
 - `downloads-daily.json`: one line per night: each app's all-time total, the downloads since the
   night before (`new`) and about how many of them were people (`people`), and its stars.
+- `requests.json`: every issue and pull request someone other than the owner opened, open now or
+  changed in the last 30 days (feature requests, bug reports, contributions), with title, state and link.
 
 The morning report (`tools/daily_traffic.py`) reads them, so it doesn't need to reach GitHub itself.
 GitHub sometimes starts scheduled runs late; each line records the exact times it covers.

@@ -104,6 +104,33 @@ def downloads():
         t, auto, _kinds, _rel = weekly_stats.week_numbers(now, prev)
         print("  %s: %d downloads, about %d by people; stars %d" % (name, t, t - auto, now["stars"]))
 
+
+def asked():
+    """What other people asked for on GitHub (issues and pull requests not by the owner), from the
+    nightly snapshot's requests.json. Emails to support@kanzonas.com aren't in it."""
+    path = os.path.join(weekly_stats.OUT, "requests.json")
+    if not os.path.exists(path):
+        print("Requests on GitHub: none saved yet (the nightly snapshot saves them).")
+        return
+    data = json.load(open(path))
+    taken = datetime.datetime.fromisoformat(data["taken"])
+    recent = taken - datetime.timedelta(days=2)
+    print("Requests on GitHub by other people (as of %s, US Eastern):" % taken.astimezone(TZ).strftime("%a %d %b %I:%M %p"))
+    any_ = False
+    for app, items in data["apps"].items():
+        for i in items:
+            created = datetime.datetime.fromisoformat(i["created"].replace("Z", "+00:00"))
+            updated = datetime.datetime.fromisoformat(i["updated"].replace("Z", "+00:00"))
+            if i["state"] != "open" and updated < recent:
+                continue                       # closed and quiet: not news
+            tag = "NEW " if created >= recent else ("updated " if updated >= recent else "")
+            print("  %s%s #%d (%s, %s) by %s: %s, %d comments, %s" % (tag, app, i["number"], i["kind"], i["state"],
+                  i["author"], i["title"], i["comments"], i["url"]))
+            any_ = True
+    if not any_:
+        print("  none open, and nothing new in the last two days")
+    print("  (Emails to support@kanzonas.com aren't included.)")
+
 def main():
     if len(sys.argv) > 1:
         day = datetime.date.fromisoformat(sys.argv[1])
@@ -135,6 +162,8 @@ def main():
     print()
 
     downloads()
+    print()
+    asked()
     print()
     print("Read-only report by tools/daily_traffic.py. Nothing is collected inside the apps.")
 

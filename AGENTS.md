@@ -29,7 +29,8 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
   morning and sends the owner a short summary. **Nightly download snapshot:**
   `.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` on GitHub every evening
   (22:37 UTC; GitHub often starts it hours late) and saves each app's download totals in `docs/stats/downloads-latest.json` and a line
-  per night in `downloads-daily.json` (not published), because a scheduled Claude session can't read
+  per night in `downloads-daily.json`, plus the issues and pull requests other people opened
+  (`requests.json`: feature requests, bug reports, contributions; not published), because a scheduled Claude session can't read
   GitHub's release counts itself.
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
