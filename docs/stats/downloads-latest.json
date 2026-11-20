@@ -1,0 +1,1700 @@
+{
+ "apps": {
+  "KanzonasCAD": {
+   "open_issues": 0,
+   "releases": {
+    "v0.10": {
+     "files": {
+      "KanzonasCAD-v0.10-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10-setup.exe": 2,
+      "KanzonasCAD-v0.10-windows.zip": 2
+     },
+     "published": "2026-11-04T04:07:48Z"
+    },
+    "v0.10.1": {
+     "files": {
+      "KanzonasCAD-v0.10.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.1-setup.exe": 2,
+      "KanzonasCAD-v0.10.1-windows.zip": 1
+     },
+     "published": "2026-11-04T13:58:28Z"
+    },
+    "v0.10.10": {
+     "files": {
+      "KanzonasCAD-v0.10.10-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.10-setup.exe": 1,
+      "KanzonasCAD-v0.10.10-windows.zip": 1
+     },
+     "published": "2026-11-04T20:58:41Z"
+    },
+    "v0.10.11": {
+     "files": {
+      "KanzonasCAD-v0.10.11-linux.tar.gz": 6,
+      "KanzonasCAD-v0.10.11-setup.exe": 5,
+      "KanzonasCAD-v0.10.11-windows.zip": 8
+     },
+     "published": "2026-11-04T21:12:12Z"
+    },
+    "v0.10.12": {
+     "files": {
+      "KanzonasCAD-v0.10.12-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.12-setup.exe": 1,
+      "KanzonasCAD-v0.10.12-windows.zip": 1
+     },
+     "published": "2026-11-04T21:19:47Z"
+    },
+    "v0.10.2": {
+     "files": {
+      "KanzonasCAD-v0.10.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.2-setup.exe": 1,
+      "KanzonasCAD-v0.10.2-windows.zip": 1
+     },
+     "published": "2026-11-04T16:40:16Z"
+    },
+    "v0.10.3": {
+     "files": {
+      "KanzonasCAD-v0.10.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.3-setup.exe": 1,
+      "KanzonasCAD-v0.10.3-windows.zip": 1
+     },
+     "published": "2026-11-04T19:42:53Z"
+    },
+    "v0.10.4": {
+     "files": {
+      "KanzonasCAD-v0.10.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.4-setup.exe": 1,
+      "KanzonasCAD-v0.10.4-windows.zip": 1
+     },
+     "published": "2026-11-04T19:48:52Z"
+    },
+    "v0.10.5": {
+     "files": {
+      "KanzonasCAD-v0.10.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.5-setup.exe": 1,
+      "KanzonasCAD-v0.10.5-windows.zip": 1
+     },
+     "published": "2026-11-04T20:00:28Z"
+    },
+    "v0.10.6": {
+     "files": {
+      "KanzonasCAD-v0.10.6-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.6-setup.exe": 1,
+      "KanzonasCAD-v0.10.6-windows.zip": 1
+     },
+     "published": "2026-11-04T20:16:35Z"
+    },
+    "v0.10.7": {
+     "files": {
+      "KanzonasCAD-v0.10.7-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.7-setup.exe": 1,
+      "KanzonasCAD-v0.10.7-windows.zip": 1
+     },
+     "published": "2026-11-04T20:29:41Z"
+    },
+    "v0.10.8": {
+     "files": {
+      "KanzonasCAD-v0.10.8-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.8-setup.exe": 1,
+      "KanzonasCAD-v0.10.8-windows.zip": 1
+     },
+     "published": "2026-11-04T20:39:35Z"
+    },
+    "v0.10.9": {
+     "files": {
+      "KanzonasCAD-v0.10.9-linux.tar.gz": 1,
+      "KanzonasCAD-v0.10.9-setup.exe": 1,
+      "KanzonasCAD-v0.10.9-windows.zip": 1
+     },
+     "published": "2026-11-04T20:47:55Z"
+    },
+    "v0.11": {
+     "files": {
+      "KanzonasCAD-v0.11-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11-setup.exe": 2,
+      "KanzonasCAD-v0.11-windows.zip": 1
+     },
+     "published": "2026-11-04T21:29:14Z"
+    },
+    "v0.11.1": {
+     "files": {
+      "KanzonasCAD-v0.11.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.1-setup.exe": 1,
+      "KanzonasCAD-v0.11.1-windows.zip": 1
+     },
+     "published": "2026-11-04T21:46:23Z"
+    },
+    "v0.11.2": {
+     "files": {
+      "KanzonasCAD-v0.11.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.2-setup.exe": 1,
+      "KanzonasCAD-v0.11.2-windows.zip": 1
+     },
+     "published": "2026-11-04T22:19:11Z"
+    },
+    "v0.11.3": {
+     "files": {
+      "KanzonasCAD-v0.11.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.3-setup.exe": 1,
+      "KanzonasCAD-v0.11.3-windows.zip": 1
+     },
+     "published": "2026-11-05T04:36:47Z"
+    },
+    "v0.11.4": {
+     "files": {
+      "KanzonasCAD-v0.11.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.4-setup.exe": 1,
+      "KanzonasCAD-v0.11.4-windows.zip": 1
+     },
+     "published": "2026-11-05T05:27:59Z"
+    },
+    "v0.11.5": {
+     "files": {
+      "KanzonasCAD-v0.11.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.5-portable.zip": 1,
+      "KanzonasCAD-v0.11.5-setup.exe": 2,
+      "KanzonasCAD-v0.11.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T05:47:54Z"
+    },
+    "v0.11.6": {
+     "files": {
+      "KanzonasCAD-v0.11.6-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.6-portable.zip": 1,
+      "KanzonasCAD-v0.11.6-setup.exe": 1,
+      "KanzonasCAD-v0.11.6-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T14:15:16Z"
+    },
+    "v0.11.7": {
+     "files": {
+      "KanzonasCAD-v0.11.7-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.7-portable.zip": 1,
+      "KanzonasCAD-v0.11.7-setup.exe": 1,
+      "KanzonasCAD-v0.11.7-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T14:54:02Z"
+    },
+    "v0.11.8": {
+     "files": {
+      "KanzonasCAD-v0.11.8-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.8-portable.zip": 0,
+      "KanzonasCAD-v0.11.8-setup.exe": 2,
+      "KanzonasCAD-v0.11.8-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T15:09:58Z"
+    },
+    "v0.11.9": {
+     "files": {
+      "KanzonasCAD-v0.11.9-linux.tar.gz": 1,
+      "KanzonasCAD-v0.11.9-portable.zip": 1,
+      "KanzonasCAD-v0.11.9-setup.exe": 2,
+      "KanzonasCAD-v0.11.9-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T16:37:14Z"
+    },
+    "v0.12": {
+     "files": {
+      "KanzonasCAD-v0.12-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12-portable.zip": 1,
+      "KanzonasCAD-v0.12-setup.exe": 1,
+      "KanzonasCAD-v0.12-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T17:28:53Z"
+    },
+    "v0.12.1": {
+     "files": {
+      "KanzonasCAD-v0.12.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.1-portable.zip": 1,
+      "KanzonasCAD-v0.12.1-setup.exe": 1,
+      "KanzonasCAD-v0.12.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T17:56:44Z"
+    },
+    "v0.12.10": {
+     "files": {
+      "KanzonasCAD-v0.12.10-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.10-portable.zip": 1,
+      "KanzonasCAD-v0.12.10-setup.exe": 2,
+      "KanzonasCAD-v0.12.10-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T00:27:53Z"
+    },
+    "v0.12.11": {
+     "files": {
+      "KanzonasCAD-v0.12.11-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.11-portable.zip": 1,
+      "KanzonasCAD-v0.12.11-setup.exe": 1,
+      "KanzonasCAD-v0.12.11-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T01:37:43Z"
+    },
+    "v0.12.2": {
+     "files": {
+      "KanzonasCAD-v0.12.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.2-portable.zip": 1,
+      "KanzonasCAD-v0.12.2-setup.exe": 1,
+      "KanzonasCAD-v0.12.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 0
+     },
+     "published": "2026-11-05T18:43:02Z"
+    },
+    "v0.12.3": {
+     "files": {
+      "KanzonasCAD-v0.12.3-linux.tar.gz": 2,
+      "KanzonasCAD-v0.12.3-portable.zip": 4,
+      "KanzonasCAD-v0.12.3-setup.exe": 3,
+      "KanzonasCAD-v0.12.3-windows.zip": 3,
+      "KanzonasCAD-x86_64.AppImage": 2
+     },
+     "published": "2026-11-05T19:45:39Z"
+    },
+    "v0.12.4": {
+     "files": {
+      "KanzonasCAD-v0.12.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.4-portable.zip": 1,
+      "KanzonasCAD-v0.12.4-setup.exe": 2,
+      "KanzonasCAD-v0.12.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T20:22:59Z"
+    },
+    "v0.12.5": {
+     "files": {
+      "KanzonasCAD-v0.12.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.5-portable.zip": 1,
+      "KanzonasCAD-v0.12.5-setup.exe": 2,
+      "KanzonasCAD-v0.12.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T21:03:31Z"
+    },
+    "v0.12.6": {
+     "files": {
+      "KanzonasCAD-v0.12.6-linux.tar.gz": 3,
+      "KanzonasCAD-v0.12.6-portable.zip": 1,
+      "KanzonasCAD-v0.12.6-setup.exe": 1,
+      "KanzonasCAD-v0.12.6-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T22:32:23Z"
+    },
+    "v0.12.7": {
+     "files": {
+      "KanzonasCAD-v0.12.7-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.7-portable.zip": 1,
+      "KanzonasCAD-v0.12.7-setup.exe": 1,
+      "KanzonasCAD-v0.12.7-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T23:16:05Z"
+    },
+    "v0.12.8": {
+     "files": {
+      "KanzonasCAD-v0.12.8-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.8-portable.zip": 1,
+      "KanzonasCAD-v0.12.8-setup.exe": 1,
+      "KanzonasCAD-v0.12.8-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T23:38:44Z"
+    },
+    "v0.12.9": {
+     "files": {
+      "KanzonasCAD-v0.12.9-linux.tar.gz": 1,
+      "KanzonasCAD-v0.12.9-portable.zip": 1,
+      "KanzonasCAD-v0.12.9-setup.exe": 1,
+      "KanzonasCAD-v0.12.9-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T23:55:52Z"
+    },
+    "v0.13": {
+     "files": {
+      "KanzonasCAD-v0.13-linux.tar.gz": 1,
+      "KanzonasCAD-v0.13-portable.zip": 1,
+      "KanzonasCAD-v0.13-setup.exe": 2,
+      "KanzonasCAD-v0.13-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T03:15:04Z"
+    },
+    "v0.13.1": {
+     "files": {
+      "KanzonasCAD-v0.13.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.13.1-portable.zip": 1,
+      "KanzonasCAD-v0.13.1-setup.exe": 1,
+      "KanzonasCAD-v0.13.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T03:31:49Z"
+    },
+    "v0.13.2": {
+     "files": {
+      "KanzonasCAD-v0.13.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.13.2-portable.zip": 1,
+      "KanzonasCAD-v0.13.2-setup.exe": 1,
+      "KanzonasCAD-v0.13.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T03:48:31Z"
+    },
+    "v0.13.3": {
+     "files": {
+      "KanzonasCAD-v0.13.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.13.3-portable.zip": 1,
+      "KanzonasCAD-v0.13.3-setup.exe": 1,
+      "KanzonasCAD-v0.13.3-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T04:20:52Z"
+    },
+    "v0.13.4": {
+     "files": {
+      "KanzonasCAD-v0.13.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.13.4-portable.zip": 1,
+      "KanzonasCAD-v0.13.4-setup.exe": 1,
+      "KanzonasCAD-v0.13.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T05:02:39Z"
+    },
+    "v0.13.5": {
+     "files": {
+      "KanzonasCAD-v0.13.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.13.5-portable.zip": 1,
+      "KanzonasCAD-v0.13.5-setup.exe": 1,
+      "KanzonasCAD-v0.13.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T05:17:44Z"
+    },
+    "v0.14": {
+     "files": {
+      "KanzonasCAD-v0.14-linux.tar.gz": 1,
+      "KanzonasCAD-v0.14-portable.zip": 1,
+      "KanzonasCAD-v0.14-setup.exe": 1,
+      "KanzonasCAD-v0.14-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T05:34:02Z"
+    },
+    "v0.14.1": {
+     "files": {
+      "KanzonasCAD-v0.14.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.14.1-portable.zip": 2,
+      "KanzonasCAD-v0.14.1-setup.exe": 4,
+      "KanzonasCAD-v0.14.1-windows.zip": 2,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-06T05:52:39Z"
+    },
+    "v0.15": {
+     "files": {
+      "KanzonasCAD-v0.15-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15-portable.zip": 1,
+      "KanzonasCAD-v0.15-setup.exe": 1,
+      "KanzonasCAD-v0.15-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-07T03:38:52Z"
+    },
+    "v0.15.1": {
+     "files": {
+      "KanzonasCAD-v0.15.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.1-portable.zip": 1,
+      "KanzonasCAD-v0.15.1-setup.exe": 5,
+      "KanzonasCAD-v0.15.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 3
+     },
+     "published": "2026-11-07T03:58:01Z"
+    },
+    "v0.15.10": {
+     "files": {
+      "KanzonasCAD-v0.15.10-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.10-portable.zip": 1,
+      "KanzonasCAD-v0.15.10-setup.exe": 3,
+      "KanzonasCAD-v0.15.10-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-12T21:06:24Z"
+    },
+    "v0.15.11": {
+     "files": {
+      "KanzonasCAD-v0.15.11-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.11-portable.zip": 1,
+      "KanzonasCAD-v0.15.11-setup.exe": 2,
+      "KanzonasCAD-v0.15.11-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-13T15:37:51Z"
+    },
+    "v0.15.12": {
+     "files": {
+      "KanzonasCAD-v0.15.12-linux.tar.gz": 2,
+      "KanzonasCAD-v0.15.12-portable.zip": 7,
+      "KanzonasCAD-v0.15.12-setup.exe": 7,
+      "KanzonasCAD-v0.15.12-windows.zip": 2,
+      "KanzonasCAD-x86_64.AppImage": 6
+     },
+     "published": "2026-11-13T17:07:18Z"
+    },
+    "v0.15.14": {
+     "files": {
+      "KanzonasCAD-v0.15.14-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.14-portable.zip": 1,
+      "KanzonasCAD-v0.15.14-setup.exe": 1,
+      "KanzonasCAD-v0.15.14-windows.zip": 2,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-16T17:13:45Z"
+    },
+    "v0.15.2": {
+     "files": {
+      "KanzonasCAD-v0.15.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.2-portable.zip": 2,
+      "KanzonasCAD-v0.15.2-setup.exe": 2,
+      "KanzonasCAD-v0.15.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 2
+     },
+     "published": "2026-11-10T19:52:26Z"
+    },
+    "v0.15.3": {
+     "files": {
+      "KanzonasCAD-v0.15.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.3-portable.zip": 1,
+      "KanzonasCAD-v0.15.3-setup.exe": 2,
+      "KanzonasCAD-v0.15.3-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 2
+     },
+     "published": "2026-11-11T13:36:56Z"
+    },
+    "v0.15.4": {
+     "files": {
+      "KanzonasCAD-v0.15.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.4-portable.zip": 1,
+      "KanzonasCAD-v0.15.4-setup.exe": 1,
+      "KanzonasCAD-v0.15.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-11T17:58:33Z"
+    },
+    "v0.15.5": {
+     "files": {
+      "KanzonasCAD-v0.15.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.5-portable.zip": 1,
+      "KanzonasCAD-v0.15.5-setup.exe": 2,
+      "KanzonasCAD-v0.15.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-11T18:19:11Z"
+    },
+    "v0.15.6": {
+     "files": {
+      "KanzonasCAD-v0.15.6-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.6-portable.zip": 1,
+      "KanzonasCAD-v0.15.6-setup.exe": 1,
+      "KanzonasCAD-v0.15.6-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-11T18:40:18Z"
+    },
+    "v0.15.7": {
+     "files": {
+      "KanzonasCAD-v0.15.7-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.7-portable.zip": 1,
+      "KanzonasCAD-v0.15.7-setup.exe": 2,
+      "KanzonasCAD-v0.15.7-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-11T19:15:05Z"
+    },
+    "v0.15.8": {
+     "files": {
+      "KanzonasCAD-v0.15.8-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.8-portable.zip": 2,
+      "KanzonasCAD-v0.15.8-setup.exe": 2,
+      "KanzonasCAD-v0.15.8-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-11T21:34:44Z"
+    },
+    "v0.15.9": {
+     "files": {
+      "KanzonasCAD-v0.15.9-linux.tar.gz": 1,
+      "KanzonasCAD-v0.15.9-portable.zip": 1,
+      "KanzonasCAD-v0.15.9-setup.exe": 2,
+      "KanzonasCAD-v0.15.9-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 2
+     },
+     "published": "2026-11-12T13:41:49Z"
+    },
+    "v0.16": {
+     "files": {
+      "KanzonasCAD-v0.16-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16-portable.zip": 1,
+      "KanzonasCAD-v0.16-setup.exe": 2,
+      "KanzonasCAD-v0.16-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-16T21:31:50Z"
+    },
+    "v0.16.1": {
+     "files": {
+      "KanzonasCAD-v0.16.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.1-portable.zip": 1,
+      "KanzonasCAD-v0.16.1-setup.exe": 2,
+      "KanzonasCAD-v0.16.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-16T22:51:31Z"
+    },
+    "v0.16.2": {
+     "files": {
+      "KanzonasCAD-v0.16.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.2-portable.zip": 1,
+      "KanzonasCAD-v0.16.2-setup.exe": 2,
+      "KanzonasCAD-v0.16.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-16T23:48:02Z"
+    },
+    "v0.16.3": {
+     "files": {
+      "KanzonasCAD-v0.16.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.3-portable.zip": 1,
+      "KanzonasCAD-v0.16.3-setup.exe": 3,
+      "KanzonasCAD-v0.16.3-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T00:28:08Z"
+    },
+    "v0.16.4": {
+     "files": {
+      "KanzonasCAD-v0.16.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.4-portable.zip": 1,
+      "KanzonasCAD-v0.16.4-setup.exe": 1,
+      "KanzonasCAD-v0.16.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T01:04:08Z"
+    },
+    "v0.16.5": {
+     "files": {
+      "KanzonasCAD-v0.16.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.5-portable.zip": 1,
+      "KanzonasCAD-v0.16.5-setup.exe": 1,
+      "KanzonasCAD-v0.16.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T01:22:56Z"
+    },
+    "v0.16.6": {
+     "files": {
+      "KanzonasCAD-v0.16.6-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.6-portable.zip": 1,
+      "KanzonasCAD-v0.16.6-setup.exe": 1,
+      "KanzonasCAD-v0.16.6-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T01:45:19Z"
+    },
+    "v0.16.8": {
+     "files": {
+      "KanzonasCAD-v0.16.8-linux.tar.gz": 1,
+      "KanzonasCAD-v0.16.8-portable.zip": 2,
+      "KanzonasCAD-v0.16.8-setup.exe": 5,
+      "KanzonasCAD-v0.16.8-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T04:08:48Z"
+    },
+    "v0.17.1": {
+     "files": {
+      "KanzonasCAD-v0.17.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.17.1-portable.zip": 1,
+      "KanzonasCAD-v0.17.1-setup.exe": 3,
+      "KanzonasCAD-v0.17.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T15:02:41Z"
+    },
+    "v0.17.2": {
+     "files": {
+      "KanzonasCAD-v0.17.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.17.2-portable.zip": 1,
+      "KanzonasCAD-v0.17.2-setup.exe": 2,
+      "KanzonasCAD-v0.17.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T15:41:02Z"
+    },
+    "v0.17.4": {
+     "files": {
+      "KanzonasCAD-v0.17.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.17.4-portable.zip": 1,
+      "KanzonasCAD-v0.17.4-setup.exe": 3,
+      "KanzonasCAD-v0.17.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T17:00:44Z"
+    },
+    "v0.17.5": {
+     "files": {
+      "KanzonasCAD-v0.17.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.17.5-portable.zip": 1,
+      "KanzonasCAD-v0.17.5-setup.exe": 2,
+      "KanzonasCAD-v0.17.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 2
+     },
+     "published": "2026-11-17T17:30:21Z"
+    },
+    "v0.18": {
+     "files": {
+      "KanzonasCAD-v0.18-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18-portable.zip": 1,
+      "KanzonasCAD-v0.18-setup.exe": 1,
+      "KanzonasCAD-v0.18-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-18T02:03:44Z"
+    },
+    "v0.18.1": {
+     "files": {
+      "KanzonasCAD-v0.18.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18.1-portable.zip": 3,
+      "KanzonasCAD-v0.18.1-setup.exe": 6,
+      "KanzonasCAD-v0.18.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-18T02:47:24Z"
+    },
+    "v0.18.2": {
+     "files": {
+      "KanzonasCAD-v0.18.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18.2-portable.zip": 1,
+      "KanzonasCAD-v0.18.2-setup.exe": 6,
+      "KanzonasCAD-v0.18.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-18T18:11:32Z"
+    },
+    "v0.18.3": {
+     "files": {
+      "KanzonasCAD-v0.18.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18.3-portable.zip": 1,
+      "KanzonasCAD-v0.18.3-setup.exe": 2,
+      "KanzonasCAD-v0.18.3-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T01:01:10Z"
+    },
+    "v0.18.4": {
+     "files": {
+      "KanzonasCAD-v0.18.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18.4-portable.zip": 1,
+      "KanzonasCAD-v0.18.4-setup.exe": 2,
+      "KanzonasCAD-v0.18.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T02:52:25Z"
+    },
+    "v0.18.5": {
+     "files": {
+      "KanzonasCAD-v0.18.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18.5-portable.zip": 1,
+      "KanzonasCAD-v0.18.5-setup.exe": 1,
+      "KanzonasCAD-v0.18.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T04:34:40Z"
+    },
+    "v0.18.7": {
+     "files": {
+      "KanzonasCAD-v0.18.7-linux.tar.gz": 1,
+      "KanzonasCAD-v0.18.7-portable.zip": 1,
+      "KanzonasCAD-v0.18.7-setup.exe": 1,
+      "KanzonasCAD-v0.18.7-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T07:16:56Z"
+    },
+    "v0.19": {
+     "files": {
+      "KanzonasCAD-v0.19-linux.tar.gz": 1,
+      "KanzonasCAD-v0.19-portable.zip": 1,
+      "KanzonasCAD-v0.19-setup.exe": 4,
+      "KanzonasCAD-v0.19-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T11:39:26Z"
+    },
+    "v0.19.1": {
+     "files": {
+      "KanzonasCAD-v0.19.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.19.1-portable.zip": 1,
+      "KanzonasCAD-v0.19.1-setup.exe": 2,
+      "KanzonasCAD-v0.19.1-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T14:15:06Z"
+    },
+    "v0.19.10": {
+     "files": {
+      "KanzonasCAD-v0.19.10-linux.tar.gz": 2,
+      "KanzonasCAD-v0.19.10-portable.zip": 4,
+      "KanzonasCAD-v0.19.10-setup.exe": 2,
+      "KanzonasCAD-v0.19.10-windows.zip": 2,
+      "KanzonasCAD-x86_64.AppImage": 2
+     },
+     "published": "2026-11-19T22:29:15Z"
+    },
+    "v0.19.11": {
+     "files": {
+      "KanzonasCAD-v0.19.11-linux.tar.gz": 2,
+      "KanzonasCAD-v0.19.11-portable.zip": 1,
+      "KanzonasCAD-v0.19.11-setup.exe": 2,
+      "KanzonasCAD-v0.19.11-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 3
+     },
+     "published": "2026-11-19T23:23:25Z"
+    },
+    "v0.19.12": {
+     "files": {
+      "KanzonasCAD-v0.19.12-linux.tar.gz": 1,
+      "KanzonasCAD-v0.19.12-portable.zip": 1,
+      "KanzonasCAD-v0.19.12-setup.exe": 1,
+      "KanzonasCAD-v0.19.12-windows.zip": 3,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-20T00:06:03Z"
+    },
+    "v0.19.2": {
+     "files": {
+      "KanzonasCAD-v0.19.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.19.2-portable.zip": 1,
+      "KanzonasCAD-v0.19.2-setup.exe": 3,
+      "KanzonasCAD-v0.19.2-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T16:16:12Z"
+    },
+    "v0.19.3": {
+     "files": {
+      "KanzonasCAD-v0.19.3-linux.tar.gz": 1,
+      "KanzonasCAD-v0.19.3-portable.zip": 1,
+      "KanzonasCAD-v0.19.3-setup.exe": 3,
+      "KanzonasCAD-v0.19.3-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T17:22:47Z"
+    },
+    "v0.19.4": {
+     "files": {
+      "KanzonasCAD-v0.19.4-linux.tar.gz": 2,
+      "KanzonasCAD-v0.19.4-portable.zip": 1,
+      "KanzonasCAD-v0.19.4-setup.exe": 2,
+      "KanzonasCAD-v0.19.4-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T18:33:03Z"
+    },
+    "v0.19.5": {
+     "files": {
+      "KanzonasCAD-v0.19.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.19.5-portable.zip": 1,
+      "KanzonasCAD-v0.19.5-setup.exe": 2,
+      "KanzonasCAD-v0.19.5-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-19T19:41:38Z"
+    },
+    "v0.20": {
+     "files": {
+      "KanzonasCAD-v0.20-linux.tar.gz": 1,
+      "KanzonasCAD-v0.20-portable.zip": 1,
+      "KanzonasCAD-v0.20-setup.exe": 9,
+      "KanzonasCAD-v0.20-windows.zip": 1,
+      "KanzonasCAD-x86_64.AppImage": 1
+     },
+     "published": "2026-11-20T03:53:28Z"
+    },
+    "v0.3.2": {
+     "files": {
+      "KanzonasCAD-v0.3.2-linux.tar.gz": 1,
+      "KanzonasCAD-v0.3.2-windows.zip": 2
+     },
+     "published": "2026-11-03T20:16:42Z"
+    },
+    "v0.3.3": {
+     "files": {
+      "KanzonasCAD-v0.3.3-linux.tar.gz": 2,
+      "KanzonasCAD-v0.3.3-windows.zip": 2
+     },
+     "published": "2026-11-03T21:37:00Z"
+    },
+    "v0.4": {
+     "files": {
+      "KanzonasCAD-v0.4-linux.tar.gz": 1,
+      "KanzonasCAD-v0.4-windows.zip": 1
+     },
+     "published": "2026-11-04T01:31:58Z"
+    },
+    "v0.4.1": {
+     "files": {
+      "KanzonasCAD-v0.4.1-linux.tar.gz": 1,
+      "KanzonasCAD-v0.4.1-setup.exe": 1,
+      "KanzonasCAD-v0.4.1-windows.zip": 1
+     },
+     "published": "2026-11-04T02:46:49Z"
+    },
+    "v0.5": {
+     "files": {
+      "KanzonasCAD-v0.5-linux.tar.gz": 1,
+      "KanzonasCAD-v0.5-setup.exe": 1,
+      "KanzonasCAD-v0.5-windows.zip": 1
+     },
+     "published": "2026-11-04T03:04:40Z"
+    },
+    "v0.6": {
+     "files": {
+      "KanzonasCAD-v0.6-linux.tar.gz": 1,
+      "KanzonasCAD-v0.6-setup.exe": 1,
+      "KanzonasCAD-v0.6-windows.zip": 1
+     },
+     "published": "2026-11-04T03:12:18Z"
+    },
+    "v0.7": {
+     "files": {
+      "KanzonasCAD-v0.7-linux.tar.gz": 1,
+      "KanzonasCAD-v0.7-setup.exe": 1,
+      "KanzonasCAD-v0.7-windows.zip": 1
+     },
+     "published": "2026-11-04T03:32:14Z"
+    },
+    "v0.8": {
+     "files": {
+      "KanzonasCAD-v0.8-linux.tar.gz": 1,
+      "KanzonasCAD-v0.8-setup.exe": 1,
+      "KanzonasCAD-v0.8-windows.zip": 1
+     },
+     "published": "2026-11-04T03:45:03Z"
+    },
+    "v0.9": {
+     "files": {
+      "KanzonasCAD-v0.9-linux.tar.gz": 1,
+      "KanzonasCAD-v0.9-setup.exe": 1,
+      "KanzonasCAD-v0.9-windows.zip": 1
+     },
+     "published": "2026-11-04T04:00:00Z"
+    }
+   },
+   "stars": 1
+  },
+  "KanzonasPDF": {
+   "open_issues": 1,
+   "releases": {
+    "v0.36": {
+     "files": {
+      "KanzonasPDF-v0.36-portable.zip": 2,
+      "KanzonasPDF-v0.36-setup.exe": 3,
+      "KanzonasPDF-v0.36-windows.zip": 2
+     },
+     "published": "2026-10-08T00:53:20Z"
+    },
+    "v0.37": {
+     "files": {
+      "KanzonasPDF-v0.37-portable.zip": 2,
+      "KanzonasPDF-v0.37-setup.exe": 2,
+      "KanzonasPDF-v0.37-windows.zip": 1
+     },
+     "published": "2026-10-08T01:27:46Z"
+    },
+    "v0.38": {
+     "files": {
+      "KanzonasPDF-v0.38-portable.zip": 2,
+      "KanzonasPDF-v0.38-setup.exe": 2,
+      "KanzonasPDF-v0.38-windows.zip": 1
+     },
+     "published": "2026-10-08T01:59:49Z"
+    },
+    "v0.42": {
+     "files": {
+      "KanzonasPDF-v0.42-portable.zip": 2,
+      "KanzonasPDF-v0.42-setup.exe": 3,
+      "KanzonasPDF-v0.42-windows.zip": 1
+     },
+     "published": "2026-10-08T03:00:06Z"
+    },
+    "v0.44": {
+     "files": {
+      "KanzonasPDF-v0.44-portable.zip": 2,
+      "KanzonasPDF-v0.44-setup.exe": 1,
+      "KanzonasPDF-v0.44-windows.zip": 1
+     },
+     "published": "2026-10-08T03:33:04Z"
+    },
+    "v0.45": {
+     "files": {
+      "KanzonasPDF-v0.45-portable.zip": 1,
+      "KanzonasPDF-v0.45-setup.exe": 2,
+      "KanzonasPDF-v0.45-windows.zip": 2
+     },
+     "published": "2026-10-08T04:16:08Z"
+    },
+    "v0.46": {
+     "files": {
+      "KanzonasPDF-v0.46-portable.zip": 2,
+      "KanzonasPDF-v0.46-setup.exe": 4,
+      "KanzonasPDF-v0.46-windows.zip": 1
+     },
+     "published": "2026-10-08T13:34:13Z"
+    },
+    "v0.48": {
+     "files": {
+      "KanzonasPDF-v0.48-portable.zip": 1,
+      "KanzonasPDF-v0.48-setup.exe": 1,
+      "KanzonasPDF-v0.48-windows.zip": 1
+     },
+     "published": "2026-10-08T15:18:22Z"
+    },
+    "v0.49": {
+     "files": {
+      "KanzonasPDF-v0.49-portable.zip": 1,
+      "KanzonasPDF-v0.49-setup.exe": 1,
+      "KanzonasPDF-v0.49-windows.zip": 1
+     },
+     "published": "2026-10-08T15:37:41Z"
+    },
+    "v0.59": {
+     "files": {
+      "KanzonasPDF-v0.59-portable.zip": 1,
+      "KanzonasPDF-v0.59-setup.exe": 1,
+      "KanzonasPDF-v0.59-windows.zip": 1
+     },
+     "published": "2026-10-08T16:11:37Z"
+    },
+    "v0.62": {
+     "files": {
+      "KanzonasPDF-v0.62-portable.zip": 2,
+      "KanzonasPDF-v0.62-setup.exe": 1,
+      "KanzonasPDF-v0.62-windows.zip": 2
+     },
+     "published": "2026-10-08T16:57:51Z"
+    },
+    "v0.65": {
+     "files": {
+      "KanzonasPDF-v0.65-portable.zip": 2,
+      "KanzonasPDF-v0.65-setup.exe": 2,
+      "KanzonasPDF-v0.65-windows.zip": 1
+     },
+     "published": "2026-10-08T18:02:15Z"
+    },
+    "v0.70": {
+     "files": {
+      "KanzonasPDF-v0.70-portable.zip": 1,
+      "KanzonasPDF-v0.70-setup.exe": 2,
+      "KanzonasPDF-v0.70-windows.zip": 1
+     },
+     "published": "2026-10-08T19:31:19Z"
+    },
+    "v0.75": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.75-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-08T20:13:22Z"
+    },
+    "v0.76": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.76-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 2
+     },
+     "published": "2026-10-08T21:22:30Z"
+    },
+    "v0.77": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.77-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-08T21:53:40Z"
+    },
+    "v0.78": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v0.78-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-08T22:37:25Z"
+    },
+    "v0.79": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.79-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-09T01:01:52Z"
+    },
+    "v0.80": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v0.80-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-09T01:20:11Z"
+    },
+    "v0.81": {
+     "files": {},
+     "published": "2026-10-09T04:13:28Z"
+    },
+    "v0.82": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.82-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-09T04:21:20Z"
+    },
+    "v0.83": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.83-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-09T04:49:43Z"
+    },
+    "v0.84": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.84-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 2
+     },
+     "published": "2026-10-09T11:44:26Z"
+    },
+    "v0.85": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.85-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-09T14:06:41Z"
+    },
+    "v0.87": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.87-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 2
+     },
+     "published": "2026-10-09T16:29:21Z"
+    },
+    "v0.89": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.89-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-09T17:51:38Z"
+    },
+    "v0.90": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v0.90-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-10T13:49:46Z"
+    },
+    "v0.91.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v0.91.1-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-12T17:52:09Z"
+    },
+    "v0.91.2": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v0.91.2-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-13T01:15:33Z"
+    },
+    "v0.91.3": {
+     "files": {
+      "KanzonasPDF-portable.zip": 8,
+      "KanzonasPDF-v0.91.3-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDFPortable_0.91.3_English.paf.exe": 31
+     },
+     "published": "2026-10-13T02:12:03Z"
+    },
+    "v0.92.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v0.92.1-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-15T09:29:34Z"
+    },
+    "v0.93": {
+     "files": {
+      "KanzonasPDF-portable.zip": 5,
+      "KanzonasPDF-v0.93-setup.exe": 4,
+      "KanzonasPDF-windows.zip": 3
+     },
+     "published": "2026-10-16T12:40:13Z"
+    },
+    "v0.94": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v0.94-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-21T01:14:50Z"
+    },
+    "v1.0": {
+     "files": {
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.0-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-22T13:24:37Z"
+    },
+    "v1.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.1-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-23T12:05:54Z"
+    },
+    "v1.10": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 2,
+      "KanzonasPDF-portable.zip": 8,
+      "KanzonasPDF-v1.10-setup.exe": 18,
+      "KanzonasPDF-windows.zip": 4,
+      "KanzonasPDF-x86_64.AppImage": 7
+     },
+     "published": "2026-11-09T00:48:38Z"
+    },
+    "v1.10.1": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 3,
+      "KanzonasPDF-portable.zip": 14,
+      "KanzonasPDF-v1.10.1-setup.exe": 57,
+      "KanzonasPDF-windows.zip": 5,
+      "KanzonasPDF-x86_64.AppImage": 7
+     },
+     "published": "2026-11-09T20:12:35Z"
+    },
+    "v1.11": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.11-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-11T17:46:07Z"
+    },
+    "v1.11.1": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.11.1-setup.exe": 6,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-11T18:30:40Z"
+    },
+    "v1.12": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.12-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-12T03:06:39Z"
+    },
+    "v1.12.1": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 2,
+      "KanzonasPDF-portable.zip": 7,
+      "KanzonasPDF-v1.12.1-setup.exe": 12,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-12T05:21:57Z"
+    },
+    "v1.12.2": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.12.2-setup.exe": 7,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-12T17:44:04Z"
+    },
+    "v1.13": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.13-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-12T21:24:26Z"
+    },
+    "v1.13.2": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.13.2-setup.exe": 11,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-13T04:08:22Z"
+    },
+    "v1.14": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 42,
+      "KanzonasPDF-v1.14-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 5
+     },
+     "published": "2026-11-13T15:30:21Z"
+    },
+    "v1.14.1": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.14.1-setup.exe": 4,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 2
+     },
+     "published": "2026-11-13T20:02:05Z"
+    },
+    "v1.14.2": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.14.2-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 2
+     },
+     "published": "2026-11-13T23:19:37Z"
+    },
+    "v1.15": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.15-setup.exe": 6,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-14T07:09:38Z"
+    },
+    "v1.15.1": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.15.1-setup.exe": 4,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 4
+     },
+     "published": "2026-11-14T20:39:54Z"
+    },
+    "v1.15.10": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.15.10-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-20T01:14:11Z"
+    },
+    "v1.15.11": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.15.11-setup.exe": 21,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 2
+     },
+     "published": "2026-11-20T02:21:12Z"
+    },
+    "v1.15.2": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.15.2-setup.exe": 27,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 9
+     },
+     "published": "2026-11-15T14:38:00Z"
+    },
+    "v1.15.3": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.15.3-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 2
+     },
+     "published": "2026-11-16T20:09:00Z"
+    },
+    "v1.15.4": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.15.4-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 3
+     },
+     "published": "2026-11-16T21:08:38Z"
+    },
+    "v1.15.5": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.15.5-setup.exe": 1,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T01:22:06Z"
+    },
+    "v1.15.6": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.15.6-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-17T02:07:39Z"
+    },
+    "v1.15.7": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 7,
+      "KanzonasPDF-v1.15.7-setup.exe": 44,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 8
+     },
+     "published": "2026-11-17T02:41:25Z"
+    },
+    "v1.15.8": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 2,
+      "KanzonasPDF-portable.zip": 8,
+      "KanzonasPDF-v1.15.8-setup.exe": 26,
+      "KanzonasPDF-windows.zip": 4,
+      "KanzonasPDF-x86_64.AppImage": 8
+     },
+     "published": "2026-11-18T20:10:50Z"
+    },
+    "v1.15.9": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 4,
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.15.9-setup.exe": 8,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 3
+     },
+     "published": "2026-11-19T19:18:49Z"
+    },
+    "v1.2": {
+     "files": {
+      "KanzonasPDF-portable.zip": 6,
+      "KanzonasPDF-v1.2-setup.exe": 7,
+      "KanzonasPDF-windows.zip": 4
+     },
+     "published": "2026-10-24T00:33:06Z"
+    },
+    "v1.2.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.2.1-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-26T16:58:22Z"
+    },
+    "v1.3": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.3-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-26T18:21:40Z"
+    },
+    "v1.4": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.4-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-26T22:59:51Z"
+    },
+    "v1.4.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.4.1-setup.exe": 8,
+      "KanzonasPDF-windows.zip": 2
+     },
+     "published": "2026-10-27T02:47:48Z"
+    },
+    "v1.4.2": {
+     "files": {
+      "KanzonasPDF-portable.zip": 6,
+      "KanzonasPDF-v1.4.2-setup.exe": 17,
+      "KanzonasPDF-windows.zip": 2
+     },
+     "published": "2026-10-27T15:30:04Z"
+    },
+    "v1.5": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.5-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-31T03:39:12Z"
+    },
+    "v1.5.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.5.1-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-31T11:52:52Z"
+    },
+    "v1.6": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.6-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-10-31T23:00:11Z"
+    },
+    "v1.6.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.6.1-setup.exe": 2,
+      "KanzonasPDF-windows.zip": 2
+     },
+     "published": "2026-11-01T12:44:45Z"
+    },
+    "v1.6.2": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.6.2-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-11-01T18:54:27Z"
+    },
+    "v1.6.3": {
+     "files": {
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.6.3-setup.exe": 4,
+      "KanzonasPDF-windows.zip": 1
+     },
+     "published": "2026-11-02T02:49:57Z"
+    },
+    "v1.7": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.7-setup.exe": 3,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 3
+     },
+     "published": "2026-11-02T13:50:59Z"
+    },
+    "v1.7.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 3,
+      "KanzonasPDF-v1.7.1-setup.exe": 5,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-02T16:50:55Z"
+    },
+    "v1.7.2": {
+     "files": {
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.7.2-setup.exe": 13,
+      "KanzonasPDF-windows.zip": 3,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-02T21:59:20Z"
+    },
+    "v1.7.3": {
+     "files": {
+      "KanzonasPDF-portable.zip": 5,
+      "KanzonasPDF-v1.7.3-setup.exe": 12,
+      "KanzonasPDF-windows.zip": 3,
+      "KanzonasPDF-x86_64.AppImage": 5
+     },
+     "published": "2026-11-03T19:59:04Z"
+    },
+    "v1.8": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.8-setup.exe": 4,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-04T20:28:22Z"
+    },
+    "v1.8.1": {
+     "files": {
+      "KanzonasPDF-portable.zip": 1,
+      "KanzonasPDF-v1.8.1-setup.exe": 6,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-04T23:02:30Z"
+    },
+    "v1.8.2": {
+     "files": {
+      "KanzonasPDF-portable.zip": 2,
+      "KanzonasPDF-v1.8.2-setup.exe": 6,
+      "KanzonasPDF-windows.zip": 2,
+      "KanzonasPDF-x86_64.AppImage": 1
+     },
+     "published": "2026-11-05T05:11:33Z"
+    },
+    "v1.8.3": {
+     "files": {
+      "KanzonasPDF-portable.zip": 7,
+      "KanzonasPDF-v1.8.3-setup.exe": 13,
+      "KanzonasPDF-windows.zip": 8,
+      "KanzonasPDF-x86_64.AppImage": 2
+     },
+     "published": "2026-11-05T08:31:43Z"
+    },
+    "v1.9": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 0,
+      "KanzonasPDF-portable.zip": 6,
+      "KanzonasPDF-v1.9-setup.exe": 17,
+      "KanzonasPDF-windows.zip": 3,
+      "KanzonasPDF-x86_64.AppImage": 6
+     },
+     "published": "2026-11-06T15:03:21Z"
+    },
+    "v1.9.1": {
+     "files": {
+      "KanzonasPDF-macos-arm64.dmg": 1,
+      "KanzonasPDF-portable.zip": 4,
+      "KanzonasPDF-v1.9.1-setup.exe": 10,
+      "KanzonasPDF-windows.zip": 1,
+      "KanzonasPDF-x86_64.AppImage": 3
+     },
+     "published": "2026-11-08T07:15:57Z"
+    }
+   },
+   "stars": 9
+  },
+  "KanzonasSVG": {
+   "open_issues": 0,
+   "releases": {
+    "v1.0": {
+     "files": {
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-12T13:04:31Z"
+    },
+    "v1.0.1": {
+     "files": {
+      "KanzonasSVG-v1.0.1-setup.exe": 1,
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-12T17:56:13Z"
+    },
+    "v1.0.3": {
+     "files": {
+      "KanzonasSVG-v1.0.3-setup.exe": 1,
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-13T11:43:04Z"
+    },
+    "v1.0.4": {
+     "files": {
+      "KanzonasSVG-v1.0.4-setup.exe": 2,
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 3
+     },
+     "published": "2026-11-13T11:57:08Z"
+    },
+    "v1.1": {
+     "files": {
+      "KanzonasSVG-v1.1-setup.exe": 2,
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-13T15:51:18Z"
+    },
+    "v1.1.1": {
+     "files": {
+      "KanzonasSVG-v1.1.1-setup.exe": 2,
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-13T16:07:06Z"
+    },
+    "v1.2": {
+     "files": {
+      "KanzonasSVG-v1.2-setup.exe": 3,
+      "KanzonasSVG-windows.zip": 3,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-14T03:46:37Z"
+    },
+    "v1.2.1": {
+     "files": {
+      "KanzonasSVG-v1.2.1-setup.exe": 3,
+      "KanzonasSVG-windows.zip": 2,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-14T20:41:32Z"
+    },
+    "v1.2.2": {
+     "files": {
+      "KanzonasSVG-v1.2.2-setup.exe": 3,
+      "KanzonasSVG-windows.zip": 1,
+      "KanzonasSVG-x86_64.AppImage": 1
+     },
+     "published": "2026-11-16T19:05:18Z"
+    },
+    "v1.2.3": {
+     "files": {
+      "KanzonasSVG-v1.2.3-setup.exe": 23,
+      "KanzonasSVG-windows.zip": 6,
+      "KanzonasSVG-x86_64.AppImage": 3
+     },
+     "published": "2026-11-17T11:25:06Z"
+    }
+   },
+   "stars": 2
+  }
+ },
+ "taken": "2026-11-20T13:56:54+00:00"
+}

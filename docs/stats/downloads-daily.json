@@ -1,0 +1,23 @@
+[
+ {
+  "taken": "2026-11-20T13:56:54+00:00",
+  "since": null,
+  "apps": {
+   "KanzonasPDF": {
+    "total": 1066,
+    "stars": 9,
+    "releases": 81
+   },
+   "KanzonasCAD": {
+    "total": 565,
+    "stars": 1,
+    "releases": 95
+   },
+   "KanzonasSVG": {
+    "total": 72,
+    "stars": 2,
+    "releases": 10
+   }
+  }
+ }
+]
