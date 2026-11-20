@@ -39,6 +39,25 @@ sessions: see AGENTS.md.)
   policy blocks it (a console error on not-found pages only). A fix would be a Cloudflare
   Transform Rule adding no-transform to 404 responses, if ever wanted.
 
+## Open items (handed over 20 Nov 2026, from the session that built the sites)
+- **Morning report can't read downloads:** the scheduled task "Kanzonas daily traffic report"
+  (6:33 a.m. US Eastern) starts its sessions with no repositories attached, so GitHub's API
+  answers 403 for all three apps; its visitor numbers are fine. Proposed fix, waiting for the
+  owner's yes: a nightly GitHub Action in this repo saving every app's download totals to
+  `docs/stats/` (GitHub's own servers read all three apps, as the weekly summary does), and
+  `tools/daily_traffic.py` reading downloads from that file (also gives exact downloads per day).
+- **KanzonasSVG** was added to the Kanzonas environment's repositories on 20 Nov 2026, so new
+  sessions can read its download counts and stars.
+- **Offered, not yet decided by the owner:** download-click counting through small pages on the
+  sites (`/download/windows` ...) so Cloudflare counts download clicks anonymously (true
+  conversion rate, no tracking); Spanish and Italian KanzonasPDF pages (`pdf.kanzonas.com/es/`,
+  `/it/`); a shot-by-shot script for a first YouTube demo (KanzonasPDF takeoff on a floor plan).
+- **Code signing:** SignPath application resent 19 Nov 2026 (see the code signing item below);
+  the reviewer looks for stars, forks, contributors, outside articles and independent
+  discussions. Microsoft Artifact Signing next if declined.
+- Visitor history: Cloudflare keeps only a 10% sample of visits older than about a week (days
+  before 12 Nov show as tens), so save numbers while they're exact.
+
 ## Website
 - Done (7 Nov 2026): content brought up to KanzonasPDF 1.9 (macOS for Apple silicon: the
   download link, "Good to know", structured data; Scan, styled text editing, Dimension and
