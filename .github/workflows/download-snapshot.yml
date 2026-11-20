@@ -1,0 +1,48 @@
+# The nightly download snapshot: every night (and by hand: Actions > Download snapshot > Run
+# workflow) it runs tools/download_snapshot.py, which saves every app's download totals in
+# docs/stats/ (not published on the website), so the morning report (tools/daily_traffic.py) can
+# say how many downloads each day had. It runs here, on GitHub's servers, because GitHub's release
+# counts can't always be read from a Claude session. Nothing is collected inside the apps.
+name: Download snapshot
+
+on:
+  schedule:
+    - cron: "7 5 * * *"        # 05:07 UTC, just after midnight US Eastern (scheduled runs can start late)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: download-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Take the snapshot
+        run: python tools/download_snapshot.py
+
+      - name: Save it in docs/stats
+        run: |
+          git add docs/stats
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Download snapshot $(date -u +%F)"
+            # another job (screenshots, weekly summary) may have pushed in the meantime
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin HEAD:main && break
+              sleep 10
+            done
+          fi

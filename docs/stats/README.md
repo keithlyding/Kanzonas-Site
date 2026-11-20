@@ -21,3 +21,15 @@ saved in GitHub as a secret (the summary runs on GitHub's servers):
 
 Without the secret, that section says "Not connected yet"; with a token that lacks the
 permission, it says what Cloudflare answered. The rest of the summary works either way.
+
+## Nightly download snapshot
+
+`.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` every night at 05:07 UTC
+(and by hand: Actions > Download snapshot > Run workflow). It saves:
+
+- `downloads-latest.json`: every release file's download count at that moment;
+- `downloads-daily.json`: one line per night: each app's all-time total, the downloads since the
+  night before (`new`) and about how many of them were people (`people`), and its stars.
+
+The morning report (`tools/daily_traffic.py`) reads them, so it doesn't need to reach GitHub itself.
+GitHub sometimes starts scheduled runs late; each line records the exact times it covers.

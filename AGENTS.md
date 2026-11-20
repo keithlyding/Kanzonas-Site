@@ -25,8 +25,12 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
   It only reads public numbers and the site's own analytics: nothing is collected inside the apps (the owner's promise: no
   telemetry, ever).
 - **Daily traffic report:** `tools/daily_traffic.py` (read only) prints yesterday's visitors (US
-  Eastern day) and this week's downloads; a scheduled task runs it every morning and sends the
-  owner a short summary.
+  Eastern day) and the downloads from the nightly snapshots; a scheduled task runs it every
+  morning and sends the owner a short summary. **Nightly download snapshot:**
+  `.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` on GitHub every night
+  (05:07 UTC) and saves each app's download totals in `docs/stats/downloads-latest.json` and a line
+  per night in `downloads-daily.json` (not published), because a scheduled Claude session can't read
+  GitHub's release counts itself.
 - `_headers` sets the security headers, including a Content-Security-Policy: only the site's
   own files run, plus Cloudflare Web Analytics, the download buttons may call
   api.github.com, and the AlternativeTo badge (pdf/, cad/, svg/) is a picture from alternativeto.net. A new outside script, font, picture or API needs adding there, or the

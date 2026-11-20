@@ -40,14 +40,13 @@ sessions: see AGENTS.md.)
   Transform Rule adding no-transform to 404 responses, if ever wanted.
 
 ## Open items (handed over 20 Nov 2026, from the session that built the sites)
-- **Morning report can't read downloads:** the scheduled task "Kanzonas daily traffic report"
-  (6:33 a.m. US Eastern) starts its sessions with no repositories attached, so GitHub's API
-  answers 403 for all three apps; its visitor numbers are fine. Proposed fix, waiting for the
-  owner's yes: a nightly GitHub Action in this repo saving every app's download totals to
-  `docs/stats/` (GitHub's own servers read all three apps, as the weekly summary does), and
-  `tools/daily_traffic.py` reading downloads from that file (also gives exact downloads per day).
-- **KanzonasSVG** was added to the Kanzonas environment's repositories on 20 Nov 2026, so new
-  sessions can read its download counts and stars.
+- Done (20 Nov 2026): the morning report couldn't read downloads (its scheduled sessions have no
+  repositories attached, so GitHub's API answered 403). Now a nightly GitHub Action
+  (`download-snapshot.yml`, 05:07 UTC) saves every app's download totals in `docs/stats/`, and
+  `tools/daily_traffic.py` reads them: downloads per day for all three apps. First snapshot the
+  night of 19/20 Nov, so the first full day counted is Friday 20 Nov (in Saturday's report).
+- **KanzonasSVG** was added to the Kanzonas environment's repositories on 20 Nov 2026 (and attached
+  to the session that built the sites), so sessions can read its download counts and stars.
 - **Offered, not yet decided by the owner:** download-click counting through small pages on the
   sites (`/download/windows` ...) so Cloudflare counts download clicks anonymously (true
   conversion rate, no tracking); Spanish and Italian KanzonasPDF pages (`pdf.kanzonas.com/es/`,

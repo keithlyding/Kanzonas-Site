@@ -60,6 +60,50 @@ def cloudflare(start, end, week_start):
     return d["data"]["viewer"]["accounts"][0]
 
 
+
+def downloads():
+    """Downloads from the nightly snapshots (docs/stats/downloads-*.json, saved by GitHub's own
+    servers), so this works in a session that can't read GitHub's counts itself; GitHub directly
+    only when there are no snapshots yet."""
+    daily_path = os.path.join(weekly_stats.OUT, "downloads-daily.json")
+    latest_path = os.path.join(weekly_stats.OUT, "downloads-latest.json")
+    week_path = os.path.join(weekly_stats.OUT, "snapshot.json")
+    week = json.load(open(week_path)) if os.path.exists(week_path) else None
+    daily = json.load(open(daily_path)) if os.path.exists(daily_path) else []
+    if daily and os.path.exists(latest_path):
+        last = daily[-1]
+        latest = json.load(open(latest_path))
+        when = lambda s: datetime.datetime.fromisoformat(s).astimezone(TZ).strftime("%a %d %b %I:%M %p")
+        age = datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(last["taken"])
+        if last.get("since"):
+            print("Downloads from %s to %s (US Eastern), nightly snapshots:" % (when(last["since"]), when(last["taken"])))
+        else:
+            print("Downloads: the first nightly snapshot was taken %s; daily counts start with the next one." % when(last["taken"]))
+        for name, e in last["apps"].items():
+            day = "%d new, about %d by people" % (e["new"], e["people"]) if "new" in e else "no earlier snapshot"
+            wk = ""
+            prev = (week or {}).get("apps", {}).get(name)
+            if prev and name in latest.get("apps", {}):
+                t, auto, _k, _r = weekly_stats.week_numbers(latest["apps"][name], prev)
+                wk = "; since the weekly summary of %s: %d, about %d by people" % (week.get("date", "?"), t, t - auto)
+            print("  %s: %s%s; all-time %d, stars %d" % (name, day, wk, e["total"], e["stars"]))
+        if age > datetime.timedelta(hours=30):
+            print("  (The newest snapshot is %d hours old: the nightly job may have been delayed or failed.)" % (age.total_seconds() // 3600))
+        return
+    print("Downloads since the weekly summary of %s (no nightly snapshots yet):" % (week or {}).get("date", "?"))
+    for name, repo in weekly_stats.APPS.items():
+        try:
+            now = weekly_stats.read_app(repo)
+        except Exception as e:                     # reported in the report, not hidden
+            print("  %s: couldn't read GitHub (%s)" % (name, e))
+            continue
+        prev = (week or {}).get("apps", {}).get(name)
+        if not prev:
+            print("  %s: no weekly summary yet (all-time %d)" % (name, sum(sum(r["files"].values()) for r in now["releases"].values())))
+            continue
+        t, auto, _kinds, _rel = weekly_stats.week_numbers(now, prev)
+        print("  %s: %d downloads, about %d by people; stars %d" % (name, t, t - auto, now["stars"]))
+
 def main():
     if len(sys.argv) > 1:
         day = datetime.date.fromisoformat(sys.argv[1])
@@ -90,21 +134,7 @@ def main():
                                       for d in (day - datetime.timedelta(days=i) for i in range(6, -1, -1))))
     print()
 
-    snap_path = os.path.join(weekly_stats.OUT, "snapshot.json")
-    snap = json.load(open(snap_path)) if os.path.exists(snap_path) else None
-    print("Downloads since the weekly summary of %s:" % (snap or {}).get("date", "?"))
-    for name, repo in weekly_stats.APPS.items():
-        try:
-            now = weekly_stats.read_app(repo)
-        except Exception as e:                     # reported in the report, not hidden
-            print("  %s: couldn't read GitHub (%s)" % (name, e))
-            continue
-        prev = (snap or {}).get("apps", {}).get(name)
-        if not prev:
-            print("  %s: no snapshot yet (all-time %d)" % (name, sum(sum(r["files"].values()) for r in now["releases"].values())))
-            continue
-        t, auto, _kinds, _rel = weekly_stats.week_numbers(now, prev)
-        print("  %s: %d downloads, about %d by people; stars %d" % (name, t, t - auto, now["stars"]))
+    downloads()
     print()
     print("Read-only report by tools/daily_traffic.py. Nothing is collected inside the apps.")
 
