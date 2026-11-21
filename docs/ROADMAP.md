@@ -73,6 +73,11 @@ sessions: see AGENTS.md.)
 - Ideas for the apps' own sessions (not this repo): Flathub, winget/Scoop/Chocolatey, the
   PortableApps.com listing, download directories, a "star us on GitHub" line in the About box,
   short demo videos.
+- Done (21 Nov 2026): KanzonasCAD 0.21 on the site: its license is PolyForm Shield 1.0.0 (free to
+  use, including at work and for paid projects; source code public; 0.20 and earlier stay MIT), so
+  the CAD pages, kanzonas.com and the press kit no longer call it open source (KanzonasPDF and
+  KanzonasSVG still are); and its new reports (wire list, terminal strip list, report sheets,
+  Excel), I/O list import and second library folder. "Coming next" follows its README.
 - Done (17 Nov 2026): the PDF page brought up to KanzonasPDF 1.15.7 (colors of the page's own
   drawing and text, rotating pictures and shapes, SVG drawings placed as real lines, File
   Explorer thumbnails); the SVG page mentions placing an SVG in KanzonasPDF.

@@ -89,7 +89,7 @@ r/PLC is controls engineers and techs: talk to them as one of them.
 
 **Title:**
 
-    After 20 years in controls and plenty of AutoCAD Electrical frustration, I had AI write me an alternative. It's good enough to share (free, open source)
+    After 20 years in controls and plenty of AutoCAD Electrical frustration, I had AI write me an alternative. It's good enough to share (free)
 
 **Text:**
 
@@ -108,10 +108,10 @@ r/PLC is controls engineers and techs: talk to them as one of them.
 > lists, and printing to paper or PDF. It opens DWG and DXF, and AutoCAD Electrical's
 > attributes come in as tags and parts.
 >
-> What it doesn't do yet: wire lists, terminal strip reports, multi-user check-out. It's
+> What it doesn't do yet: multi-user check-out, macOS. It's
 > version 0.x, US practice only (no IEC).
 >
-> Free, MIT, Windows and Linux: https://cad.kanzonas.com
+> Free to use (also at work), source code public, Windows and Linux: https://cad.kanzonas.com
 >
 > I'd value honest feedback from people who do this every day: what would stop you using it on
 > a real job?
