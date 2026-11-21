@@ -40,6 +40,11 @@ sessions: see AGENTS.md.)
   Transform Rule adding no-transform to 404 responses, if ever wanted.
 
 ## Open items (handed over 20 Nov 2026, from the session that built the sites)
+- Done (21 Nov 2026): all website and GitHub data moved to the private repo
+  keithlyding/Kanzonas-Site-Data: nightly visitors (exact, per site, page, source, country, device
+  and hour), downloads, requests, the weekly summary (moved there; posted as an issue there) and
+  the history since 5 Nov. It needs the CF_ANALYTICS_TOKEN secret in its own settings. This repo
+  keeps only the public download and request counts for the morning report.
 - Done (20 Nov 2026): the morning report couldn't read downloads (its scheduled sessions have no
   repositories attached, so GitHub's API answered 403). Now a nightly GitHub Action
   (`download-snapshot.yml`, 22:37 UTC; moved from 05:07 after GitHub started the first run 9 hours late) saves every app's download totals in `docs/stats/`, and

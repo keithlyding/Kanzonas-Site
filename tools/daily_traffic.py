@@ -23,7 +23,7 @@ import urllib.request
 import zoneinfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import weekly_stats  # noqa: E402  (its GitHub reading and "probably people" counting)
+import github_stats  # noqa: E402  (GitHub reading and "probably people" counting)
 
 ACCOUNT = "3148e7ce611b08b82ffba66d703d90a8"      # the Cloudflare account (not secret)
 TZ = zoneinfo.ZoneInfo("America/New_York")
@@ -63,52 +63,37 @@ def cloudflare(start, end, week_start):
 
 def downloads():
     """Downloads from the nightly snapshots (docs/stats/downloads-*.json, saved by GitHub's own
-    servers), so this works in a session that can't read GitHub's counts itself; GitHub directly
-    only when there are no snapshots yet."""
-    daily_path = os.path.join(weekly_stats.OUT, "downloads-daily.json")
-    latest_path = os.path.join(weekly_stats.OUT, "downloads-latest.json")
-    week_path = os.path.join(weekly_stats.OUT, "snapshot.json")
-    week = json.load(open(week_path)) if os.path.exists(week_path) else None
+    servers), so this works in a session that can't read GitHub's counts itself."""
+    daily_path = os.path.join(github_stats.OUT, "downloads-daily.json")
     daily = json.load(open(daily_path)) if os.path.exists(daily_path) else []
-    if daily and os.path.exists(latest_path):
-        last = daily[-1]
-        latest = json.load(open(latest_path))
-        when = lambda s: datetime.datetime.fromisoformat(s).astimezone(TZ).strftime("%a %d %b %I:%M %p")
-        age = datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(last["taken"])
-        if last.get("since"):
-            print("Downloads from %s to %s (US Eastern), nightly snapshots:" % (when(last["since"]), when(last["taken"])))
-        else:
-            print("Downloads: the first nightly snapshot was taken %s; daily counts start with the next one." % when(last["taken"]))
-        for name, e in last["apps"].items():
-            day = "%d new, about %d by people" % (e["new"], e["people"]) if "new" in e else "no earlier snapshot"
-            wk = ""
-            prev = (week or {}).get("apps", {}).get(name)
-            if prev and name in latest.get("apps", {}):
-                t, auto, _k, _r = weekly_stats.week_numbers(latest["apps"][name], prev)
-                wk = "; since the weekly summary of %s: %d, about %d by people" % (week.get("date", "?"), t, t - auto)
-            print("  %s: %s%s; all-time %d, stars %d" % (name, day, wk, e["total"], e["stars"]))
-        if age > datetime.timedelta(hours=30):
-            print("  (The newest snapshot is %d hours old: the nightly job may have been delayed or failed.)" % (age.total_seconds() // 3600))
+    if not daily:
+        print("Downloads: no nightly snapshots yet.")
         return
-    print("Downloads since the weekly summary of %s (no nightly snapshots yet):" % (week or {}).get("date", "?"))
-    for name, repo in weekly_stats.APPS.items():
-        try:
-            now = weekly_stats.read_app(repo)
-        except Exception as e:                     # reported in the report, not hidden
-            print("  %s: couldn't read GitHub (%s)" % (name, e))
-            continue
-        prev = (week or {}).get("apps", {}).get(name)
-        if not prev:
-            print("  %s: no weekly summary yet (all-time %d)" % (name, sum(sum(r["files"].values()) for r in now["releases"].values())))
-            continue
-        t, auto, _kinds, _rel = weekly_stats.week_numbers(now, prev)
-        print("  %s: %d downloads, about %d by people; stars %d" % (name, t, t - auto, now["stars"]))
+    last = daily[-1]
+    when = lambda s: datetime.datetime.fromisoformat(s).astimezone(TZ).strftime("%a %d %b %I:%M %p")
+    age = datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(last["taken"])
+    # this week so far: every snapshot taken since Monday 00:00 US Eastern
+    today = datetime.datetime.now(TZ).date()
+    monday = datetime.datetime.combine(today - datetime.timedelta(days=today.weekday()), datetime.time(), TZ)
+    week = [l for l in daily if l.get("since") and datetime.datetime.fromisoformat(l["taken"]) >= monday]
+    if last.get("since"):
+        print("Downloads from %s to %s (US Eastern), nightly snapshots:" % (when(last["since"]), when(last["taken"])))
+    else:
+        print("Downloads: the first nightly snapshot was taken %s; daily counts start with the next one." % when(last["taken"]))
+    for name, e in last["apps"].items():
+        day = "%d new, about %d by people" % (e["new"], e["people"]) if "new" in e else "no earlier snapshot"
+        wk_new = sum(l["apps"].get(name, {}).get("new", 0) for l in week)
+        wk_people = sum(l["apps"].get(name, {}).get("people", 0) for l in week)
+        wk = "; this week (since Monday) %d, about %d by people" % (wk_new, wk_people) if week else ""
+        print("  %s: %s%s; all-time %d, stars %d" % (name, day, wk, e["total"], e["stars"]))
+    if age > datetime.timedelta(hours=30):
+        print("  (The newest snapshot is %d hours old: the nightly job may have been delayed or failed.)" % (age.total_seconds() // 3600))
 
 
 def asked():
     """What other people asked for on GitHub (issues and pull requests not by the owner), from the
     nightly snapshot's requests.json. Emails to support@kanzonas.com aren't in it."""
-    path = os.path.join(weekly_stats.OUT, "requests.json")
+    path = os.path.join(github_stats.OUT, "requests.json")
     if not os.path.exists(path):
         print("Requests on GitHub: none saved yet (the nightly snapshot saves them).")
         return

@@ -17,13 +17,14 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
   `gallery:end` markers in `index.html`, and pushes only when something changed. Don't edit
   those files or that part of the page by hand; to change a screenshot or its description,
   change the app's README. The short label under each thumbnail is in `screenshots.json`.
-- **Weekly summary:** `.github/workflows/weekly-stats.yml` runs `tools/weekly_stats.py` every
-  Monday: the apps' download counts (with the "probably automated" rounds left out), stars and
-  issues, compared with last week's snapshot in `docs/stats/` (not published), posted as an
-  issue labeled "weekly summary" (GitHub emails it; last week's is closed), plus the websites'
-  visitors from Cloudflare Web Analytics (with the secret CF_ANALYTICS_TOKEN, docs/stats/README.md).
-  It only reads public numbers and the site's own analytics: nothing is collected inside the apps (the owner's promise: no
-  telemetry, ever).
+- **Website and GitHub data live in the private repository keithlyding/Kanzonas-Site-Data**
+  (the owner's decision, 21 Nov 2026): every day's website visitors (saved nightly while
+  Cloudflare still has them exactly), downloads, other people's issues and pull requests, the
+  weekly summary (posted as an issue there, which GitHub emails) and all the history, for graphs.
+  Never copy visitor numbers, summaries or private notes into this public repository; it keeps only
+  the public download and request counts in `docs/stats/` for the morning report. Only the
+  websites' own analytics and GitHub's public numbers are collected: nothing inside the apps (the
+  owner's promise: no telemetry, ever).
 - **Daily traffic report:** `tools/daily_traffic.py` (read only) prints yesterday's visitors (US
   Eastern day) and the downloads from the nightly snapshots; a scheduled task runs it every
   morning and sends the owner a short summary. **Nightly download snapshot:**

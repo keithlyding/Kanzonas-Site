@@ -5,11 +5,11 @@
 GitHub only keeps running totals per release file, with no history, and a Claude session can't
 always read them (a scheduled session has no repositories attached). So this runs on GitHub's own
 servers every night, reads KanzonasPDF's, KanzonasCAD's and KanzonasSVG's releases (the same way
-tools/weekly_stats.py does), and saves in docs/stats/ (not published on the website):
+tools/github_stats.py does), and saves in docs/stats/ (not published on the website):
 
 - downloads-latest.json: every release file's count now (to compare with tomorrow night's);
 - downloads-daily.json: one line per night: each app's total, the downloads since the night
-  before and about how many of them were people (weekly_stats' "probably automated" rounds left
+  before and about how many of them were people (github_stats' "probably automated" rounds left
   out), and its stars;
 - requests.json: what other people asked for on GitHub: every issue and pull request not opened by
   the owner or a bot, open now or opened, changed or closed in the last 30 days (feature
@@ -23,11 +23,11 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import weekly_stats  # noqa: E402  (its GitHub reading and "probably people" counting)
+import github_stats  # noqa: E402  (GitHub reading and "probably people" counting)
 
-LATEST = os.path.join(weekly_stats.OUT, "downloads-latest.json")
-DAILY = os.path.join(weekly_stats.OUT, "downloads-daily.json")
-REQUESTS = os.path.join(weekly_stats.OUT, "requests.json")
+LATEST = os.path.join(github_stats.OUT, "downloads-latest.json")
+DAILY = os.path.join(github_stats.OUT, "downloads-daily.json")
+REQUESTS = os.path.join(github_stats.OUT, "requests.json")
 OWNERS = ("keithlyding", "github-actions[bot]", "dependabot[bot]", "Copilot")
 
 
@@ -36,7 +36,7 @@ def requests(repo, now):
     since = (now - datetime.timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
     seen, out = set(), []
     for query in ("state=open", "state=all&since=" + since):
-        for i in weekly_stats.get("https://api.github.com/repos/%s/issues?%s&per_page=100" % (repo, query)):
+        for i in github_stats.get("https://api.github.com/repos/%s/issues?%s&per_page=100" % (repo, query)):
             if i["number"] in seen or i["user"]["login"] in OWNERS:
                 continue
             seen.add(i["number"])
@@ -53,25 +53,25 @@ def load(path, default):
 
 
 def main():
-    os.makedirs(weekly_stats.OUT, exist_ok=True)
+    os.makedirs(github_stats.OUT, exist_ok=True)
     before = load(LATEST, None)
     daily = load(DAILY, [])
     taken = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
     now = {"taken": taken, "apps": {}}
     line = {"taken": taken, "since": (before or {}).get("taken"), "apps": {}}
-    for name, repo in weekly_stats.APPS.items():
-        data = weekly_stats.read_app(repo)          # an error fails the run: no half snapshot
+    for name, repo in github_stats.APPS.items():
+        data = github_stats.read_app(repo)          # an error fails the run: no half snapshot
         now["apps"][name] = data
         total = sum(sum(r["files"].values()) for r in data["releases"].values())
         entry = {"total": total, "stars": data["stars"], "releases": len(data["releases"])}
         prev = (before or {}).get("apps", {}).get(name)
         if prev:
-            new, auto, _kinds, _rel = weekly_stats.week_numbers(data, prev)
+            new, auto, _kinds, _rel = github_stats.week_numbers(data, prev)
             entry["new"], entry["people"] = new, new - auto
         line["apps"][name] = entry
     daily.append(line)
     stamp = datetime.datetime.fromisoformat(taken)
-    json.dump({"taken": taken, "apps": {name: requests(repo, stamp) for name, repo in weekly_stats.APPS.items()}},
+    json.dump({"taken": taken, "apps": {name: requests(repo, stamp) for name, repo in github_stats.APPS.items()}},
               open(REQUESTS, "w"), indent=1)
     json.dump(now, open(LATEST, "w"), indent=1, sort_keys=True)
     json.dump(daily, open(DAILY, "w"), indent=1)
