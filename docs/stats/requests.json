@@ -1,0 +1,93 @@
+{
+ "taken": "2026-11-21T03:25:52+00:00",
+ "apps": {
+  "KanzonasPDF": [
+   {
+    "number": 107,
+    "kind": "issue",
+    "title": "count feature enhancement",
+    "state": "open",
+    "author": "cloydcc-dev",
+    "created": "2026-11-19T10:11:01Z",
+    "updated": "2026-11-19T19:25:16Z",
+    "closed": null,
+    "comments": 2,
+    "labels": [
+     "enhancement"
+    ],
+    "url": "https://github.com/keithlyding/KanzonasPDF/issues/107"
+   },
+   {
+    "number": 91,
+    "kind": "pull request",
+    "title": "1.12.2: six fixes moved out of the Dot PR",
+    "state": "closed",
+    "author": "fexxdev",
+    "created": "2026-11-12T13:32:08Z",
+    "updated": "2026-11-12T17:14:35Z",
+    "closed": "2026-11-12T17:14:34Z",
+    "comments": 0,
+    "labels": [],
+    "url": "https://github.com/keithlyding/KanzonasPDF/pull/91"
+   },
+   {
+    "number": 90,
+    "kind": "issue",
+    "title": "Auto-size callout text box to fit content",
+    "state": "closed",
+    "author": "hellensvard",
+    "created": "2026-11-12T12:42:05Z",
+    "updated": "2026-11-13T04:14:55Z",
+    "closed": "2026-11-13T04:14:55Z",
+    "comments": 2,
+    "labels": [
+     "enhancement"
+    ],
+    "url": "https://github.com/keithlyding/KanzonasPDF/issues/90"
+   },
+   {
+    "number": 87,
+    "kind": "pull request",
+    "title": "1.14: Dot markers, numbered points for floor plans and site drawings",
+    "state": "closed",
+    "author": "fexxdev",
+    "created": "2026-11-11T22:05:55Z",
+    "updated": "2026-11-13T15:13:09Z",
+    "closed": "2026-11-13T14:56:49Z",
+    "comments": 9,
+    "labels": [],
+    "url": "https://github.com/keithlyding/KanzonasPDF/pull/87"
+   },
+   {
+    "number": 86,
+    "kind": "pull request",
+    "title": "1.13: KanzonasPDF in Italian",
+    "state": "closed",
+    "author": "fexxdev",
+    "created": "2026-11-11T20:54:37Z",
+    "updated": "2026-11-12T20:56:04Z",
+    "closed": "2026-11-12T20:56:04Z",
+    "comments": 7,
+    "labels": [],
+    "url": "https://github.com/keithlyding/KanzonasPDF/pull/86"
+   },
+   {
+    "number": 82,
+    "kind": "issue",
+    "title": "allow ellements to use free space around page",
+    "state": "closed",
+    "author": "hamishpoole-hill-ctrl",
+    "created": "2026-11-10T04:33:33Z",
+    "updated": "2026-11-13T03:04:30Z",
+    "closed": "2026-11-13T02:15:57Z",
+    "comments": 7,
+    "labels": [
+     "enhancement"
+    ],
+    "url": "https://github.com/keithlyding/KanzonasPDF/issues/82"
+   }
+  ],
+  "KanzonasCAD": [],
+  "KanzonasSVG": []
+ }
+}
