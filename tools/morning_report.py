@@ -139,8 +139,20 @@ def main():
                                           for i, t in enumerate(starts)})
     wide = {"h": [x for i in range(n_days) for x in per_day["d%d" % i]]}
     time.sleep(2)
-    det = cloudflare(d0, d1, {"pages": "requestHost requestPath", "sources": "refererHost", "countries": "countryName",
-                              "devices": "deviceType", "browsers": "userAgentBrowser", "os": "userAgentOS"})
+    det_parts = {"pages": "requestHost requestPath", "sources": "refererHost", "countries": "countryName",
+                 "devices": "deviceType", "browsers": "userAgentBrowser", "os": "userAgentOS"}
+    det = cloudflare(d0, d1, det_parts)
+    # Cloudflare sometimes answers a recent day with a 1-in-10 sample (or nothing) although it has
+    # it exactly: ask such a breakdown again on its own, a few times.
+    for name, dims in det_parts.items():
+        for _try in range(3):
+            if det[name] and all(x["avg"]["sampleInterval"] == 1 for x in det[name]):
+                break
+            if (d1 - d0) and datetime.datetime.now(TZ) - d0 > datetime.timedelta(days=6):
+                break                                   # older days are only kept as a sample
+            time.sleep(3)
+            det[name] = cloudflare(d0, d1, {name: dims})[name]
+    w_sampled = [n for n in det_parts if any(x["avg"]["sampleInterval"] > 1 for x in det[n])]
 
     days, sampled = {}, {}
     hours_y = {s: [0] * 24 for s in SITES}
@@ -175,6 +187,8 @@ def main():
     for s in SITES:
         last = days.get(day - datetime.timedelta(days=7), {}).get(s, 0)
         w("- %s: %d (%s%d)" % (s, days.get(day, {}).get(s, 0), est(day - datetime.timedelta(days=7)), last))
+    if w_sampled:
+        w("(Cloudflare only gave a 1-in-10 sample for: %s; those numbers are estimates.)" % ", ".join(w_sampled))
     w("")
     pages = sorted(((site(r["dimensions"]["requestHost"]) + r["dimensions"]["requestPath"], r["count"]) for r in det["pages"]), key=lambda kv: -kv[1])
     w("TOP PAGES (page views): " + ", ".join("%s %d" % kv for kv in pages[:12]))
