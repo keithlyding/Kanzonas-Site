@@ -58,7 +58,9 @@ sessions: see AGENTS.md.)
   `/it/`); a shot-by-shot script for a first YouTube demo (KanzonasPDF takeoff on a floor plan).
 - **Code signing:** SignPath application resent 19 Nov 2026 (see the code signing item below);
   the reviewer looks for stars, forks, contributors, outside articles and independent
-  discussions. Microsoft Artifact Signing next if declined.
+  discussions. Also started Microsoft Artifact Signing on 21 Nov 2026 (identity validation in
+  progress); when a certificate is ready, the apps' own sessions add signing to their builds, and
+  the download notes here change then.
 - Visitor history: Cloudflare keeps only a 10% sample of visits older than about a week (days
   before 12 Nov show as tens), so save numbers while they're exact.
 

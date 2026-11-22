@@ -25,9 +25,11 @@ cad.kanzonas.com, `svg/` is svg.kanzonas.com.
   the public download and request counts in `docs/stats/` for the morning report. Only the
   websites' own analytics and GitHub's public numbers are collected: nothing inside the apps (the
   owner's promise: no telemetry, ever).
-- **Daily traffic report:** `tools/daily_traffic.py` (read only) prints yesterday's visitors (US
-  Eastern day) and the downloads from the nightly snapshots; a scheduled task runs it every
-  morning and sends the owner a short summary. **Nightly download snapshot:**
+- **Daily traffic report:** `tools/morning_report.py OUT_DIR` (read only; needs matplotlib) prints
+  yesterday's visitors in detail (US Eastern day: sites, pages, sources, countries, devices, hours,
+  the last 14 days and 4 weeks), the downloads from the nightly snapshots and the requests, and
+  draws its graphs into OUT_DIR, never into this repo; a scheduled task runs it every morning and
+  sends the owner the summary and graphs. (`tools/daily_traffic.py` is the short version.) **Nightly download snapshot:**
   `.github/workflows/download-snapshot.yml` runs `tools/download_snapshot.py` on GitHub every evening
   (22:37 UTC; GitHub often starts it hours late) and saves each app's download totals in `docs/stats/downloads-latest.json` and a line
   per night in `downloads-daily.json`, plus the issues and pull requests other people opened
