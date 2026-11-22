@@ -46,5 +46,32 @@
     "people": 3
    }
   }
+ },
+ {
+  "taken": "2026-11-22T02:37:40+00:00",
+  "since": "2026-11-21T03:25:52+00:00",
+  "apps": {
+   "KanzonasPDF": {
+    "total": 1140,
+    "stars": 9,
+    "releases": 86,
+    "new": 52,
+    "people": 27
+   },
+   "KanzonasCAD": {
+    "total": 601,
+    "stars": 1,
+    "releases": 98,
+    "new": 29,
+    "people": 14
+   },
+   "KanzonasSVG": {
+    "total": 101,
+    "stars": 2,
+    "releases": 12,
+    "new": 26,
+    "people": 14
+   }
+  }
  }
 ]
