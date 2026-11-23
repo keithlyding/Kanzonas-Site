@@ -92,6 +92,11 @@ sessions: see AGENTS.md.)
   route around symbols and land on pins, buses by poles, wire gauge and color, ratings, fused
   disconnects, starters, drive terminals, Array and Offset, a second screen); also the
   AutoCAD Electrical page, the kanzonas.com card, the press kit and the r/PLC draft.
+- Done (23 Nov 2026): KanzonasCAD is presented as electrical CAD everywhere: kanzonas.com's title
+  ("free PDF editor, electrical CAD and SVG converter"), a bold "Electrical CAD" on its card (and
+  "PDF editor", "Picture to SVG" on the others), and on the CAD page a "Good to know" line that
+  it isn't built for mechanical, architectural or 3D drafting. The owner may make it more
+  workable for mechanical drawings later: when that ships, change that line.
 - **KanzonasCAD wire lists** (its README: coming next, with assigning parts to devices and
   shared libraries): update the CAD page's comparison and "Good to know" when they ship.
 - Done (13 Nov 2026): **KanzonasSVG** on the website (the owner tested it): svg.kanzonas.com
