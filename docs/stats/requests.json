@@ -1,7 +1,22 @@
 {
- "taken": "2026-11-22T02:37:40+00:00",
+ "taken": "2026-11-23T03:03:48+00:00",
  "apps": {
   "KanzonasPDF": [
+   {
+    "number": 120,
+    "kind": "issue",
+    "title": "Command/option to toggle line thickness view",
+    "state": "open",
+    "author": "cloydcc-dev",
+    "created": "2026-11-22T09:29:41Z",
+    "updated": "2026-11-22T09:29:41Z",
+    "closed": null,
+    "comments": 0,
+    "labels": [
+     "enhancement"
+    ],
+    "url": "https://github.com/keithlyding/KanzonasPDF/issues/120"
+   },
    {
     "number": 107,
     "kind": "issue",
@@ -9,9 +24,9 @@
     "state": "closed",
     "author": "cloydcc-dev",
     "created": "2026-11-19T10:11:01Z",
-    "updated": "2026-11-21T07:01:03Z",
+    "updated": "2026-11-22T07:30:28Z",
     "closed": "2026-11-21T07:01:03Z",
-    "comments": 3,
+    "comments": 5,
     "labels": [
      "enhancement"
     ],
