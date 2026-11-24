@@ -1,17 +1,17 @@
 {
- "taken": "2026-11-23T03:03:48+00:00",
+ "taken": "2026-11-24T04:26:25+00:00",
  "apps": {
   "KanzonasPDF": [
    {
     "number": 120,
     "kind": "issue",
     "title": "Command/option to toggle line thickness view",
-    "state": "open",
+    "state": "closed",
     "author": "cloydcc-dev",
     "created": "2026-11-22T09:29:41Z",
-    "updated": "2026-11-22T09:29:41Z",
-    "closed": null,
-    "comments": 0,
+    "updated": "2026-11-23T16:25:43Z",
+    "closed": "2026-11-23T05:49:55Z",
+    "comments": 1,
     "labels": [
      "enhancement"
     ],
